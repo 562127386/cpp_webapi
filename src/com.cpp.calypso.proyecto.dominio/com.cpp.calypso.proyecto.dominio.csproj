@@ -151,11 +151,18 @@
   <ItemGroup>
     <Compile Include="Entidades\Catalogo.cs" />
     <Compile Include="Entidades\Colaborador.cs" />
+    <Compile Include="Entidades\Consumo.cs" />
+    <Compile Include="Entidades\ConsumoQr.cs" />
+    <Compile Include="Entidades\ConsumoVianda.cs" />
+    <Compile Include="Entidades\ConsumoViandaQr.cs" />
     <Compile Include="Entidades\ContratoProveedor.cs" />
     <Compile Include="Entidades\Empresa.cs" />
+    <Compile Include="Entidades\Locacion.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\SolicitudVianda.cs" />
     <Compile Include="Entidades\TipoCatalogo.cs" />
     <Compile Include="Entidades\TipoOpcionComida.cs" />
+    <Compile Include="Entidades\Zona.cs" />
     <Compile Include="Foo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectoDominioModule.cs" />

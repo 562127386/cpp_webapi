@@ -12,7 +12,7 @@ using JetBrains.Annotations;
 namespace com.cpp.calypso.proyecto.dominio.Entidades
 {
     [Serializable]
-    public class Colaborador : Entity
+    public class Colaborador : Entity, ISoftDelete
     {
         [CanBeNull]
         [DisplayName("Tipo de identificacion")]
@@ -214,10 +214,6 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         [DisplayName("Estado")]
         public bool registro_masivo { get; set; } = false;
 
-        [Obligado]
-        [DisplayName("Estado")]
-        public bool vigente { get; set; } = true;
-
         [DisplayName("Encuadre")]
         public int catalogo_encuadre_id { get; set; }
 
@@ -244,5 +240,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         [DisplayName("Fecha Alta")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd hh:mm}", ApplyFormatInEditMode = true)]
         public DateTime? fecha_alta { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

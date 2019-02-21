@@ -166,12 +166,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mapping\CatalogoMap.cs" />
+    <Compile Include="Mapping\ColaboradorMap.cs" />
+    <Compile Include="Mapping\ConsumoMap.cs" />
+    <Compile Include="Mapping\ConsumoQrMap.cs" />
+    <Compile Include="Mapping\ConsumoViandaMap.cs" />
+    <Compile Include="Mapping\ConsumoViandaQrMap.cs" />
     <Compile Include="Mapping\ContratoProveedorMap.cs" />
     <Compile Include="Mapping\EmpresaMap.cs" />
     <Compile Include="Mapping\FooMap.cs" />
+    <Compile Include="Mapping\LocacionMap.cs" />
     <Compile Include="Mapping\ProveedorMap.cs" />
+    <Compile Include="Mapping\SolicitudViandaMap.cs" />
     <Compile Include="Mapping\TipoCatalogoMap.cs" />
     <Compile Include="Mapping\TipoOpcionComidaMap.cs" />
+    <Compile Include="Mapping\ZonaMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectoEntityFrameworkModule.cs" />
   </ItemGroup>

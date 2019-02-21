@@ -451,6 +451,18 @@
     <Compile Include="Migrations\201901180441481_Auditoria.Designer.cs">
       <DependentUpon>201901180441481_Auditoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902201800461_Estructura_Catalogos.cs" />
+    <Compile Include="Migrations\201902201800461_Estructura_Catalogos.Designer.cs">
+      <DependentUpon>201902201800461_Estructura_Catalogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902202146185_Proveedores y relaciones.cs" />
+    <Compile Include="Migrations\201902202146185_Proveedores y relaciones.Designer.cs">
+      <DependentUpon>201902202146185_Proveedores y relaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902212151137_Consumos_y_SolicitudesViandas.cs" />
+    <Compile Include="Migrations\201902212151137_Consumos_y_SolicitudesViandas.Designer.cs">
+      <DependentUpon>201902212151137_Consumos_y_SolicitudesViandas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -523,6 +535,7 @@
     <Content Include="Migrations\Script_Datos_Auditoria_Datos.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Migrations\Script_Datos_Auditoria_Estructura.sql" />
     <Content Include="Migrations\Script_Datos_Proyecto.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -949,6 +962,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901180441481_Auditoria.resx">
       <DependentUpon>201901180441481_Auditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902201800461_Estructura_Catalogos.resx">
+      <DependentUpon>201902201800461_Estructura_Catalogos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902202146185_Proveedores y relaciones.resx">
+      <DependentUpon>201902202146185_Proveedores y relaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902212151137_Consumos_y_SolicitudesViandas.resx">
+      <DependentUpon>201902212151137_Consumos_y_SolicitudesViandas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
