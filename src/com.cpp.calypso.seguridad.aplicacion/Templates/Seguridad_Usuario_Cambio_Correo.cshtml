@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html; charset=[b]iso-8859-1[/b]' />
+    <title>Notificacion</title>
+    <style type='text/css' media='screen'>
+        body {
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+        }
+
+        .contenido {
+            text-align: justify;
+        }
+
+        .nota {
+            font-size: 8pt;
+        }
+
+        #textoPrincipal {
+            width: 900px;
+        }
+
+        .disclaimer {
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
+            font-size: 7pt;
+            text-align: justify;
+        }
+
+        table {
+            border-color: Black;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Estimado(a): <strong>@Model.Nombres</strong>
+    </p>
+    <p>
+    </p>
+    <div id='textoPrincipal'>
+        <p class='contenido'>
+            Ha realizado un cambio del correo electrónico, se requiere registrar una nueva Contraseña.
+            <br />
+            <br />
+            Ingrese en el siguiente enlace para registrar una nueva Contraseña:
+            <br />
+            <a href="@Model.Enlace">Registrar Nueva Contraseña</a>
+        </p>
+        <br />
+        <p>
+            Saludos Cordiales.
+        </p>
+        <br />
+        <p class='nota'>
+            <strong>NOTA: El envío de este correo es automático, por favor no lo responda.</strong>
+        </p>
+        <br />
+
+    </div>
+</body>
+</html>

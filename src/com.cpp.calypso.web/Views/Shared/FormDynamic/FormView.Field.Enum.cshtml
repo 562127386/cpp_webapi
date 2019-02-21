@@ -1,0 +1,19 @@
+﻿ 
+ 
+ 
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FieldForm"].'
+
+        return;
+    }
+
+}
+
+@Html.DropDownList(fieldForm.Name,  EnumHelper.GetSelectList(fieldForm.FieldType),
+            "", new { @class = "form-control" })

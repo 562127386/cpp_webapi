@@ -1,0 +1,120 @@
+﻿@model  RolDetalleDto
+
+@{
+    ViewBag.Title = "Visualizar Rol";
+}
+
+@section page_title {<i class="fa fa-eye"></i>  Visualizar Rol}
+
+
+@section view_form {
+
+                     <div class="nuc_form_view">
+                         @using (Html.BeginForm())
+                         {
+                             using (Html.BeginPanel())
+                             {
+                                 using (Html.BeginPanelBody())
+                                 {
+                                     <div>
+
+                                         <dl class="dl-horizontal">
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.Codigo)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.Codigo)
+                                             </dd>
+
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.Nombre)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.Nombre)
+                                             </dd>
+
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.Url)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.Url)
+                                             </dd>
+
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.EsAdministrador)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.EsAdministrador)
+                                             </dd>
+
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.EsExterno)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.EsExterno)
+                                             </dd>
+
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.CreationTime)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.CreationTime)
+                                             </dd>
+
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.CreatorUser)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.CreatorUser)
+                                             </dd>
+
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.LastModificationTime)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.LastModificationTime)
+                                             </dd>
+
+                                             <dt>
+                                                 @Html.DisplayNameFor(model => model.LastModifierUser)
+                                             </dt>
+
+                                             <dd>
+                                                 @Html.DisplayFor(model => model.LastModifierUser)
+                                             </dd>
+
+                                         </dl>
+                                     </div>
+
+                                 }
+
+                                 using (Html.BeginPanelFooter())
+                                 {
+
+                                     <div>
+                                         <a href="@Url.Action("Index")" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Visualizar Roles">
+                                             <i class="fa fa-home"></i> Regresar a Listado
+                                         </a>
+
+                                     </div>
+                                 }
+                             }
+
+
+                         }
+
+
+
+
+                     </div>
+}
+
+

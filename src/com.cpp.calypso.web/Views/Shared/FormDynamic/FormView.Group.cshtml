@@ -1,0 +1,40 @@
+﻿ 
+ 
+
+@model IEntity
+
+@{
+    var groupForm = ViewData["FromDyanamic.GroupForm"] as Group;
+    if (groupForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["GroupForm"].'
+
+        return;
+    }
+
+    int classCol = 12 / groupForm.Col;
+    
+    List<FieldForm>[] Cols = FormViewExtensions.SeparateFieldsColumns(groupForm);
+}
+
+
+<div class="row">
+
+    @for (int i = 0; i < Cols.Length; i++)
+    {
+        <div class="col-md-@classCol">
+            @{
+
+                foreach (var field in Cols[i])
+                {
+                    ViewData["FromDyanamic.FieldForm"] = field;
+
+                    @Html.Partial("FormDynamic/FormView.Field", Model)
+                }
+
+            }
+        </div>
+    }
+</div>
+
+

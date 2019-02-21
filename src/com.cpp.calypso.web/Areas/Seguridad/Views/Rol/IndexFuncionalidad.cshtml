@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Funcionalidad>
+
+@{
+    ViewBag.Title = "Visualizar Funcionalidad";
+}
+
+@section page_title {Funcionalidad}
+<!--
+<p>
+    Html.ActionLink("Create New", "Create")
+</p>
+    -->
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Controlador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VersionRegistro)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Acciones)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Controlador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VersionRegistro)
+            </td>
+            <td>@Html.ActionLink("ACCIONES", "Permisos", new { id = item.Id })</td>
+            <!--
+            <td>
+                Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+                -->
+        </tr>
+    }
+
+</table>

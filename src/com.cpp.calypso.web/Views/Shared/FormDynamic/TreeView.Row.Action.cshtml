@@ -1,0 +1,58 @@
+﻿ 
+ 
+
+@model IEntity
+
+@{
+    var tree = ViewData["FromDyanamic.Tree"] as Tree;
+    if (tree == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FromDyanamic.Tree"].'
+
+        return;
+    }
+
+     
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+     
+}
+
+
+
+<td>
+    @if (tree.Edit && Html.CheckPermissions(controllerName,"Edit"))
+    {
+        <a data-entity-id="@Model.Id" class="btn btn-info nuc_action_edit" href="@Url.Action("Edit", new { id = Model.Id })" data-toggle="tooltip" data-placement="top" title="Editar">
+            <i class="fa fa-edit "></i>
+        </a>
+    }
+
+    @if (tree.Delete && Html.CheckPermissions(controllerName, "Delete"))
+    {
+        <a data-entity-id="@Model.Id" class="btn btn-danger nuc_action_delete" href="@Url.Action("Delete", new { id = Model.Id })" data-toggle="tooltip" data-placement="top" title="Eliminar">
+            <i class="fa fa-trash-o"></i>
+        </a>
+    }
+
+    @if (tree.Details && Html.CheckPermissions(controllerName, "Details"))
+    {
+        <a data-entity-id="@Model.Id" class="btn btn-info nuc_action_details" href="@Url.Action("Details", new { id = Model.Id })" data-toggle="tooltip" data-placement="top" title="Detalles">
+            <i class="fa fa-eye "></i>
+        </a>
+
+    }
+
+
+    @foreach (var button in tree.Buttons)
+    {
+        ViewData["FromDyanamic.Button"] = button;
+
+        if (Html.CheckPermissions(button.Name))
+        {
+            @Html.Partial("FormDynamic/TreeView.Row.Button", Model)
+        }
+    }
+
+</td>
+ 
+ 

@@ -1,0 +1,83 @@
+﻿@model UsuarioDto
+
+@{
+    Layout = null;
+}
+
+<div class="modal-header">
+    <h4 class="modal-title">
+        <span>Información del Usuario</span>
+    </h4>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+</div>
+
+<div class="modal-body">
+
+    @using (Html.BeginForm("MyInfo", "usuario", FormMethod.Post, new { id = "frmMyInfo" }))
+    {
+
+    <div class="form-horizontal">
+
+        <div class="validation-summary-errors text-danger">
+
+        </div>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(model => model.Id)
+
+        <input name="correo_original" id="correo_original" type="hidden" value="@Model.Correo" />
+
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Identificacion, htmlAttributes: new { @class = "col-md-3 col-form-label" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Identificacion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Identificacion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Nombres, htmlAttributes: new { @class = "col-md-3 col-form-label" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Apellidos, htmlAttributes: new { @class = "col-md-3 col-form-label" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Apellidos, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "col-md-3 col-form-label" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+
+    }
+</div>
+
+<div class="modal-footer">
+   
+    <button class="btn btn-primary"  id="usuario_my_info_save"
+            data-loading-text="<i class='fa fa-spinner fa-pulse fa-fw'></i> Procesando..." >
+        <i class="fa fa-save"></i>
+        Guardar
+    </button>
+    @Html.ActionLink("Cancelar", "Index", new object { }, new { @class = "btn btn-default bt-cancelar", data_dismiss = "modal" })
+
+
+</div>
+
+<script src="~/Areas/Seguridad/Views/Usuario/_MyInfo.js"></script>

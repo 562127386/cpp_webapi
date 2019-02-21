@@ -1,0 +1,16 @@
+﻿ 
+ 
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FromDyanamic.FieldForm"].'
+
+        return;
+    }
+}
+
+@Html.Display(fieldForm.Name, new { htmlAttributes = new { @class = "form-control" } })

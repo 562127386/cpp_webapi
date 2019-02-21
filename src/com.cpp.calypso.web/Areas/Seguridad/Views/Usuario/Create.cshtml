@@ -1,0 +1,141 @@
+﻿@model CrearUsuarioViewModel
+
+@{
+    var title = string.Format("Nuevo Usuario");
+    ViewBag.Title = title;
+}
+
+
+@{
+    ViewBag.Modulos = Model.Modulos;
+    ViewBag.Roles = Model.Roles;
+}
+
+
+
+
+@section page_title { @title }
+
+
+@section view_form {
+
+    @using (Html.BeginForm("create", "usuario", FormMethod.Post, new { id = "frmEdit" }))
+    {
+        @Html.AntiForgeryToken()
+
+        using (Html.BeginPanel())
+        {
+            using (Html.BeginPanelBody())
+            {
+                @Html.Partial("_Item", Model.Model)
+            }
+
+            using (Html.BeginPanelFooter())
+            {
+                <button class="btn btn-primary" type="submit" id="create">
+                    <i class="fa fa-save"></i>
+                    Crear
+                </button>
+                @Html.ActionLink("Cancelar", "Index", new object { }, new { @class = "btn btn-default" })
+            }
+        }
+
+
+    }
+}
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+
+
+        var _$form = $('#frmEdit');
+
+     
+       _$form.find('#getUser').click(function (e) {
+
+           e.preventDefault();
+
+           var cuenta = _$form.find('#Cuenta').val(); 
+
+           if (cuenta.length == 0) {
+               toastr["error"]("Ingrese un valor en cuenta");
+           } else {
+
+               var data = { userName: cuenta };
+
+
+               $.ajax({
+                   url: abp.appPath + 'Seguridad/Usuario/GetExternal',
+                   data: data,
+                   type: 'POST',
+                   success: function (response) {
+
+                       if (response.success === true) {
+
+                           _$form.find('#Cuenta').val(response.user.UserName);
+                           _$form.find('#Nombres').val(response.user.Surname);
+                           _$form.find('#Apellidos').val(response.user.GivenName);
+                           _$form.find('#Correo').val(response.user.EmailAddress);
+
+                           _$form.valid();
+
+                       } else if (response.success === false) {
+                           var message = '';
+
+
+                           if (response != undefined && response.errors) {
+
+                               $.each(response.errors, function (i, fieldItem) {
+                                   //i => nombre del campo
+                                   if (fieldItem.length > 0) {
+                                       $.each(fieldItem, function (j, errItem) {
+                                           message += errItem + ' ';
+                                       });
+                                       message += "<br />";
+                                   }
+                               });
+                           } else if (response != undefined && response.error) {
+                               message += response.error;
+                           }
+
+
+                           toastr["error"](message);
+                       } else { //not wrapped result
+
+                           toastr["error"](response);
+                       }
+                   }
+               });
+           }
+        });
+
+
+        _$form.find('button[type="submit"]').click(function (e) {
+            e.preventDefault();
+
+            if (!_$form.valid()) {
+                return;
+            }
+
+            //RolesNames
+            /*
+            var roleNames = [];
+            var _$roleCheckboxes = $("input[name='rolesId']:checked");
+            if (_$roleCheckboxes) {
+                for (var roleIndex = 0; roleIndex < _$roleCheckboxes.length; roleIndex++) {
+                    var _$roleCheckbox = $(_$roleCheckboxes[roleIndex]);
+                    roleNames.push(_$roleCheckbox.attr('data-role-name'));
+                }
+            }
+            $("#Roles").val(roleNames);
+            */
+
+            _$form.submit();
+        });
+
+    </script>
+
+}

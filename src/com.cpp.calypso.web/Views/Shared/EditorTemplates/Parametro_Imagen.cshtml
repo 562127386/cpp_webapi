@@ -1,0 +1,15 @@
+﻿ 
+
+@model string
+
+@Html.TextBoxFor(cadena => cadena, new { @type = "file", @class = CssClass.Form.Control })
+
+@{
+    //Preview
+    if (ViewData.Model != null)
+    {
+        @Html.RenderImagen(ViewData.Model.ToString(), new {width = "250" }) 
+    }
+}
+
+ 

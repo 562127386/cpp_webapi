@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewData["Message"]</h2>
+
+@section page_title {<i class="fa fa-home"></i> @string.Format("Bienvenido")}
+
+@if (ViewBag.Texto != null)
+{
+    <div class="alert @Html.ShowAlert((TipoMensaje)ViewBag.Tipo)" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <strong>@ViewBag.Texto</strong>
+    </div>
+}
+
+<h3>
+    Bienvenido @ViewBag.NOMBRE_USUARIO, ha iniciado sesión en el módulo : <strong>@ViewBag.MODULO</strong>
+</h3>
+
+
+
+
+
+
+

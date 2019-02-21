@@ -1,0 +1,55 @@
+﻿
+@model FormModelView
+
+@{
+    var entityName = Html.Title(Model).Singularize();
+    var title = string.Format("Eliminar {0}", entityName);
+    var confirmation = string.Format("¿Está seguro de eliminar este {0}?", entityName);
+
+    ViewBag.Title = title;
+}
+
+
+@section page_title {@title}
+
+
+@section view_form {
+
+
+    <div class="nuc_form_view">
+        
+            @using (Html.BeginPanel())
+            {
+                using (Html.BeginPanelHeader(confirmation,new {@class= "bg-danger" })) {
+
+                }
+
+                using (Html.BeginPanelBody())
+                {
+                    @Html.Partial("FormDynamic/FormView.Delete")
+                }
+
+
+                using (Html.BeginPanelFooter())
+                {
+                    using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+
+                        <div class="form-actions no-color">
+
+                            <button class="btn btn-danger" type="submit" id="create">
+                                <i class="fa fa-times"></i>
+                                Elimnar
+                            </button>
+                            @Html.ActionLink("Cancelar", "Index", new object { }, new { @class = "btn btn-primary" })
+
+                        </div>
+                    }
+                }
+            }
+ 
+    </div>
+}
+

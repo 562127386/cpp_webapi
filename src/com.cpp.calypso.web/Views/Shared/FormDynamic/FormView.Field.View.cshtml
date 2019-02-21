@@ -1,0 +1,51 @@
+﻿
+
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FromDyanamic.FieldForm"].'
+
+        return;
+    }
+}
+
+@if (!fieldForm.Invisible)
+{
+<div class="form-group row">
+    @Html.Label(fieldForm.Name, htmlAttributes: new { @class = "col-md-3 col-form-label" })
+
+
+    <div class="col-md-9">
+        <div class="form-control">
+             
+            @if (string.IsNullOrWhiteSpace(fieldForm.Widget))
+            {
+                @Html.Display(fieldForm.Name, new { htmlAttributes = new { @class = "form-control" } })
+            }
+            else
+            {
+                //Segun el Widget, seleccionar el view. ("FormDynamic/FormView.Field.View.Widget.cshtml")
+                var viewName = string.Format("{0}.{1}", "FormDynamic/FormView.Field.View", fieldForm.Widget);
+                if (Html.ExistsView(viewName))
+                {
+                    ViewData["FromDyanamic.FieldForm"] = fieldForm;
+                    @Html.Partial(viewName, Model);
+                }
+                else
+                {
+                    @Html.Display(fieldForm.Name, new { htmlAttributes = new { @class = "form-control" } })
+                }
+            }
+        </div>
+
+        </div>
+    </div>
+ 
+    }
+    else {
+    @Html.Hidden(fieldForm.Name)
+    }

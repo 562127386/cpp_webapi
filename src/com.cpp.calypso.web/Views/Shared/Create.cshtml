@@ -1,0 +1,55 @@
+﻿  
+
+
+@model FormModelView
+
+@{
+
+    var title = string.Format("Nuevo {0}", Html.Title(Model));
+
+    ViewBag.Title = title;
+}
+
+@section page_title { @title }
+
+
+@section view_form {
+    
+<div class="nuc_form_view">
+     
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            using (Html.BeginPanel())
+            {
+
+                using (Html.BeginPanelBody())
+                {
+                  
+                    <div class="form-compact">
+
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+                        @Html.Partial("FormDynamic/FormView.Create")
+                    </div>
+                }
+                using (Html.BeginPanelFooter())
+                {
+                    <button class="btn btn-primary" type="submit" id="create">
+                        <i class="fa fa-save"></i>
+                        Crear
+                    </button>
+                    @Html.ActionLink("Cancelar", "Index", new object { }, new { @class = "btn btn-default" })
+
+                }
+            }
+        }
+
+    
+</div>
+
+}
+
+
+ 

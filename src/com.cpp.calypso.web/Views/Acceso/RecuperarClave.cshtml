@@ -1,0 +1,76 @@
+﻿@model RecuperarClaveViewModel
+@{
+    ViewBag.Title = "Recupera tu contraseña";
+}
+@{
+    Layout = "~/Views/Shared/_PublicLayout.cshtml";
+}
+
+<div class="col-md-8">
+
+    @using (Html.BeginForm("RecuperarClave", "Acceso", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "frmEdit", @class = "form-horizontal form-compact", role = "form" }))
+
+    {
+        <div class="card-group">
+            <div class="card p-4">
+                <div class="card-body">
+
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+
+                    <h1>Recupera tu contraseña</h1>
+                    <p class="text-muted">Introduce el correo electrónico o el nombre de tu cuenta.</p>
+
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="icon-user"></i></span>
+                        </div>
+                        @Html.TextBoxFor(m => m.CorreoElectronicoCuenta, new { @class = CssClass.Form.Control, placeholder = "Correo electrónico o tu cuenta", id = "CorreoElectronicoCuenta" })
+                        @Html.ValidationMessageFor(m => m.CorreoElectronicoCuenta, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-primary px-4" type="submit" id="create">RECUPERAR</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
+                <div class="card-body text-center">
+                    <div>
+                        <h2>Informacion adicional, para el usuario.... o eliminar. (Opcional)</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button type="button" class="btn btn-primary active mt-3">Ayuda Adicional (Opcional)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+  
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+              //Codigo para evitar que el login se muestre en llamadas AJAX cuando termino la sesion
+            var count_elements = $('.app').length;
+            if (count_elements > 1) {
+                window.location.href = "@com.cpp.calypso.web.Constantes.AUTENTIFICACION_LOGIN";
+            }
+
+        });
+    </script>
+
+}
+
+

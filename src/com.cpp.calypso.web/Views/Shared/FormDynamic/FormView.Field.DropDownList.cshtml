@@ -1,0 +1,94 @@
+﻿ 
+ 
+ 
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FieldForm"].'
+
+        return;
+    }
+
+    var formModelView = ViewData["FromDyanamic.FormModelView"] as FormModelView;
+    if (formModelView == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe  ViewData["FormModelView"].'
+
+        return;
+    }
+
+
+    Type fieldType = fieldForm.FieldType;
+
+    Object metadata = null;
+    IEnumerable<SelectListItem> selectList = null;
+
+    if (formModelView.Metadata != null && formModelView.Metadata.ContainsKey(fieldForm.Name))
+    {
+        metadata = formModelView.Metadata[fieldForm.Name];
+    }
+
+    if (metadata == null || !(fieldType.Implements<IEntity>()))
+    {
+        @:TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe  metadata, para @fieldType.Name, o tipo no implementa IEntity
+        return;
+    }
+
+
+    var options = new DropDownListWidgetOption();
+    if (!string.IsNullOrWhiteSpace(fieldForm.Options))
+    {
+
+        try
+        {
+            options = JsonConvert.DeserializeObject<DropDownListWidgetOption>(fieldForm.Options);
+        }
+        catch (Exception)
+        {
+            //TODO: Analizar si controlar excepcion o lanzar...
+            throw;
+        }
+    }
+
+    var list = metadata as IEnumerable<IEntity>;
+    object selectedValue = null;
+
+    if (!string.IsNullOrWhiteSpace(options.PropertyRef))
+    {
+
+        selectedValue = fieldForm.GetValue(Model, options.PropertyRef);
+
+    }
+    else {
+
+        int? id = fieldForm.GetId(Model);
+        if (id.HasValue) {
+            selectedValue = id.Value;
+        }
+
+    }
+
+
+    if (selectedValue != null)
+    {
+        selectList = new SelectList(list, "Id", null, selectedValue);
+    }
+    else
+    {
+        selectList = new SelectList(list, "Id", null);
+    }
+}
+
+@if (!string.IsNullOrWhiteSpace(options.PropertyRef))
+{
+    //El valor seleccionado, debe ser guardo en la propiedad de referencia. Y no en la propiedad definida en fieldForm.Name
+    @Html.DropDownList(options.PropertyRef, selectList, new { @class = "form-control" })
+}
+else
+{
+    @Html.DropDownList(fieldForm.Name, selectList, new { @class = "form-control" })
+}

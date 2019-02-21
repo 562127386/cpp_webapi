@@ -1,0 +1,56 @@
+﻿
+
+@model TreeModelView
+
+
+
+@{
+
+    var searchView = Model.SearchView.Layout as Search;
+
+    if (searchView == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: Model.SearchView.Layout no es del tipo Search.'
+
+        return;
+    }
+
+    var i = 0;
+}
+
+
+<div class="nuc_search_view col-lg-12">
+
+    @using (Ajax.BeginForm("Search", null, new AjaxOptions { UpdateTargetId = "nuc_pnl_ToUpdate", OnComplete = "nuc_search_OnComplete", OnSuccess = "nuc_search_OnSuccess", OnFailure = "nuc_search_OnFailure" }, new { id = "nuc_frm_Search" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        using (Html.BeginPanel())
+        {
+
+            using (Html.BeginPanelBody(new { @class = "row" }))
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.Hidden("nuc_view_search_name", Model.SearchView.Name)
+
+                foreach (var row in searchView.Fields)
+                {
+                    @Html.Partial("FormDynamic/SearchView.Row", row)
+
+                    i++;
+                }
+
+            }
+
+            using (Html.BeginPanelFooter())
+            {
+                <button class="center-block btn btn-primary" type="submit" id="nuc_btn_search">
+                    <i class="fa fa-search"></i>
+                    Buscar
+                </button>
+            }
+        }
+    }
+</div>

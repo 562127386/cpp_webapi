@@ -1,0 +1,65 @@
+﻿ 
+
+
+@model FormModelView
+
+@{
+
+    var title = string.Format("Editar {0}", Html.Title(Model));
+
+    ViewBag.Title = title;
+}
+
+
+
+
+@section page_title {@title}
+
+@section view_form {
+
+    <div class="nuc_form_view">
+        <div class="panel panel-default">
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                using (Html.BeginPanel())
+                {
+
+                    using (Html.BeginPanelBody())
+                    {
+                    
+                        <div class="form-compact">
+
+
+                            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+
+                            @Html.Partial("FormDynamic/FormView.Edit")
+
+                        </div>
+
+                    }
+                    using (@Html.BeginPanelFooter())
+                    {
+                     
+
+                        <button class="btn btn-primary" type="submit" id="create">
+                            <i class="fa fa-save"></i>
+                            Guardar
+                        </button>
+                        @Html.ActionLink("Cancelar", "Index", new object { }, new { @class = "btn btn-default" })
+                           
+
+                    }
+                }
+            }
+
+
+
+        </div>
+    </div>
+}
+ 

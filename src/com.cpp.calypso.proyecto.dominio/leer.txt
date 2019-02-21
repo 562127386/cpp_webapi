@@ -1,0 +1,3 @@
+﻿Colocar las clases de Negocio
+
+- Deben heredar de Entity

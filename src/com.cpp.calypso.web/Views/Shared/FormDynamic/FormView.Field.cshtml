@@ -1,0 +1,57 @@
+﻿ 
+ 
+ 
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FieldForm"].'
+
+        return;
+    }
+ 
+
+    if (string.IsNullOrWhiteSpace(fieldForm.Widget))
+    {
+        //TODO
+        //Por lo pronto lanzar exception para detectar falla, luego a cambiar comportamiento por defecto.
+        //Lanzar exception, o visualizar el generico..(Comportamiento por defecto). 
+
+        @:TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe widget en la definicion del campo [FromDyanamic.FielForm].  Nombre: @fieldForm.Name
+
+        return;
+    }
+
+}
+
+
+@if (!fieldForm.Invisible)
+{
+<div class="form-group row">
+
+
+    @if (string.IsNullOrWhiteSpace(fieldForm.String))
+    {
+        @Html.Label(fieldForm.Name, htmlAttributes: new { @class = "col-md-3 col-form-label" })
+    }
+    else
+    {
+        @Html.Label(fieldForm.String, htmlAttributes: new { @class = "col-md-3 col-form-label" })
+    }
+
+    <div class="col-md-9">
+        @* Segun el Widget, seleccionar el view. ("FormDynamic/FormView.Field.Widget.cshtml") *@
+        @Html.Partial(string.Format("{0}.{1}", "FormDynamic/FormView.Field", fieldForm.Widget), Model)
+
+        @Html.ValidationMessage(fieldForm.Name, "", new { @class = "text-danger" })
+
+    </div>
+
+</div>
+}
+else {
+    @Html.Hidden(fieldForm.Name)
+}

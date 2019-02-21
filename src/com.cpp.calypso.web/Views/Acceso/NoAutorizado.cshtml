@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "NoAutorizado";
+}
+
+@section page_title
+{
+    
+    <h4>No Autorizado</h4>
+}
+
+@if (!string.IsNullOrWhiteSpace(ViewBag.reason))
+{
+     
+    <div class="alert alert-danger">@ViewBag.reason</div>
+}
+else
+{
+    <div class="alert alert-danger">Acceso restringido a la funcionalidad</div>
+}
+
+
+

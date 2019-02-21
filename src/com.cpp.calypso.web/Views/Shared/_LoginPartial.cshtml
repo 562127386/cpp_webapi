@@ -1,0 +1,27 @@
+﻿ 
+ 
+
+@if (Html.IsAuthenticated())
+{
+
+    <ul class="nav navbar-nav navbar-right">
+        
+     <li>
+            <a href="@Url.Action("Salir","Acceso")" data-toggle="tooltip" data-placement="top" title="Cerrar Sesión">
+                <i class="fa fa-sign-in"></i> Cerrar sesión
+            </a>
+        </li>
+ 
+    </ul>
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+
+        <li>@Html.ActionLink("Iniciar sesión", "Ingreso", "Acceso", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+
+    </ul>
+}
+
+

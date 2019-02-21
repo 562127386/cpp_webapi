@@ -1,0 +1,144 @@
+﻿@model  TreeModelView
+
+
+@{
+
+
+    var title = Html.Title(Model);
+    if (!string.IsNullOrEmpty(Model.Title))
+    {
+        title = Model.Title;
+    }
+
+    ViewBag.Title = title;
+
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+}
+
+
+@section page_title
+{
+    <i class="fa fa-tag"></i> @title
+
+}
+
+
+
+@section page_toolbar {
+
+    <ul class="nav nav-tabs float-right" role="tablist">
+
+        @if (Model.View.Details && Html.CheckPermissions(controllerName, "Export"))
+        {
+            <li class="nav-item">
+                <a class="nav-link  nuc_action_export" href="@Url.Action("Export", new { format = "excel"})"
+                   data-toggle="tooltip" data-placement="top" title="Exportar Excel">
+                    <i class="fa fa-file-excel-o"></i> Exportar Excel
+                </a>
+            </li>
+        }
+
+
+        @if (Model.View.Create && Html.CheckPermissions(controllerName, "Create"))
+        {
+            <li class="nav-item">
+                <a href="@Url.Action("Create")" class="nav-link   nuc_action_create">
+                    <i class="fa fa-plus"></i>
+                    Nuevo
+                </a>
+            </li>
+        }
+
+    </ul>
+}
+
+
+@if (!string.IsNullOrWhiteSpace(Model.Mensaje.Texto))
+{
+    @Html.Partial("_ShowAlert", Model.Mensaje)
+}
+
+
+@if (Model.SearchView != null)
+{
+    @Html.Partial("FormDynamic/SearchView")
+}
+
+
+<div id="nuc_pnl_ToUpdate">
+    @Html.Partial("FormDynamic/TreeView")
+</div>
+
+<div id="nuc_pnl_code_additional">
+    @Html.Partial("_IndexCodeAddicional")
+</div>
+
+@section Scripts {
+
+    @Html.Partial("_IndexCodeAddicional.js")
+
+    @if (Model.SearchView != null)
+    {
+
+        //nuc_frmSearch
+
+        <script type="application/javascript">
+
+            var nuc_action_export_link = '';
+
+            function nuc_search_OnComplete(jqXHR,  textStatus){
+                console.debug('nuc_search_OnComplete')
+            }
+
+            function nuc_search_OnSuccess( ajaxContext,  textStatus, jqXHR){
+
+                add_field_link_pagination();
+                add_field_link_export();
+            }
+
+
+            function nuc_search_OnFailure(jqXHR,  ajaxSettings, thrownError){
+                console.error('nuc_search_OnFailure')
+            }
+
+            function add_field_link_pagination(){
+                //Add Values Fields Form, tags a paged
+                $(".pagination-container a").each(function() {
+                        var $this = $(this);
+                        var _href = $this.attr("href");
+                        if (_href){
+                             var _values = $("#nuc_frm_Search").serialize();
+                            $this.attr("href", _href + '&' + _values);
+                        }
+                    });
+            }
+
+            function add_field_link_export(){
+
+                //Add Values Fields Form
+                $("a.nuc_action_export").each(function() {
+                        var $this = $(this);
+                        var _href = nuc_action_export_link; //$this.attr("href");
+                        if (_href){
+                             var _values = $("#nuc_frm_Search").serialize();
+                            $this.attr("href", _href + '&' + _values);
+                        }
+                    });
+
+            }
+
+            $(document).ready(function () {
+
+                 nuc_action_export_link = $("a.nuc_action_export").attr("href");
+                 add_field_link_pagination();
+                 add_field_link_export();
+             });
+
+
+        </script>
+
+    }
+
+}
+
+

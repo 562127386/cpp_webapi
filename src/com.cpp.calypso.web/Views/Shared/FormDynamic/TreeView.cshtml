@@ -1,0 +1,96 @@
+﻿ 
+ 
+@using PagedList.Mvc;
+@using PagedList;
+
+
+
+@model TreeModelView
+
+@{
+    ViewData["FromDyanamic.TreeModelView"] = Model;
+
+    ViewData["FromDyanamic.Tree"] = Model.View;
+}
+
+
+<div class="nuc_tree_view col-lg-12">
+
+    <div class="card">
+        
+        <div class="card-body">
+            
+            <table class="table table-responsive-sm">
+
+                @Html.Partial("FormDynamic/TreeView.Header", Model.View)
+
+                <tbody>
+                    @if (Model.Model != null)
+                    {
+                        foreach (var row in Model.Model)
+                        {
+                            @Html.Partial("FormDynamic/TreeView.Row", row)
+                        }
+                    }
+                    else
+                    {
+                        //DTO
+                        foreach (var row in Model.ModelDto)
+                        {
+                            @Html.Partial("FormDynamic/TreeView.Dto.Row", row)
+                        }
+                    }
+
+                </tbody>
+            </table>
+
+
+            @{
+                var pagedListMetada = Model.PagedListMetaData;
+
+                var totalItems = 0;
+                if (pagedListMetada != null)
+                {
+                    totalItems = pagedListMetada.TotalItemCount;
+                }
+                else
+                {
+                    if (Model.Model != null) {
+                        totalItems = Model.Model.Count();
+                    }
+                    else if (Model.ModelDto != null) {
+                        totalItems = Model.ModelDto.Count();
+                    }
+                }
+            }
+
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="pull-left">
+                        <h4><span class="label label-primary">Total: @totalItems</span></h4>
+                    </div>
+
+                    <div class="pull-right">
+                        @if (pagedListMetada != null)
+                        {
+
+                            var renderOptions = PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { HttpMethod = "POST", UpdateTargetId = "nuc_pnl_ToUpdate", OnComplete = "nuc_search_OnComplete", OnSuccess = "nuc_search_OnSuccess", OnFailure = "nuc_search_OnFailure" });
+                            //Add css
+                            //var list = renderOptions.LiElementClasses.ToList();
+                            //list.Add("nuc_li_paged");
+                            //renderOptions.LiElementClasses = list;
+
+                            <!-- output a paging control that lets the user navigation to the previous page, next page, etc -->
+                            @Html.PagedListPager(pagedListMetada, page => Url.Action("Search", new { page }), renderOptions)
+                        }
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+ 
+    </div>
+
+</div>

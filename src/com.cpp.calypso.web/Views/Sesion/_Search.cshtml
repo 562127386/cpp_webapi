@@ -1,0 +1,62 @@
+﻿
+@model SesionCriteria
+
+
+<div class="panel panel-default">
+
+    @using (Ajax.BeginForm("Search", new object { }, new AjaxOptions { UpdateTargetId = "pnlToUpdate" }, new { id = "frmBusqueda" }))
+    {
+        using (Html.BeginPanelBody())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true)
+
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+
+                        @Html.LabelFor(model => model.Cuenta, htmlAttributes: new { @class = "col-md-2 " + CssClass.Form.Label })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Cuenta, new { htmlAttributes = new { @class = CssClass.Form.Control } })
+                            @Html.ValidationMessageFor(model => model.Cuenta, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Estados, new { @class = "col-md-2 " + CssClass.Form.Label })
+                        <div class="col-md-10">
+                            @Html.EnumDropDownListFor(model => model.Estados, new { @class = CssClass.Form.Control })
+                            @Html.ValidationMessageFor(model => model.Estados, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "col-md-2 " + CssClass.Form.Label })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = CssClass.Form.Control, data_date_language = "es", data_date_format = "dd/mm/yyyy", data_date_today_btn = "linked", data_date_autoclose = "true", data_date_today_highlight = "true" } })
+                            @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+        using (@Html.BeginPanelFooter())
+        {
+
+            <button class="center-block btn btn-primary" type="submit" id="buscar">
+                <i class="fa fa-search"></i>
+                Buscar
+            </button>
+
+        }
+    }
+</div>

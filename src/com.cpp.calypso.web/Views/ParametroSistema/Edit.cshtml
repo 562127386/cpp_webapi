@@ -1,0 +1,23 @@
+﻿ 
+
+@model FormModelView
+
+@{
+    var title = string.Format("Editar {0}", Html.Title(Model));
+    ViewBag.Title = title;
+}
+
+
+@section page_title {<i class="fa fa-edit"></i> @title}
+
+@section view_form {
+
+    <div class="nuc_form_view">
+
+         
+
+            @Html.Partial("_Edit", Model.Model)
+
+        
+    </div>
+}

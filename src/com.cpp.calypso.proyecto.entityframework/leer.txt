@@ -1,0 +1,3 @@
+﻿Colocar las clases de mapeo (Entidad / Relacion)
+
+Implementaciones de Repositorios Personalizados

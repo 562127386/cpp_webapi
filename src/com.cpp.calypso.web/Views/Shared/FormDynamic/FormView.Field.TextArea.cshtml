@@ -1,0 +1,22 @@
+﻿
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData[".FromDyanamic.FieldForm"].'
+
+        return;
+    }
+
+    //TODO: Ver la forma de procesar las opciones de  widget. Ejemplo en el procesamienot de la vista...
+
+    //Options
+    IDictionary<string, object> htmlAttributes = JsonConvert.DeserializeObject<Dictionary<string, object>>(fieldForm.Options);
+    htmlAttributes.Add("class", "form-control");
+
+}
+
+
+@Html.TextArea(fieldForm.Name, htmlAttributes)

@@ -1,0 +1,112 @@
+﻿
+@model PermisoViewModel
+
+@{
+    ViewBag.Title = "Permisos";
+
+}
+
+@section page_title {<i class="fa fa-unlock-alt"></i> Permisos del Rol [@Model.Rol.Codigo - @Model.Rol.Nombre]}
+
+
+
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.AntiForgeryToken()
+
+    @Html.Hidden("idRol", Model.Rol.Id)
+    @Html.Hidden("codigoRol", Model.Rol.Codigo)
+
+    using (Html.BeginPanel())
+    {
+        using (Html.BeginPanelBody())
+        {
+            <table class="table table-hover">
+
+                <tr>
+                    <th>Funcionalidad</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                    <th><input type="checkbox" id="selectAll" /> Permiso</th>
+                </tr>
+
+                @foreach (var item in Model.Funcionalidades)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td colspan="3">
+                            @Html.DisplayFor(modelItem => item.Descripcion)
+                        </td>
+
+                    </tr>
+
+                    //bool check = false;
+
+                    foreach (var accion in item.Acciones)
+                    {
+                        bool check = false;
+                        foreach (var per in Model.Rol.Permisos)
+                        {
+                            if (accion.Id == per.AccionId)
+                            {
+                                check = true;
+                                break;
+                            }
+                        }
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                @accion.Nombre
+                            </td>
+                            <td>
+                                <input type="checkbox"
+                                       name="selectedAccion"
+                                       value="@accion.Id"
+                                       @Html.Raw(check ? "checked=\"checked\"" : "") />
+                            </td>
+                        </tr>
+
+                    }
+
+                }
+
+            </table>
+        }
+
+        using (Html.BeginPanelFooter())
+        {
+            <button class="btn btn-primary" type="submit" id="create">
+                <i class="fa fa-save"></i>
+                Guardar
+            </button>
+            @Html.ActionLink("Cancelar", "Index", new object { }, new { @class = "btn btn-default" })
+        }
+    }
+
+}
+@section Scripts {
+
+
+    <script>
+
+        $('#selectAll').click(function (e) {
+            var table = $(e.target).closest('table');
+            //$('td input:checkbox', table).attr('checked', e.target.checked);
+            $('td input:checkbox', table).prop('checked', this.checked);
+        });
+
+    </script>
+}
+
+
+
+
+
+

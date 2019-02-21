@@ -1,0 +1,31 @@
+﻿
+
+@model TreeModelView
+
+
+<div class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mod-confirmar-rest">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Confirmar</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <div class="p-4">
+                Este proceso enviará un correo electrónico al usuario, con el código de reseteo de Contraseña. ¿Desea realizarlo?
+            </div>
+
+            <input type="hidden" id="mod-confirmar-rest-entity-id" name="mod-confirmar-rest-entity-id">
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="btn-reset-si">Si</button>
+                <button type="button" class="btn btn-primary" data_dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+ 

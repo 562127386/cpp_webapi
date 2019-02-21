@@ -1,0 +1,14 @@
+﻿ 
+1. Trabajar con base de datos
+enable-migrations
+
+Enable-Migrations -ProjectName com.cpp.calypso.tests -StartupProjectName com.cpp.calypso.tests -ContextTypeName com.cpp.calypso.tests.ComunAbpIntegratedDbContext
+
+
+2. Agregar un bloque de migracion. 
+add-migration 'Estructura_Inicial'  -ProjectName  com.cpp.calypso.tests -StartupProjectName com.cpp.calypso.tests 
+
+
+3. Instalar la base de datos se ejecuta:
+Update-Database -ConfigurationTypeName Configuration  -ProjectName com.cpp.calypso.tests  -StartupProjectName com.cpp.calypso.tests 
+

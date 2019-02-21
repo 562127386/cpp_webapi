@@ -1,0 +1,67 @@
+﻿ 
+You can rollback to any migration by using:
+
+Update-Database -TargetMigration:"MigrationName"
+If you want to rollback all migrations you can use:
+
+Update-Database -TargetMigration:0
+or equivalent:
+
+Update-Database -TargetMigration:$InitialDatabase 
+
+Use the Get-Migrations command to get a list of the migration names that have been applied to your database.
+Get-Migrations
+
+
+
+Generacion de base de datos, desde los modelos
+=========================================
+
+
+1. Trabajar con base de datos
+enable-migrations
+
+Enable-Migrations -ProjectName com.cpp.calypso.web -StartupProjectName com.cpp.calypso.web
+
+
+2. Agregar un bloque de migracion. 
+add-migration 'Estructura_Inicial'  -ProjectName com.cpp.calypso.web -StartupProjectName com.cpp.calypso.web
+
+
+3. Instalar la base de datos se ejecuta:
+c
+
+
+4. Agregar otro bloque
+add-migration 'Datos Iniciales'  -ProjectName  com.cpp.calypso.web -StartupProjectName com.cpp.calypso.web
+
+//Agregar llamada a script
+public override void Up()
+{
+    var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Migrations\Script_Datos_Iniciales.sql");
+    Sql(File.ReadAllText(sqlFile));
+}
+
+.... repetir proceso 3 y 4....  segun los bloques que se desea agregar.
+
+
+5. Agregar bloque de Proyectos
+add-migration 'Proyectos'  -ProjectName com.cpp.calypso.web -StartupProjectName com.cpp.calypso.web
+
+
+
+Commandos Adicionales
+======================
+
+Obtener lista de migraciones existentes
+Get-Migrations  -ConfigurationTypeName Configuration
+
+Regresar a una migracion "Etiqueta"
+Update-Database  -ConfigurationTypeName Configuration -TargetMigration:"Etiqueta"
+
+
+Generar Script (todo) desde el inicio hasta la migracion ejecutada... 
+Update-Database -ConfigurationTypeName Configuration -Script -SourceMigration:0
+
+or 
+Update-Database -ConfigurationTypeName Configuration -Script -SourceMigration:$InitialDatabase

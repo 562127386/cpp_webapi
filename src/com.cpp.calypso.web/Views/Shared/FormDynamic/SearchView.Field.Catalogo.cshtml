@@ -1,0 +1,54 @@
+﻿ 
+ 
+@using Campusoft.Nucleo.Service;
+@using  CommonServiceLocator;
+ 
+
+
+@model  FieldSearch
+
+@{
+
+    //TODO: Ver la forma de procesar las opciones de  widget. Ejemplo en el procesamienot de la vista...
+    //IGUAL QUE SE LO HACE CON CAMPOS DE VISTA FORMULARIO
+
+
+    var catalogoService = ServiceLocator.Current.GetInstance<ICatalogoService>();
+
+    var options = new CatalogoWidgetOption();
+    if (!string.IsNullOrWhiteSpace(Model.Options))
+    {
+
+        try
+        {
+            options = JsonConvert.DeserializeObject<CatalogoWidgetOption>(Model.Options);
+        }
+        catch (Exception)
+        {
+            //TODO: Analizar si controlar excepcion o lanzar...
+            throw;
+        }
+    }
+
+    //1. Recuperar Informacion del Catalogo
+    var catalogo = catalogoService.GetItemsCatalogo(options.Codigo).OrderBy(item => item.Nombre);
+
+    if (catalogo == null)
+    {
+        @:TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe  catalogo con codigo  @options.Codigo
+        return;
+    }
+
+
+    IEnumerable<SelectListItem> selectList = null;
+
+    selectList = new SelectList(catalogo, options.CampoClave, null);
+
+
+}
+
+
+@Html.DropDownList(Model.Name, selectList,"", new { @class = "form-control" })
+
+
+

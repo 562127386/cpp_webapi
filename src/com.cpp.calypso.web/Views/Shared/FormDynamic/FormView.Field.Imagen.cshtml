@@ -1,0 +1,36 @@
+﻿ 
+ 
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData[".FromDyanamic.FieldForm"].'
+
+        return;
+    }
+
+    //TODO: RECUPERAR ATRIBUTOS DEL Widget , PARA ESTABLECER  @cols = x, @rows = Y
+
+}
+
+
+@Html.Editor(fieldForm.Name, new { htmlAttributes = new { @type = "file", @class = "form-control" } })
+<input type="text" readonly="" class="form-control" placeholder="Cambiar Imagen...">
+
+
+@{
+    //Preview
+    if (ViewData.Model != null)
+    {
+        var value = fieldForm.GetValue(Model);
+
+        if (value != null)
+        {
+            @Html.RenderImagen(value.ToString(), new { @class = "img_preview" })
+        }
+
+    }
+}

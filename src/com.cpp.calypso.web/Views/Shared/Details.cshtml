@@ -1,0 +1,49 @@
+﻿ 
+
+
+@model FormModelView
+
+
+@{
+
+    var title = string.Format("Visualizar {0}", Html.Title(Model));
+
+    ViewBag.Title = title;
+}
+
+
+@section page_title {<i class="fa fa-eye"></i>  @title}
+
+
+@section view_form {
+
+                     <div class="nuc_form_view">
+
+                         @using (Html.BeginPanel())
+                         {
+
+
+                             using (Html.BeginPanelBody())
+                             {
+                                 <div>
+
+                                     @Html.Partial("FormDynamic/FormView.View")
+                                 </div>
+                             }
+
+                             using (Html.BeginPanelFooter())
+                             {
+                                 
+                                <a href="@Url.Action("Index")" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="@title">
+                                    <i class="fa fa-home"></i> Regresar a Listado
+                                </a>
+                                 
+                             }
+                         }
+
+
+
+
+                     </div>
+}
+

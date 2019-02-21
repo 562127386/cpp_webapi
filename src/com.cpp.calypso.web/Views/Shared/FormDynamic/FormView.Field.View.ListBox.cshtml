@@ -1,0 +1,90 @@
+﻿
+
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FromDyanamic.FieldForm"].'
+
+        return;
+    }
+}
+
+@{
+
+    if (ViewData.Model != null)
+    {
+        var value = fieldForm.GetValue(Model);
+
+        if (value != null && value.GetType().IsGenericType
+&& (value.GetType().GetGenericTypeDefinition() == typeof(IEnumerable<>)
+|| value.GetType().GetGenericTypeDefinition() == typeof(ICollection<>)
+|| value.GetType().GetGenericTypeDefinition().Implements(typeof(IEnumerable<>))
+|| value.GetType().GetGenericTypeDefinition().Implements(typeof(ICollection<>))))
+        {
+            var list = value as IEnumerable<IEntity>;
+            if (list != null)
+            {
+                <ul>
+                    @foreach (var item in list)
+                    {
+                        <li>
+                            @item
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                var listDto = value as IEnumerable<IEntityDto>;
+                if (listDto != null)
+                {
+                    <ul>
+                        @foreach (var item in listDto)
+                        {
+                            <li>
+                                @item
+                            </li>
+                        }
+                    </ul>
+
+                }
+                else
+                {
+                    var listObject = value as IEnumerable<object>;
+
+                    <ul>
+                        @foreach (var item in listObject)
+                        {
+                            <li>
+                                @item
+                            </li>
+                        }
+                    </ul>
+                }
+
+            }
+        }
+        else
+        {
+            if (value != null && value.GetType().IsArray)
+            {
+
+                var list = value as object[];
+                @Html.Raw(string.Join(", ", list))
+
+            }
+            else
+            {
+                var str = string.Format("Error: El campo {0} no se puede visualizar con ListBox.", fieldForm.Name);
+                @:str
+            }
+        }
+
+
+
+    }
+}

@@ -1,0 +1,51 @@
+﻿
+
+@model FormModelView
+
+@{
+    ViewData["FromDyanamic.FormModelView"] = Model;
+}
+ 
+<div class="nuc_form_view">
+
+
+    @foreach (var field in Model.View.Fields)
+    {
+        ViewData["FromDyanamic.FieldForm"] = field;
+
+        if (Model.Model != null)
+        {
+            @Html.Partial("FormDynamic/FormView.Field", Model.Model)
+        }
+        else if (Model.ModelDto != null)
+        {
+            @Html.Partial("FormDynamic/FormView.Field", Model.ModelDto)
+        }
+        else
+        {
+            @: Error: No existe el modelo
+        }
+    }
+
+
+
+    @foreach (var group in Model.View.Group)
+    {
+        ViewData["FromDyanamic.GroupForm"] = group;
+
+        if (Model.Model != null)
+        {
+
+            @Html.Partial("FormDynamic/FormView.Group", Model.Model)
+        }
+        else if (Model.ModelDto != null)
+        {
+            @Html.Partial("FormDynamic/FormView.Group", Model.ModelDto)
+        }
+        else
+        {
+            @: Error: No existe el modelo
+        }
+    }
+
+</div>

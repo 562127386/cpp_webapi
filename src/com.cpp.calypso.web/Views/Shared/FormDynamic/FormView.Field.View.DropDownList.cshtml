@@ -1,0 +1,30 @@
+﻿ 
+ 
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FromDyanamic.FieldForm"].'
+
+        return;
+    }
+}
+
+@{
+    //Preview
+    if (ViewData.Model != null)
+    {
+        var value = fieldForm.GetValue(Model);
+
+        if (value != null)
+        {
+            <text>
+            @value
+            </text>
+        }
+
+    }
+}

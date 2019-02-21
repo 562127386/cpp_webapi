@@ -1,0 +1,31 @@
+﻿ 
+ 
+
+
+@model object
+
+@{
+    var field = ViewData["FromDyanamic.Tree.Field"] as Field;
+    if (field == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FromDyanamic.Tree.Field"].'
+
+        return;
+    }
+}
+
+@{
+    //Preview
+    if (ViewData.Model != null)
+    {
+        var value = field.GetValue(Model);
+
+        if (value != null)
+        {
+            @Html.RenderImagen(value.ToString(), new { @class = "img_preview" })
+        }
+
+    }
+}
+
+

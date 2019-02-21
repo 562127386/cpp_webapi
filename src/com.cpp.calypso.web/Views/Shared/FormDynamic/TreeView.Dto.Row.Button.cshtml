@@ -1,0 +1,64 @@
+﻿ 
+ 
+
+@model IEntityDto
+
+@{
+    var buttonCell = ViewData["FromDyanamic.Button"] as Button;
+    if (buttonCell == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe  ViewData["FromDyanamic.Button"].'
+
+        return;
+    }
+
+    //TODO: CLASS  HELPER
+
+    var actionButton = buttonCell.Name;
+
+    var action = string.Empty;
+    var controller = string.Empty;
+
+    if (actionButton.IndexOf("/") != -1)
+    {
+        controller = actionButton.Split('/')[0];
+        action = actionButton.Split('/')[1];
+    }
+    else {
+        action = actionButton;
+    }
+
+    var classNameAction = "nuc_action_" + action;
+
+
+}
+
+|
+
+@if (buttonCell.Icon != string.Empty)
+{
+    if (controller != string.Empty)
+    {
+        <a data-entity-id="@Model.Id" class="btn btn-info  @classNameAction" href="@Url.Action(action, controller, new { id = Model.Id })" data-toggle="tooltip" data-placement="top" title="@buttonCell.String">
+            <i class="@buttonCell.Icon"></i>
+        </a>
+    }
+    else {
+        <a data-entity-id="@Model.Id" class="btn btn-info  @classNameAction"  href="@Url.Action(action, new { id = Model.Id })" data-toggle="tooltip" data-placement="top" title="@buttonCell.String">
+            <i class="@buttonCell.Icon"></i>
+        </a>
+    }
+}
+else {
+
+    if (controller != string.Empty)
+    {
+        @Html.ActionLink(@buttonCell.String, action, controller, new { id = Model.Id, @class = classNameAction, data_entity_id = Model.Id })
+    }
+    else {
+        @Html.ActionLink(@buttonCell.String, action, new { id = Model.Id, @class = classNameAction, data_entity_id = Model.Id })
+    }
+}
+
+
+ 

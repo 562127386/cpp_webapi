@@ -1,0 +1,3 @@
+﻿@model TimeSpan
+@{ Layout = null;}
+<span id="time" data-time="@Model.Ticks">@Html.FormatValue(Model, "{0:hh\\:mm}")</span>

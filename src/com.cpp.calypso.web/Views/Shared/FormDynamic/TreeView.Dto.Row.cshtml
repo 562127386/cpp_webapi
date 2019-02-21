@@ -1,0 +1,41 @@
+﻿ 
+ 
+
+@model Abp.Application.Services.Dto.IEntityDto
+
+@{
+    var tree = ViewData["FromDyanamic.Tree"] as Tree;
+    if (tree == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FromDyanamic.Tree"].'
+
+        return;
+    }
+}
+
+<tr>
+    @foreach (var field in tree.Fields)
+    {
+        if (!field.Invisible)
+        {
+            <td>
+                @if (string.IsNullOrWhiteSpace(field.Widget))
+                {
+                    @Html.Display(field.Name)
+                }
+                else
+                {
+                    //Segun el Widget, seleccionar el view. ("FormDynamic/TreeView.Field.Widget.cshtml") 
+                    ViewData["FromDyanamic.Tree.Field"] = field;
+                    @Html.Partial(string.Format("{0}.{1}", "FormDynamic/TreeView.Field", field.Widget), Model);
+                }
+            </td>
+        }
+    }
+
+   
+    @Html.Partial("FormDynamic/TreeView.Dto.Row.Action", Model)
+     
+</tr>
+
+

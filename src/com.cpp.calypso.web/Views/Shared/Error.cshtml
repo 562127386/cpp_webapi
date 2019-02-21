@@ -1,0 +1,27 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+
+    var mensajeError = "Existe un inconveniente, vuelva a intentar más tarde";
+    if (Model != null)
+    {
+        var exceptionGeneric = Model.Exception as GenericException;
+        if (exceptionGeneric != null)
+        {
+
+            if (!HttpContext.Current.IsDebuggingEnabled)
+            {
+                mensajeError = exceptionGeneric.FriendlyMessage;
+            }
+            else
+            {
+                mensajeError = string.Format("Excepcion: {0}. Mensaje Amigable: {1}", exceptionGeneric.Message, exceptionGeneric.FriendlyMessage);
+            }
+        }
+    }
+
+}
+
+<div class="alert alert-danger">@mensajeError</div>
+

@@ -1,0 +1,76 @@
+﻿@model CrearUsuarioViewModel
+
+@{
+    var title = string.Format("Editar Usuario");
+    ViewBag.Title = title;
+}
+
+
+@{
+    ViewBag.Modulos = Model.Modulos;
+    ViewBag.Roles = Model.Roles;
+}
+
+
+@section page_title { @title }
+
+
+@section view_form {
+
+    @using (Html.BeginForm("edit", "usuario", FormMethod.Post, new { id = "frmEdit" }))
+    {
+        @Html.AntiForgeryToken()
+
+       
+        using (Html.BeginPanel())
+        {
+            using (Html.BeginPanelBody())
+            {
+                @Html.Partial("_Item", Model.Model)
+            }
+
+            using (Html.BeginPanelFooter())
+            {
+                <button class="btn btn-primary" type="submit" id="create">
+                    <i class="fa fa-save"></i>
+                    Guardar
+                </button>
+                @Html.ActionLink("Cancelar", "Index", new object { }, new { @class = "btn btn-default" })
+            }
+        }
+
+
+    }
+}
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+        var _$form = $('#frmEdit');
+
+        _$form.find('button[type="submit"]').click(function (e) {
+            e.preventDefault();
+
+            if (!_$form.valid()) {
+                return;
+            }
+
+            //RolesNames
+            var roleNames = [];
+            var _$roleCheckboxes = $("input[name='rolesId']:checked");
+            if (_$roleCheckboxes) {
+                for (var roleIndex = 0; roleIndex < _$roleCheckboxes.length; roleIndex++) {
+                    var _$roleCheckbox = $(_$roleCheckboxes[roleIndex]);
+                    roleNames.push(_$roleCheckbox.attr('data-role-name'));
+                }
+            }
+            $("#Roles").val(roleNames);
+
+
+            _$form.submit();
+        });
+
+    </script>
+
+}

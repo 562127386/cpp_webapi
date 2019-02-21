@@ -1,0 +1,49 @@
+﻿<header class="app-header navbar">
+    @if (Html.IsAuthenticated())
+    {
+        <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <ul class="nav navbar-nav d-md-down-none mr-auto">
+            <li class="nav-item px-3">
+                <strong> Usuario: </strong>  @Html.RenderNombreUsuario()
+            </li>
+
+
+            <li class="nav-item  px-3">
+                <strong> Módulo : </strong> @Html.RenderNombreModulo()
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-placement="top" title="Opciones de Usuario">
+                    <i class="fa fa-user-circle-o fa-2x"></i>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>Opciones de Usuario</strong>
+                    </div>
+                    <a class="dropdown-item" id="action_info_user" href="#"><i class="fa fa-user"></i> Información </a>
+                    <div class="divider"></div>
+                    <a class="dropdown-item" href="@Url.Action("Salir","Acceso",new { area = "" })" data-toggle="tooltip" data-placement="top" title="Cerrar Sesión">
+                        <i class="fa fa-lock"></i> Salir
+                    </a>
+
+                </div>
+            </li>
+
+
+        </ul>
+    }
+</header>
+
+ 

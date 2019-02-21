@@ -1,0 +1,64 @@
+﻿ 
+ 
+ 
+
+@model object
+
+@{
+    var fieldForm = ViewData["FromDyanamic.FieldForm"] as FieldForm;
+    if (fieldForm == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe ViewData["FieldForm"].'
+
+        return;
+    }
+
+    var formModelView = ViewData["FromDyanamic.FormModelView"] as FormModelView;
+    if (formModelView == null)
+    {
+        @:'TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe  ViewData["FormModelView"].'
+
+        return;
+    }
+
+
+    Type fieldType = fieldForm.FieldType;
+
+    Object metadata = null;
+    IEnumerable<SelectListItem> selectList = null;
+
+    if (formModelView.Metadata != null && formModelView.Metadata.ContainsKey(fieldForm.Name))
+    {
+        metadata = formModelView.Metadata[fieldForm.Name];
+    }
+
+
+    //1. Si es una collection
+    if (metadata != null && fieldType.IsGenericType
+&& (fieldType.GetGenericTypeDefinition() == typeof(IEnumerable<>)
+|| fieldType.GetGenericTypeDefinition() == typeof(ICollection<>)
+|| fieldType.GetGenericTypeDefinition().Implements(typeof(IEnumerable<>))
+|| fieldType.GetGenericTypeDefinition().Implements(typeof(ICollection<>))))
+    {
+
+        var list = metadata as IEnumerable<IEntity>;
+
+        //Recuperar collection from Model. SelectedValue
+        var selectedValue = fieldForm.GetIds(Model);
+
+        //You want to use MultiSelectList instead which has a constructor to meet your needs:
+        selectList = new MultiSelectList(list, "Id", null, selectedValue);
+
+    }
+    else
+    {
+
+        @:TODO: MEJORAR CONTROL DE ERRORES. ERROR: No existe  metadata, para @fieldType.Name, o tipo no implementa IEntity
+        return;
+    }
+
+}
+
+
+@Html.EditorListBox(fieldForm.Name,
+             selectList, new { @class = "form-control" })

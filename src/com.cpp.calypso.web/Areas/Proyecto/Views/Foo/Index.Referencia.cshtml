@@ -1,0 +1,78 @@
+﻿
+@model Abp.Application.Services.Dto.PagedResultDto<ProyectoDto>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@section page_title
+{
+    <i class="fa fa-tag"></i> COLOCAR TITULO DE LA VISTA
+
+    <h2>Index</h2>
+
+}
+
+
+
+@section page_toolbar {
+
+    <div class="btn-toolbar" role="toolbar">
+
+        page_toolbar: COLOCAR ACCIONES DE LA BARRA SUPERIOR DE LA VISTA
+
+        <a href="@Url.Action("Create")" class="btn btn-primary pull-right nuc_action_create">
+            <i class="fa fa-plus"></i>
+            Nuevo
+        </a>
+
+        @Html.ActionLink("Create New", "Create")
+
+
+    </div>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            Codigo
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Fecha Inicio
+        </th>
+        <th>
+            Fecha Final
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Items)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFinal)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

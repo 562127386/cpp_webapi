@@ -1,0 +1,32 @@
+﻿ 
+ 
+
+@model Tree
+
+<thead>
+    <tr>
+
+        @foreach (var field in Model.Fields)
+        {
+            if (!field.Invisible)
+            {
+                <th data-id="@field.Name">
+                    @field.String
+                </th>
+            }
+            //else {
+
+            //}
+        }
+
+@if (Model.Edit || Model.Delete || Model.Details)
+{
+    <th>
+        Acciones
+    </th>
+
+}
+    </tr>
+</thead>
+
+ 

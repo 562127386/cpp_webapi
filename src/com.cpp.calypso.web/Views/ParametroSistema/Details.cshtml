@@ -1,0 +1,130 @@
+﻿@model  ParametroDetalleViewModel
+
+@{
+    ViewBag.Title = "Parámetro";
+}
+
+@section page_title {<i class="fa fa-eye"></i> Parámetro}
+
+@section view_form {
+
+    <div>
+
+        <div class="nuc_form_view">
+            <div class="panel panel-default">
+                @using (Html.BeginPanelBody())
+                {
+                    <div>
+                        <dl class="dl-horizontal">
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Codigo)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Codigo)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Nombre)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Descripcion)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Descripcion)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Categoria)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Categoria)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Tipo)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Tipo)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Valor)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Valor)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.EsEditable)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.EsEditable)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.FechaCreacion)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.FechaCreacion)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.UsuarioCreacion)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.UsuarioCreacion)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.FechaActualizacion)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.FechaActualizacion)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.UsuarioActualizacion)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.UsuarioActualizacion)
+                            </dd>
+
+
+                        </dl>
+
+
+                    </div>
+                }
+
+                @using (Html.BeginPanelFooter())
+                {
+                    <div>
+                        <a href="@Url.Action("Index")" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Visualizar Parametros">
+                            <i class="fa fa-home"></i> Regresar a Listado
+                        </a>
+
+                    </div>
+                }
+
+
+            </div>
+        </div>
+
+}
+

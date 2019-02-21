@@ -1,0 +1,84 @@
+﻿@model ParametroSistema
+
+
+@using (Html.BeginForm("Edit", "ParametroSistema", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    using (Html.BeginPanel())
+    {
+
+        using (Html.BeginPanelBody())
+        {
+
+<div class="form-horizontal">
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.Codigo)
+    @Html.HiddenFor(model => model.Categoria)
+    @Html.HiddenFor(model => model.Tipo)
+    @Html.HiddenFor(model => model.EsEditable)
+
+
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Codigo, htmlAttributes: new { @class =  "col-md-3 col-form-label" })
+        <div class="col-md-9">
+            @Html.DisplayFor(model => model.Codigo)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class =  "col-md-3 col-form-label" })
+        <div class="col-md-9">
+            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = CssClass.Form.Control } })
+            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class =  "col-md-3 col-form-label" })
+        <div class="col-md-9">
+            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = CssClass.Form.Control } })
+            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Categoria, htmlAttributes: new { @class =  "col-md-3 col-form-label" })
+        <div class="col-md-9">
+            @Html.DisplayFor(model => model.Categoria)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Tipo, htmlAttributes: new { @class =  "col-md-3 col-form-label" })
+        <div class="col-md-9">
+            @Html.DisplayFor(model => model.Tipo)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Valor, htmlAttributes: new { @class =  "col-md-3 col-form-label" })
+        <div class="col-md-9">
+
+            @Html.EditorFor(model => model.Valor, "Parametro_" + Model.Tipo.ToString())
+
+            @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+        }
+        using (@Html.BeginPanelFooter())
+        {
+            <button class="btn btn-primary" type="submit" id="create">
+                <i class="fa fa-save"></i>
+                Guardar
+            </button>
+            @Html.ActionLink("Cancelar", "Index", new object { }, new { @class = "btn btn-default" })
+        }
+    }
+}
+

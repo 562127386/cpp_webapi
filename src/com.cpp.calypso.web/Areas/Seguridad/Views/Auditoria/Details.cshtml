@@ -1,0 +1,117 @@
+﻿
+@model com.cpp.calypso.seguridad.aplicacion.AuditoriaDto
+
+@{
+    ViewBag.Title = "Auditoría";
+
+}
+
+@section page_title {<i class="fa fa-unlock-alt"></i> Auditoría -  Propiedades}
+
+
+@using (Html.BeginPanel())
+{
+    using (Html.BeginPanelBody())
+    {
+                     <div class="row">
+                         <div class="col-md-6">
+                             <dl class="dl-horizontal">
+                                 <dt>
+                                     Entidad
+                                 </dt>
+
+                                 <dd>
+                                     @Html.DisplayFor(model => model.EntityTypeName)
+                                 </dd>
+
+                                 <dt>
+                                     Estado
+                                 </dt>
+
+                                 <dd>
+                                     @Html.DisplayFor(model => model.StateName)
+                                 </dd>
+
+                               
+
+                             </dl>
+
+                         </div>
+                         <div class="col-md-6">
+
+                             <dl class="dl-horizontal">
+                                 <dt>
+                                     Usuario
+                                 </dt>
+
+                                 <dd>
+                                     @Html.DisplayFor(model => model.CreatedBy)
+                                 </dd>
+
+                                 <dt>
+                                     Fecha
+                                 </dt>
+
+                                 <dd>
+                                     @Html.DisplayFor(model => model.CreatedDate)
+                                 </dd>
+ 
+                             </dl>
+
+                         </div>
+                     </div>
+                  
+    }
+}
+
+@using (Html.BeginPanel())
+{
+    using (Html.BeginPanelBody())
+    {
+
+        <table class="table">
+            <tr>
+                <th>
+                    Propiedad
+                </th>
+                <th>
+                    Relación
+                </th>
+                <th>
+                    Valor Anterior
+                </th>
+                <th>
+                    Nuevo Valor
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model.Properties)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PropertyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RelationName)
+                </td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.OldValueFormatted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NewValueFormatted)
+                </td>
+
+            </tr>
+            }
+
+        </table>
+    }
+
+    using (Html.BeginPanelFooter())
+    {
+        @Html.ActionLink("Regresar", "Index", new object { }, new { @class = "btn btn-default" })
+    }
+}
+
