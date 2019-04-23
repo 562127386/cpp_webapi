@@ -1,49 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Abp.Domain.Entities;
-using com.cpp.calypso.comun.dominio;
 
 namespace com.cpp.calypso.proyecto.dominio.Entidades
 {
     [Serializable]
     public class ConsumoVianda : Entity, ISoftDelete
     {
-        [Obligado]
-        [DisplayName("Solicitud")]
         public int SolicitudViandaId { get; set; }
-        public virtual SolicitudVianda SolicitudVianda { get; set; }
-
-        [Obligado]
-        [DisplayName("Colaborador")]
+        public SolicitudVianda SolicitudVianda { get; set; }
         public int ColaboradorId { get; set; }
-        public Colaborador colaborador { get; set; }
+        public Colaborador Colaborador { get; set; }
+        public DateTime FechaConsumoVianda { get; set; }
+        public int EnSitio { get; set; }
+        public string Observaciones { get; set; }
+        public OrigenConsumoVianda OrigenConsumoId { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayName("Fecha Consumo Vianda")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime fecha_consumo_vianda { get; set; }
+        public int Version { get; set; }
 
+        public string Ref { get; set; }
 
-        [Obligado]
-        [DisplayName("En sitio?")]
-        public int en_sitio { get; set; }
-
-        [Obligado]
-        [StringLength(500)]
-        [DisplayName("Observaciones")]
-        public string observaciones { get; set; }
-
-        [Obligado]
-        [DisplayName("Origen Consumo")]
-        public OrigenConsumoVianda origen_consumo_id { get; set; }
-
-
-        [Obligado] [DisplayName("Vigente")] public bool IsDeleted { get; set; } = true;
+        public bool IsDeleted { get; set; }
 
     }
 

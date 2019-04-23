@@ -1,62 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Abp.Domain.Entities;
-using com.cpp.calypso.comun.dominio;
-using com.cpp.calypso.proyecto.dominio.Servicios_Proveedores;
 
-namespace com.cpp.calypso.proyecto.dominio
+namespace com.cpp.calypso.proyecto.dominio.Entidades
 {
     [Serializable]
     public class Proveedor : Entity, ISoftDelete
     {
-        public Proveedor()
-        {
+        public ProveedorTipoIdentificacion TipoIdentificacion { get; set; }
 
-        }
+        public string Identificacion { get; set; }
 
-        [Obligado]
-        [DisplayName("Tipo Identificación")]
-        public ProveedorTipoIdentificacion tipo_identificacion { get; set; }
+        public string RazonSocial { get; set; }
 
-        [Obligado]
-        [StringLength(20)]
-        [DisplayName("Identificación")]
-        public string identificacion { get; set; }
+        public ProveedorEstado Estado { get; set; }
 
-        [Obligado]
-        [StringLength(100)]
-        [DisplayName("Razón Social")]
-        public string razon_social { get; set; }
+        public int EsExterno { get; set; }
 
+        public string Coordenadas { get; set; }
 
-        [Obligado]
-        [DisplayName("Estado")]
-        public ProveedorEstado estado { get; set; }
+        public string CodigoSap { get; set; }
 
-        [Obligado]
-        [DisplayName("Es externo?")]
-        public int es_externo { get; set; }
+        public string Usuario { get; set; }
 
+        public virtual ICollection<ContratoProveedor> Contratos { get; set; }
 
-        [StringLength(50)]
-        [DisplayName("Coordenadas")]
-        public string coordenadas { get; set; }
+        public int Version { get; set; }
 
-        [StringLength(30)]
-        [DisplayName("Código SAP")]
-        public string codigo_sap { get; set; }
-
-        [DisplayName("Usuario")]
-        [StringLength(60)]
-        public string usuario { get; set; }
-
-
-        public virtual ICollection<ContratoProveedor> contratos { get; set; }
+        public string Ref { get; set; }
 
         public bool IsDeleted { get; set; }
     }

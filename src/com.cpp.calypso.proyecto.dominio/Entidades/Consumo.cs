@@ -1,56 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Abp.Domain.Entities;
-using com.cpp.calypso.comun.dominio;
-using com.cpp.calypso.proyecto.dominio.Servicios_Proveedores;
 
 namespace com.cpp.calypso.proyecto.dominio.Entidades
 {
     [Serializable]
     public class Consumo : Entity, ISoftDelete
     {
-        [Obligado]
-        [DisplayName("Proveedor")]
         public int ProveedorId { get; set; }
-        public virtual Proveedor Proveedor { get; set; }
 
+        public Proveedor Proveedor { get; set; }
 
-        [Obligado]
-        [DisplayName("Colaborador")]
         public int ColaboradorId { get; set; }
-        public Colaborador colaborador { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayName("Fecha")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime fecha { get; set; }
+        public Colaborador Colaborador { get; set; }
 
-        [Obligado]
-        [DisplayName("Tipo Comida")]
+        public DateTime Fecha { get; set; }
+
         public int TipoComidaId { get; set; }
-        public virtual Catalogo TipoComida { get; set; }
 
-        [Obligado]
-        [DisplayName("Opción Comida")]
+        public Catalogo TipoComida { get; set; }
+
         public int OpcionComidaId { get; set; }
-        public virtual Catalogo OpcionComida { get; set; }
 
-        [Obligado]
-        [StringLength(500)]
-        [DisplayName("Observación")]
-        public string observacion { get; set; }
+        public Catalogo OpcionComida { get; set; }
 
-        [DisplayName("Origen Consumo")]
-        public OrigenConsumo origen_consumo_id { get; set; }
+        public string Observacion { get; set; }
 
-        [Obligado]
-        [DisplayName("Vigente")]
-        public bool IsDeleted { get; set; } = true;
+        public OrigenConsumo OrigenConsumoId { get; set; }
+
+        public int Version { get; set; }
+
+        public string Ref { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 
     public enum OrigenConsumo

@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using com.cpp.calypso.proyecto.dominio.Entidades;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using com.cpp.calypso.proyecto.dominio.Entidades;
 
 namespace com.cpp.calypso.proyecto.entityframework.Mapping
 {
     public class ZonaMap : EntityTypeConfiguration<Zona>
     {
-
         public ZonaMap()
         {
             ToTable("zonas", "SCH_CATALOGOS");
@@ -20,7 +14,13 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Id)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
+            Property(d => d.Id).HasColumnName("id");
+            Property(d => d.Codigo).HasColumnName("codigo");
+            Property(d => d.Nombre).HasColumnName("nombre");
+
             Property(d => d.IsDeleted).HasColumnName("vigente");
+            Property(d => d.Version).HasColumnName("m_version");
+            Property(d => d.Ref).HasColumnName("m_ref");
         }
     }
 }

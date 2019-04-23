@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using com.cpp.calypso.proyecto.dominio.Entidades;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using com.cpp.calypso.proyecto.dominio;
 
 namespace com.cpp.calypso.proyecto.entityframework.Mapping
 {
@@ -19,23 +14,33 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Id)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            //Add evitar error:
-            //'FK_SCH_SERVICIOS.consumos_SCH_SERVICIOS.tipos_opciones_comidas_TipoOpcionComidaId' on table 'consumos' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.
-            HasRequired(a => a.TipoComida)
-                .WithMany()
-                .HasForeignKey(u => u.TipoComidaId)
-                .WillCascadeOnDelete(false);
-
-            HasRequired(a => a.OpcionComida)
-                .WithMany()
-                .HasForeignKey(u => u.OpcionComidaId)
-                .WillCascadeOnDelete(false);
-
-
-            Property(d => d.IsDeleted).HasColumnName("vigente");
+            Property(d => d.Id).HasColumnName("id");
             Property(d => d.TipoComidaId).HasColumnName("tipo_comida_id");
             Property(d => d.OpcionComidaId).HasColumnName("opcion_comida");
             Property(d => d.ProveedorId).HasColumnName("proveedor_id");
+            Property(d => d.Cedula).HasColumnName("cedula");
+            Property(d => d.FechaConsumo).HasColumnName("fecha_consumo");
+            Property(d => d.UsuarioGeneradorId).HasColumnName("usuario_generador_id");
+            Property(d => d.OrigenConsumoId).HasColumnName("origen_consumo_id");
+
+            Property(d => d.IsDeleted).HasColumnName("vigente");
+            Property(d => d.Version).HasColumnName("m_version");
+            Property(d => d.Ref).HasColumnName("m_ref");
+
+            this.HasRequired(t => t.Proveedor)
+                .WithMany()
+                .HasForeignKey(d => d.ProveedorId)
+                .WillCascadeOnDelete(false);
+
+            this.HasRequired(t => t.TipoComida)
+                .WithMany()
+                .HasForeignKey(d => d.TipoComidaId)
+                .WillCascadeOnDelete(false);
+
+            this.HasRequired(t => t.OpcionComida)
+                .WithMany()
+                .HasForeignKey(d => d.OpcionComidaId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

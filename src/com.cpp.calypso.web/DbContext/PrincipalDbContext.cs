@@ -1,6 +1,7 @@
 ﻿using Abp.Domain.Entities;
 using com.cpp.calypso.comun.entityframework;
 using com.cpp.calypso.framework;
+using com.cpp.calypso.proyecto.entityframework.Mapping;
 using com.cpp.calypso.seguridad.aplicacion;
 using com.cpp.calypso.seguridad.entityframework;
 using Newtonsoft.Json;
@@ -8,11 +9,11 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using com.cpp.calypso.proyecto.dominio.Servicios_Proveedores;
-using com.cpp.calypso.proyecto.entityframework.Mapping;
+using com.cpp.calypso.proyecto.dominio.Entidades;
 using Z.EntityFramework.Plus;
 
 namespace com.cpp.calypso.web
@@ -29,12 +30,11 @@ namespace com.cpp.calypso.web
         public DbSet<AuditoriaEntidad> Auditorias { get; set; }
         public DbSet<AuditoriaPropiedad> AuditoriasPropiedades { get; set; }
 
-
         //public DbSet<AuditEntry> AuditEntries { get; set; }
         //public DbSet<AuditEntryProperty> AuditEntryProperties { get; set; }
 
         #endregion
-        public DbSet<TipoCatalogo> TiposCatalogos { get; set; }
+        public DbSet<TipoCatalogo> TipoCatalogo { get; set; }
 
 
         protected static ConcurrentDictionary<string, Dictionary<string, string>> AuditedDictionary

@@ -1,0 +1,1 @@
+Debug | notauth:: | 22/04/2019 20:49:07:497 | 12 | com.cpp.calypso.webapi.GenericApiApplication | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApiApplication..ctor => NLogLogger.DebugFormat |  | !

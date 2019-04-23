@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Abp.Application.Services.Dto;
-using Abp.AutoMapper;
-using com.cpp.calypso.comun.dominio;
+﻿using Abp.AutoMapper;
+using com.cpp.calypso.comun.aplicacion;
 using com.cpp.calypso.proyecto.dominio.Entidades;
+using System;
+using Abp.Application.Services.Dto;
 
 namespace com.cpp.calypso.proyecto.aplicacion.Dto
 {
@@ -15,19 +10,14 @@ namespace com.cpp.calypso.proyecto.aplicacion.Dto
     [Serializable]
     public class LocacionDto : EntityDto
     {
-        [Obligado]
-        [DisplayName("Código")]
-        public int codigo { get; set; }
-
-        [DisplayName("Zona")]
+        public int Codigo { get; set; }
         public int ZonaId { get; set; }
-        public virtual string zona_nombre { get; set; }
+        public ZonaDto Zona { get; set; }
+        public string Nombre { get; set; }
+        public int Version { get; set; }
 
-        [Obligado]
-        [DisplayName("Nombre")]
-        [LongitudMayorAttribute(200)]
-        public string nombre { get; set; }
+        public string Ref { get; set; }
 
-
+        public bool IsDeleted { get; set; }
     }
 }

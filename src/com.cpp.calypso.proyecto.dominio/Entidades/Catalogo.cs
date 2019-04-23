@@ -1,31 +1,28 @@
-﻿using Abp.Domain.Entities;
-using com.cpp.calypso.comun.dominio;
+﻿using com.cpp.calypso.comun.dominio;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Abp.Domain.Entities;
 
-namespace com.cpp.calypso.proyecto.dominio.Servicios_Proveedores
+namespace com.cpp.calypso.proyecto.dominio.Entidades
 {
     [Serializable]
     public class Catalogo : Entity, ISoftDelete
     {
+
         [Obligado]
         [LongitudMayor(200)]
         [DisplayName("Nombre")]
-        public string nombre { get; set; }
+        public string Nombre { get; set; }
 
         [Obligado]
         [LongitudMayor(20)]
         [DisplayName("Código")]
-        public string codigo { get; set; }
+        public string Codigo { get; set; }
 
         [Obligado]
         [LongitudMayor(800)]
         [DisplayName("Descripción")]
-        public string descripcion { get; set; }
+        public string Descripcion { get; set; }
 
         [Obligado]
         [DisplayName("Tipo Catálogo")]
@@ -36,13 +33,16 @@ namespace com.cpp.calypso.proyecto.dominio.Servicios_Proveedores
 
         [Obligado]
         [DisplayName("Predeterminado")]
-        public bool predeterminado { get; set; }
+        public bool Predeterminado { get; set; }
 
 
         [Obligado]
         [DisplayName("Ordinal")]
-        public int ordinal { get; set; }
+        public int Ordinal { get; set; }
 
+        public int Version { get; set; }
+
+        public string Ref { get; set; }
 
         public bool IsDeleted { get; set; }
     }

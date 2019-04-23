@@ -1,6 +1,6 @@
-﻿using com.cpp.calypso.proyecto.dominio.Servicios_Proveedores;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
+using com.cpp.calypso.proyecto.dominio.Entidades;
 
 
 namespace com.cpp.calypso.proyecto.entityframework.Mapping
@@ -15,7 +15,14 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Id)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
+            Property(d => d.Id).HasColumnName("id");
+            Property(d => d.Codigo).HasColumnName("codigo");
+            Property(d => d.Nombre).HasColumnName("nombre");
+            Property(d => d.TipoOrdenamiento).HasColumnName("tipo_ordenamiento");
+
             Property(d => d.IsDeleted).HasColumnName("vigente");
+            Property(d => d.Version).HasColumnName("m_version");
+            Property(d => d.Ref).HasColumnName("m_ref");
         }
     }
 }

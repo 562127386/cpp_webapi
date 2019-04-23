@@ -1,71 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Abp.Domain.Entities;
+using System;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Abp.Domain.Entities;
-using com.cpp.calypso.comun.dominio;
-using com.cpp.calypso.proyecto.dominio.Entidades;
 
-namespace com.cpp.calypso.proyecto.dominio
+namespace com.cpp.calypso.proyecto.dominio.Entidades
 {
     [Serializable]
     public class ContratoProveedor : Entity, ISoftDelete
     {
-        [Obligado]
-        [DisplayName("Proveedor")]
         public int ProveedorId { get; set; }
-        public virtual Proveedor Proveedor { get; set; }
 
-        [Obligado]
-        [DisplayName("Empresa")]
+        public Proveedor Proveedor { get; set; }
+
         public int EmpresaId { get; set; }
-        public virtual Empresa Empresa { get; set; }
 
-        [Obligado]
-        [StringLength(30)]
-        [DisplayName("Código")]
-        public string codigo { get; set; }
+        public Empresa Empresa { get; set; }
 
+        public string Codigo { get; set; }
 
-        [Obligado]
-        [StringLength(500)]
-        [DisplayName("Objeto")]
-        public string objeto { get; set; }
+        public string Objeto { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayName("Fecha inicio")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime fecha_inicio { get; set; }
+        public DateTime FechaInicio { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayName("Fecha fin")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime fecha_fin { get; set; }
+        public DateTime FechaFin { get; set; }
 
-        [Obligado]
-        [DisplayName("Plazo Pago")]
-        public int plazo_pago { get; set; }
+        public int PlazoPago { get; set; }
 
-        [Obligado]
-        [DisplayName("Monto")]
-        public decimal monto { get; set; }
+        public decimal Monto { get; set; }
 
-        [Obligado]
-        [StringLength(10)]
-        [DisplayName("Orden de Compra")]
-        public string orden_compra { get; set; }
+        public string OrdenCompra { get; set; }
 
-        [Obligado]
-        [DisplayName("Estado")]
-        public ContratoEstado estado { get; set; }
+        public ContratoEstado Estado { get; set; }
 
-        [DisplayName("Documentación")]
-        public int? documentacion_id { get; set; }
+        public int? DocumentacionId { get; set; }
 
-        public virtual ICollection<TipoOpcionComida> tipo_opciones_comida { get; set; }
+        public int Version { get; set; }
+
+        public string Ref { get; set; }
 
         public bool IsDeleted { get; set; }
     }

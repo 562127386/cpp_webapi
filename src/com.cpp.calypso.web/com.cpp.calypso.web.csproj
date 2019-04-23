@@ -463,6 +463,10 @@
     <Compile Include="Migrations\201902212151137_Consumos_y_SolicitudesViandas.Designer.cs">
       <DependentUpon>201902212151137_Consumos_y_SolicitudesViandas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904230204001_EntidadesSincronizacion.cs" />
+    <Compile Include="Migrations\201904230204001_EntidadesSincronizacion.Designer.cs">
+      <DependentUpon>201904230204001_EntidadesSincronizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -971,6 +975,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902212151137_Consumos_y_SolicitudesViandas.resx">
       <DependentUpon>201902212151137_Consumos_y_SolicitudesViandas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904230204001_EntidadesSincronizacion.resx">
+      <DependentUpon>201904230204001_EntidadesSincronizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

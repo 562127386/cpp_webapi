@@ -389,7 +389,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\Controllers\Models\LoginModel.cs" />
+    <Compile Include="Api\Controllers\Models\SincronizacionModel.cs" />
     <Compile Include="Api\Controllers\RolController.cs" />
+    <Compile Include="Api\Controllers\SincronizacionController.cs" />
     <Compile Include="Api\Controllers\TestController.cs" />
     <Compile Include="Api\Controllers\TokenController.cs" />
     <Compile Include="App_Start\Startup.cs" />

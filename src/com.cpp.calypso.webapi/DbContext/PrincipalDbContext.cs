@@ -11,6 +11,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using com.cpp.calypso.proyecto.dominio.Entidades;
+using com.cpp.calypso.proyecto.entityframework.Mapping;
 using Z.EntityFramework.Plus;
 
 namespace com.cpp.calypso.web
@@ -30,7 +32,7 @@ namespace com.cpp.calypso.web
 
         //public DbSet<AuditEntry> AuditEntries { get; set; }
         //public DbSet<AuditEntryProperty> AuditEntryProperties { get; set; }
-
+        public DbSet<TipoCatalogo> TipoCatalogo { get; set; }
         #endregion
 
 
@@ -187,6 +189,7 @@ namespace com.cpp.calypso.web
             //modelBuilder.Configurations.AddFromAssembly(typeof(FooMap).Assembly);
 
             //Otros... 
+            modelBuilder.Configurations.AddFromAssembly(typeof(TipoCatalogoMap).Assembly);
 
             modelBuilder.Entity<AuditEntry>()
                           .Map<AuditoriaEntidad>

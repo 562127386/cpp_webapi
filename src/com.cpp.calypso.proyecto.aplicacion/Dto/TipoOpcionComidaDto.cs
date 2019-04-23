@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using com.cpp.calypso.comun.dominio;
 using com.cpp.calypso.proyecto.dominio.Entidades;
+using com.cpp.calypso.comun.aplicacion;
 
 namespace com.cpp.calypso.proyecto.aplicacion.Dto
 {
@@ -15,26 +10,17 @@ namespace com.cpp.calypso.proyecto.aplicacion.Dto
     [Serializable]
     public class TipoOpcionComidaDto : EntityDto
     {
-        [Obligado]
-        [DisplayName("Contrato")]
         public int ContratoId { get; set; }
+        public ContratoProveedorDto Contrato { get; set; }
+        public int OpcionComidaId { get; set; }
+        public CatalogoDto OpcionComida { get; set; }
+        public decimal Costo { get; set; }
+        public int TipoComidaId { get; set; }
+        public CatalogoDto TipoComida { get; set; }
+        public int Version { get; set; }
 
-        [Obligado]
-        [DisplayName("Opciones Comida")]
-        public int opcion_comida_id { get; set; }
+        public string Ref { get; set; }
 
-        public string opcion_comida_nombre { get; set; }
-
-        [Obligado]
-        [DisplayName("Costo")]
-        public decimal costo { get; set; }
-
-        [Obligado]
-        [DisplayName("Tipo Comida")]
-        public int tipo_comida_id { get; set; }
-
-        public string tipo_comida_nombre { get; set; }
-
-
+        public bool IsDeleted { get; set; }
     }
 }

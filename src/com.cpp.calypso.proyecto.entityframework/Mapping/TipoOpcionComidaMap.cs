@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using com.cpp.calypso.proyecto.dominio.Entidades;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using com.cpp.calypso.proyecto.dominio.Entidades;
 
 namespace com.cpp.calypso.proyecto.entityframework.Mapping
 {
@@ -19,25 +14,31 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Id)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-
-            HasRequired(p => p.opcion_comida)
-                .WithMany()
-                .HasForeignKey(s => s.opcion_comida_id)
-                .WillCascadeOnDelete(false);
-
-            HasRequired(p => p.tipo_comida)
-                .WithMany()
-                .HasForeignKey(s => s.tipo_comida_id)
-                .WillCascadeOnDelete(false);
-
-            // Relationships
-            this.HasRequired(t => t.contrato)
-                .WithMany(t => t.tipo_opciones_comida)
-                .HasForeignKey(d => d.ContratoId);
-
+            Property(d => d.Id).HasColumnName("id");
             Property(d => d.ContratoId).HasColumnName("contrato_id");
-            Property(d => d.IsDeleted).HasColumnName("vigente");
+            Property(d => d.Costo).HasColumnName("costo");
+            Property(d => d.OpcionComidaId).HasColumnName("opcion_comida_id");
+            Property(d => d.TipoComidaId).HasColumnName("tipo_comida_id");
 
+
+            Property(d => d.IsDeleted).HasColumnName("vigente");
+            Property(d => d.Version).HasColumnName("m_version");
+            Property(d => d.Ref).HasColumnName("m_ref");
+
+            this.HasRequired(t => t.Contrato)
+                .WithMany()
+                .HasForeignKey(d => d.ContratoId)
+                .WillCascadeOnDelete(false);
+
+            this.HasRequired(t => t.OpcionComida)
+                .WithMany()
+                .HasForeignKey(d => d.OpcionComidaId)
+                .WillCascadeOnDelete(false);
+
+            this.HasRequired(t => t.TipoComida)
+                .WithMany()
+                .HasForeignKey(d => d.TipoComidaId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

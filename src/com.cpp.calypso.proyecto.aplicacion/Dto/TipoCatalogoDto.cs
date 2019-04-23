@@ -1,41 +1,23 @@
-﻿using Abp.Application.Services.Dto;
-using Abp.AutoMapper;
-using com.cpp.calypso.proyecto.dominio.Servicios_Proveedores;
+﻿using Abp.AutoMapper;
+using com.cpp.calypso.proyecto.dominio.Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Abp.Domain.Entities;
-using com.cpp.calypso.comun.dominio;
+using Abp.Application.Services.Dto;
+using com.cpp.calypso.comun.aplicacion;
 
-namespace com.cpp.calypso.proyecto.aplicacion
+namespace com.cpp.calypso.proyecto.aplicacion.Dto
 {
     [AutoMap(typeof(TipoCatalogo))]
     [Serializable]
     public class TipoCatalogoDto : EntityDto
     {
-        [Obligado]
-        [LongitudMayor(200)]
-        [DisplayName("Nombre")]
-        public string nombre { get; set; }
+        public string Nombre { get; set; }
+        public string Codigo { get; set; }
+        public string TipoOrdenamiento { get; set; }
+        public bool Editable { get; set; }
 
-        [Obligado]
-        [LongitudMayor(50)]
-        [DisplayName("Código")]
-        public string codigo { get; set; }
+        public int Version { get; set; }
 
-
-        [Obligado]
-        [LongitudMayor(3)]
-        [DisplayName("Tipo Ordinal")]
-        public string tipo_ordenamiento { get; set; }
-
-
-        [Obligado]
-        public bool editable { get; set; }
-
+        public string Ref { get; set; }
 
         public bool IsDeleted { get; set; }
     }
