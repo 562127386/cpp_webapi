@@ -115,8 +115,6 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                 .Where(o => o.Version > version)
                 .ToList()
                 ;
-            var list = _repository.GetAll().ToList();
-            var entity = _repository.Get(1);
             return registros;
         }
 
@@ -129,6 +127,10 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             {
                 objJson.Add("m_ref", entidad.Ref);
             }
+            objJson.Add("m_version", entidad.Version);
+            objJson.Add("vigente", GetStringFromBool(entidad.IsDeleted == false));
+
+
             objJson.Add("codigo", entidad.Codigo);
             objJson.Add("descripcion", entidad.Descripcion);
             objJson.Add("nombre", entidad.Nombre);

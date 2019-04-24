@@ -99,7 +99,6 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                     //Si la instancia ha sido persistida realizamos un update
                     
                     Repository.Update(instancia);
-                    System.Diagnostics.Debug.WriteLine(" ... 7.1.10 ...");
 
                     //Vinculamos el ID SqlServer al Id Sqlite
                     lKeyBinding.Add(instancia.Id, obj.GetValue("lkey").Value<int>());
@@ -114,8 +113,6 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                 .Where(o => o.Version > version)
                 .ToList()
                 ;
-            var list = _repository.GetAll().ToList();
-            var entity = _repository.Get(1);
             return registros;
         }
 
@@ -130,6 +127,9 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             }
             objJson.Add("m_version", entidad.Version);
             objJson.Add("vigente", GetStringFromBool(entidad.IsDeleted == false));
+
+
+
             objJson.Add("codigo", entidad.Codigo);
             objJson.Add("nombre", entidad.Nombre);
             objJson.Add("tipo_ordenamiento", entidad.TipoOrdenamiento);
