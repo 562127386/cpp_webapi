@@ -116,5 +116,41 @@ namespace com.cpp.calypso.comun.aplicacion
             var items = await Repository.GetAllListAsync();
             return items.Select(MapToEntityDto).ToList();
         }
+
+
+        public virtual DateTime GetDateFromString(string date)
+        {
+            DateTime oDate = DateTime.ParseExact(date, "yyyy-MM-dd", null);
+            return oDate;
+        }
+
+        public virtual string GetStringFromDate(DateTime? oDate)
+        {
+            if (oDate == null)
+            {
+                return "";
+            }
+            return String.Format("{0:yyyy-MM-dd}", oDate);
+        }
+
+        public virtual DateTime GetDateTimeFromString(string date)
+        {
+            DateTime oDate = DateTime.ParseExact(date, "yyyy-MM-dd HH:mm:ss", null);
+            return oDate;
+        }
+
+        public virtual string GetStringFromDateTime(DateTime? oDate)
+        {
+            if (oDate == null)
+            {
+                return "";
+            }
+            return String.Format("{0:yyyy-MM-dd HH:mm:ss}", oDate);
+        }
+
+        public virtual string GetStringFromBool(bool b)
+        {
+            return b ? "1" : "0";
+        }
     }
 }

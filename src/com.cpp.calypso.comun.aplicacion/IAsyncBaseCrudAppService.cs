@@ -1,6 +1,7 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -40,10 +41,15 @@ namespace com.cpp.calypso.comun.aplicacion
         /// <returns></returns>
         Task<TEntityDto> InsertOrUpdateAsync(TCreateInput entityDto);
 
-        
+
+        DateTime GetDateFromString(string date);
+
+        string GetStringFromDate(DateTime? oDate);
+
+        DateTime GetDateTimeFromString(string date);
+
+        string GetStringFromDateTime(DateTime? oDate);
+
+        string GetStringFromBool(bool b);
     }
-
-     
-
-
 }

@@ -177,10 +177,5 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
 
             return entity;
         }
-
-        protected string GetStringFromBool(bool b)
-        {
-            return b ? "1" : "0";
-        }
     }
 }

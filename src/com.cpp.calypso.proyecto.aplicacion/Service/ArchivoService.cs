@@ -129,9 +129,11 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("m_version", entidad.Version);
             objJson.Add("vigente", GetStringFromBool(entidad.IsDeleted == false));
 
-
-            
-            
+            objJson.Add("tipo", entidad.TipoContenido);
+            objJson.Add("nombre", entidad.Nombre);
+            objJson.Add("codigo", entidad.Codigo);
+            objJson.Add("contenido", entidad.Hash);
+            objJson.Add("fecha_registro", GetStringFromDateTime(entidad.FechaRegistro));
 
             return objJson;
         }
@@ -163,14 +165,15 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                 entity.IsDeleted = (bool)json["vigente"] == false;
             }
 
-            
+
+            entity.TipoContenido = (string)json["tipo"];
+            entity.Codigo = (string)json["codigo"];
+            entity.Nombre = (string)json["nombre"];
+            entity.Hash = (string)json["contenido"];
+            entity.FechaRegistro = GetDateTimeFromString((string)json["fecha_registro"]);
+
 
             return entity;
-        }
-
-        protected string GetStringFromBool(bool b)
-        {
-            return b ? "1" : "0";
         }
     }
 }
