@@ -129,10 +129,15 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("m_version", entidad.Version);
             objJson.Add("vigente", GetStringFromBool(entidad.IsDeleted == false));
 
-
-            //objJson.Add("solicitud_viandas", entidad.SolicitudVianda.);
-            
-
+            objJson.Add("solicitud_vianda_id", entidad.SolicitudViandaId);
+            objJson.Add("colaborador_id", entidad.ColaboradorId);
+            objJson.Add("fecha_consumo_vianda", GetStringFromDateTime(entidad.FechaConsumoVianda));
+            objJson.Add("en_sitio", entidad.EnSitio);
+            objJson.Add("observaciones", entidad.Observaciones);
+            //objJson.Add("detalle_liquidacion_id", entidad.D);
+            objJson.Add("origen_consumo_id", entidad.OrigenConsumoId == OrigenConsumoVianda.Cedula ? 1
+                : entidad.OrigenConsumoId == OrigenConsumoVianda.Qr ? 2
+                : 3);
             return objJson;
         }
 
@@ -163,6 +168,16 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                 entity.IsDeleted = (bool)json["vigente"] == false;
             }
 
+
+            entity.SolicitudViandaId = (int)json["solicitud_vianda_id"];
+            entity.ColaboradorId = (int)json["colaborador_id"];
+            entity.FechaConsumoVianda = GetDateTimeFromString((string)json["fecha_consumo_vianda"]);
+            entity.EnSitio = (int)json["en_sitio"];
+            entity.Observaciones = (string)json["observaciones"];
+            int OrigenConsumoJson = (int)json["origen_consumo_id"];
+            entity.OrigenConsumoId = OrigenConsumoJson == 1 ? OrigenConsumoVianda.Cedula
+                : OrigenConsumoJson == 2 ? OrigenConsumoVianda.Qr
+                : OrigenConsumoVianda.Huella;
 
 
             return entity;

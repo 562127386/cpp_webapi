@@ -8,17 +8,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace com.cpp.calypso.proyecto.aplicacion.Service
 {
-    public class EmpresaAsyncBaseCrudAppService : AsyncBaseCrudAppService<Empresa, EmpresaDto, 
-        PagedAndFilteredResultRequestDto>, IEmpresaAsyncBaseCrudAppService
+    public class ConsumoViandaQrAsyncBaseCrudAppService :
+        AsyncBaseCrudAppService<ConsumoViandaQr, ConsumoViandaQrDto, PagedAndFilteredResultRequestDto>,
+        IConsumoViandaQrAsyncBaseCrudAppService
     {
-        public EmpresaAsyncBaseCrudAppService(IBaseRepository<Empresa> repository) : base(repository)
+        public ConsumoViandaQrAsyncBaseCrudAppService(IBaseRepository<ConsumoViandaQr> repository) : base(repository)
         {
             Repository = repository;
         }
 
-        public IBaseRepository<Empresa> Repository { get; }
+        public IBaseRepository<ConsumoViandaQr> Repository { get; }
+
+
 
         public JArray Sync(int version, JArray registrosJson, List<int> usuarios)
         {
@@ -38,7 +42,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             return lKeyBinding;
         }
 
-        public JArray GenerarRegistrosMovil(Dictionary<int, int> diccionario, List<Empresa> registros)
+        public JArray GenerarRegistrosMovil(Dictionary<int, int> diccionario, List<ConsumoViandaQr> registros)
         {
             //IList<TEntityDto> registros = GetRegistros(version, usuariosId);
 
@@ -71,7 +75,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             {
 
                 //Recuperamos la instacia de la entidad concreta
-                Empresa instancia = JsonToObject(obj);
+                ConsumoViandaQr instancia = JsonToObject(obj);
 
                 Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
                 Int32 unixTimestamp2 = (Int32)(DateTime.UtcNow.Subtract(new DateTime())).TotalSeconds;
@@ -105,7 +109,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             return lKeyBinding;
         }
 
-        public List<Empresa> GetRegistros(int version, List<int> usuarios)
+        public List<ConsumoViandaQr> GetRegistros(int version, List<int> usuarios)
         {
             var registros = Repository.GetAll()
                 .Where(o => o.Version > version)
@@ -114,7 +118,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             return registros;
         }
 
-        public JObject ObjectToJson(Empresa entidad)
+        public JObject ObjectToJson(ConsumoViandaQr entidad)
         {
             JObject objJson = new JObject();
 
@@ -126,27 +130,19 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("m_version", entidad.Version);
             objJson.Add("vigente", GetStringFromBool(entidad.IsDeleted == false));
 
-            objJson.Add("tipo_identificacion", entidad.TipoIdentificacion == TipoDeIdentificacion.Cedula ? 1
-                : entidad.TipoIdentificacion == TipoDeIdentificacion.Passaporte ? 2
-                : 0);
+            objJson.Add("solicitud_vianda_id", entidad.SolicitudViandaId);
             objJson.Add("identificacion", entidad.Identificacion);
-            objJson.Add("razon_social", entidad.RazonSocial);
-            objJson.Add("direccion", entidad.Direccion);
-            objJson.Add("correo", entidad.Correo);
-            objJson.Add("estado", entidad.Estado);
-            objJson.Add("telefono", entidad.Telefono);
-            objJson.Add("tipo_sociedad", entidad.TipoSociedad == TipoDeSociedad.Especial ? 1 : 0);
-            objJson.Add("observaciones", entidad.Observaciones);
-            objJson.Add("es_principal", entidad.EsPrincipal);
-            objJson.Add("tipo_contribuyente", entidad.TipoContribuyente == TipoDeContribuyente.Normal ? 0 : 1);
-            objJson.Add("codigo_sap", entidad.CodigoSap);
+            objJson.Add("fecha_consumo_vianda", GetStringFromDateTime(entidad.FechaConsumoVianda));
+            objJson.Add("origen_consumo_id", entidad.OrigenConsumoId == OrigenConsumoVianda.Cedula ? 1
+                : entidad.OrigenConsumoId == OrigenConsumoVianda.Qr ? 2
+                : 3);
             return objJson;
         }
 
-        public Empresa JsonToObject(JObject json)
+        public ConsumoViandaQr JsonToObject(JObject json)
         {
 
-            var entity = new Empresa();
+            var entity = new ConsumoViandaQr();
             if (json.Property("m_id") != null && (int)json.Property("m_id") != 0)
             {
                 int id = (int)json["m_id"];
@@ -171,23 +167,13 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             }
 
 
-            int TipoIdentificacion = (int)json["tipo_identificacion"];
-            entity.TipoIdentificacion = TipoIdentificacion == 1 ? TipoDeIdentificacion.Cedula
-                : TipoIdentificacion == 2 ? TipoDeIdentificacion.Passaporte
-                : TipoDeIdentificacion.RUC;
+            entity.SolicitudViandaId = (int)json["solicitud_vianda_id"];
             entity.Identificacion = (string)json["identificacion"];
-            entity.RazonSocial = (string)json["razon_social"];
-            entity.Direccion = (string)json["direccion"];
-            entity.Correo = (string)json["correo"];
-            entity.Estado = (bool)json["estado"];
-            entity.Telefono = (string)json["telefono"];
-            int TipoSociedad = (int)json["tipo_sociedad"];
-            entity.TipoSociedad = TipoSociedad == 1 ? TipoDeSociedad.Especial : TipoDeSociedad.Normal;
-            entity.Observaciones = (string)json["observaciones"];
-            entity.EsPrincipal = (bool)json["es_principal"];
-            int TipoContribuyente = (int)json["tipo_contribuyente"];
-            entity.TipoContribuyente = TipoContribuyente == 0 ? TipoDeContribuyente.Normal : TipoDeContribuyente.Especial;
-            entity.CodigoSap = (string)json["codigo_sap"];
+            entity.FechaConsumoVianda = GetDateTimeFromString((string)json["fecha_consumo_vianda"]);
+            int OrigenConsumoJson = (int)json["origen_consumo_id"];
+            entity.OrigenConsumoId = OrigenConsumoJson == 1 ? OrigenConsumoVianda.Cedula
+                : OrigenConsumoJson == 2 ? OrigenConsumoVianda.Qr
+                : OrigenConsumoVianda.Huella;
 
             return entity;
         }
