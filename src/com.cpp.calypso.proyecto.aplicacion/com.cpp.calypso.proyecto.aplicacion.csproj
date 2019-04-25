@@ -203,8 +203,8 @@
     <Compile Include="Service\ColaboradorService.cs" />
     <Compile Include="Service\ConsumoQrService.cs" />
     <Compile Include="Service\ConsumoService.cs" />
-    <Compile Include="Service\ConsumoVianda.cs" />
-    <Compile Include="Service\ConsumoViandaQr.cs" />
+    <Compile Include="Service\ConsumoViandaService.cs" />
+    <Compile Include="Service\ConsumoViandaQrService.cs" />
     <Compile Include="Service\ContratoProveedorService.cs" />
     <Compile Include="Service\DetalleDistribucionService.cs" />
     <Compile Include="Service\DistribucionViandaService.cs" />
