@@ -149,6 +149,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constantes\CatalogosCodigos.cs" />
     <Compile Include="Entidades\Archivo.cs" />
     <Compile Include="Entidades\Catalogo.cs" />
     <Compile Include="Entidades\Colaborador.cs" />

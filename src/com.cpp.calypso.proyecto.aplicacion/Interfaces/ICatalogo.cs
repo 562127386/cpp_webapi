@@ -9,5 +9,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Interfaces
     public interface ICatalogoAsyncBaseCrudAppService : IAsyncBaseCrudAppService<Catalogo, CatalogoDto, PagedAndFilteredResultRequestDto>
     {
         JArray Sync(int version, JArray registrosJson, List<int> usuariosId);
+        string DoQuery(string query_string);
+
     }
 }

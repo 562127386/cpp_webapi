@@ -8,6 +8,10 @@ using System.Collections.Generic;
 using System.Linq;
 using com.cpp.calypso.comun.dominio;
 using com.cpp.calypso.proyecto.aplicacion.Interfaces;
+using System.Configuration;
+using com.cpp.calypso.proyecto.dominio.Constantes;
+using System.Data.SqlClient;
+using Newtonsoft.Json;
 
 namespace com.cpp.calypso.proyecto.aplicacion.Service
 {
@@ -176,6 +180,42 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.Ordinal = (int)json.GetValue("ordinal");
 
             return entity;
+        }
+
+        public string DoQuery(string query_string)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings[CatalogosCodigos.DEFAULT_NAME_CONNECTION_STRING].ConnectionString;
+                {
+                    using (SqlConnection connection = new SqlConnection(
+                               connectionString))
+                    {
+                        SqlCommand command = new SqlCommand(query_string, connection);
+                        command.Connection.Open();
+                        //command.ExecuteNonQuery();
+                        List<Object> Listado = new List<Object>();
+                        var reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                for (int i = 0; i < reader.FieldCount; i++)
+                                {
+                                    Listado.Add(reader.GetValue(i));
+                                }
+                            }
+                        }
+                        var JsonResult = JsonConvert.SerializeObject(Listado);
+                        return Listado.Count > 0 ? JsonResult : reader.RecordsAffected + " fila(s) afectadas";
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }
 }
