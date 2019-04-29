@@ -24,7 +24,7 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Nombre).HasColumnName("nombre");
             Property(d => d.FechaRegistro).HasColumnName("fecha_registro");
             Property(d => d.Hash).HasColumnName("hash");
-            Property(d => d.TipoContenido).HasColumnName("tipo_contenido");
+            Property(d => d.TipoContenido).HasColumnName("contenido");
             Property(d => d.IsDeleted).HasColumnName("vigente");
             Property(d => d.Version).HasColumnName("m_version");
             Property(d => d.Ref).HasColumnName("m_ref");

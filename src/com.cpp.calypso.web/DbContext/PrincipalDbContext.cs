@@ -202,7 +202,7 @@ namespace com.cpp.calypso.web
                     .ToTable("AuditoriaPropiedad", "SCH_USUARIOS");
 
             //Desactivar eliminado en cascada por defecto
-            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
 

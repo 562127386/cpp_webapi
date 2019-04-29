@@ -127,10 +127,10 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("m_version", entidad.Version);
             objJson.Add("vigente", GetStringFromBool(entidad.IsDeleted == false));
 
-            objJson.Add("conductor_asigando_id", entidad.ConductorAsigandoId);
+            objJson.Add("conductor_asignado_id", entidad.ConductorAsigandoId);
             objJson.Add("estado", entidad.Estado);
             objJson.Add("fecha", GetStringFromDate(entidad.Fecha));
-            objJson.Add("hora_asigancion_transporte", GetStringFromDateTime(entidad.HoraAsigancionTransporte));
+            objJson.Add("hora_asignacion_transporte", GetStringFromDateTime(entidad.HoraAsigancionTransporte));
             objJson.Add("liquidado", entidad.Liquidado);
             objJson.Add("proveedor_id", entidad.ProveedorId);
             objJson.Add("tipo_comida_id", entidad.TipoComidaId);
@@ -169,10 +169,10 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             }
 
 
-            entity.ConductorAsigandoId = (int)json.GetValue("conductor_asigando_id");
+            entity.ConductorAsigandoId = (int)json.GetValue("conductor_asignado_id");
             entity.Estado = (int)json.GetValue("estado");
             entity.Fecha = GetDateFromString((string)json.GetValue("fecha"));
-            entity.HoraAsigancionTransporte = GetDateFromString((string)json.GetValue("hora_asigancion_transporte"));
+            entity.HoraAsigancionTransporte = GetDateFromString((string)json.GetValue("hora_asignacion_transporte"));
             entity.Liquidado = (int)json.GetValue("liquidado");
             entity.ProveedorId = (int)json.GetValue("proveedor_id");
             entity.TipoComidaId = (int)json.GetValue("tipo_comida_id");

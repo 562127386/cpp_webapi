@@ -467,6 +467,22 @@
     <Compile Include="Migrations\201904230204001_EntidadesSincronizacion.Designer.cs">
       <DependentUpon>201904230204001_EntidadesSincronizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904252308096_EntidadesComplementarias.cs" />
+    <Compile Include="Migrations\201904252308096_EntidadesComplementarias.Designer.cs">
+      <DependentUpon>201904252308096_EntidadesComplementarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904262328524_AddColaboradorHuellaDigital.cs" />
+    <Compile Include="Migrations\201904262328524_AddColaboradorHuellaDigital.Designer.cs">
+      <DependentUpon>201904262328524_AddColaboradorHuellaDigital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904262338594_NotNullHuellaDigital.cs" />
+    <Compile Include="Migrations\201904262338594_NotNullHuellaDigital.Designer.cs">
+      <DependentUpon>201904262338594_NotNullHuellaDigital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904270131090_RenameEmpresaId.cs" />
+    <Compile Include="Migrations\201904270131090_RenameEmpresaId.Designer.cs">
+      <DependentUpon>201904270131090_RenameEmpresaId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -978,6 +994,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904230204001_EntidadesSincronizacion.resx">
       <DependentUpon>201904230204001_EntidadesSincronizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904252308096_EntidadesComplementarias.resx">
+      <DependentUpon>201904252308096_EntidadesComplementarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904262328524_AddColaboradorHuellaDigital.resx">
+      <DependentUpon>201904262328524_AddColaboradorHuellaDigital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904262338594_NotNullHuellaDigital.resx">
+      <DependentUpon>201904262338594_NotNullHuellaDigital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904270131090_RenameEmpresaId.resx">
+      <DependentUpon>201904270131090_RenameEmpresaId.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

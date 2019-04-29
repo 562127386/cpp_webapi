@@ -1,0 +1,1424 @@
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loading Abp modules... | AbpModuleManager.LoadAllModules => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Found 17 ABP modules in total. | AbpModuleManager.LoadAllModules => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.web.App_Start.WebModule, com.cpp.calypso.web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.comun.entityframework.ComunEntityFrameworkModule, com.cpp.calypso.comun.entityframework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.comun.dominio.ComunDominioModule, com.cpp.calypso.comun.dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.framework.FrameworkModule, com.cpp.calypso.framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.seguridad.entityframework.SeguridadEntityFrameworkModule, com.cpp.calypso.entityframework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.proyecto.entityframework.ProyectoEntityFrameworkModule, com.cpp.calypso.proyecto.entityframework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.comun.aplicacion.ComunAplicacionModule, com.cpp.calypso.comun.aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.seguridad.aplicacion.SeguridadAplicacionModule, com.cpp.calypso.seguridad.aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.proyecto.aplicacion.ProyectoAplicacionModule, com.cpp.calypso.proyecto.aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:13:5913 | 1 | Abp.Modules.AbpModuleManager             | 17 modules loaded. | AbpModuleManager.LoadAllModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:14:5914 | 1 | Abp.EntityFramework.AbpEntityFrameworkModule | Registering DbContext: com.cpp.calypso.web.PrincipalDbContext, com.cpp.calypso.web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpEntityFrameworkModule.RegisterGenericRepositoriesAndMatchDbContexes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.Localization.LocalizationManager     | Initializing 2 localization sources. | LocalizationManager.InitializeSources => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.Localization.LocalizationManager     | Initialized localization source: Abp | LocalizationManager.InitializeSources => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.Localization.LocalizationManager     | Initialized localization source: AbpWeb | LocalizationManager.InitializeSources => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.BackgroundJobs.BackgroundJobManager  | Start background worker: Abp.BackgroundJobs.BackgroundJobManager | BackgroundWorkerBase.Start => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | Found 29 classes define auto mapping attributes | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.ModuloFuncionalidDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.CrearUsuarioDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.ModuloDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.MyUsuarioDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.RolDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.RolPermisosDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.PermisoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.AccionDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.UsuarioDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ArchivoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.CatalogoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ColaboradorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ConsumoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ConsumoQrDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ConsumoViandaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ConsumoViandaQrDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ContratoProveedorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.DetalleDistribucionDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.DistribucionViandaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.EmpresaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.LocacionDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.MenuProveedorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.OpcionComidaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ProveedorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.SolicitudViandaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.TipoAccionEmpresaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.TipoCatalogoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.TipoOpcionComidaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:20:5920 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ZonaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:21:5921 | 1 | Abp.Logging.LogHelper                    | Dynamic web api controller is created for type 'com.cpp.calypso.seguridad.aplicacion.IAuditoriaService' with service name 'app/auditoriaService'. | AbpWebApiModule.PostInitialize => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:21:5921 | 1 | Abp.Logging.LogHelper                    | Dynamic web api controller is created for type 'com.cpp.calypso.seguridad.aplicacion.IModuloService' with service name 'app/moduloService'. | AbpWebApiModule.PostInitialize => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:21:5921 | 1 | Abp.Logging.LogHelper                    | Dynamic web api controller is created for type 'com.cpp.calypso.seguridad.aplicacion.IRolService' with service name 'app/rolService'. | AbpWebApiModule.PostInitialize => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:21:5921 | 1 | Abp.Logging.LogHelper                    | Dynamic web api controller is created for type 'com.cpp.calypso.seguridad.aplicacion.IUsuarioService' with service name 'app/usuarioService'. | AbpWebApiModule.PostInitialize => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:22:5922 | 7 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:22:5922 | 7 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:23:5923 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:23:5923 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:23:5923 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:28:5928 | 10 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 16:59:28 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Codigo] AS [Codigo], 
+    [Project1].[Nombre] AS [Nombre], 
+    [Project1].[Descripcion] AS [Descripcion], 
+    [Project1].[Categoria] AS [Categoria], 
+    [Project1].[Tipo] AS [Tipo], 
+    [Project1].[Valor] AS [Valor], 
+    [Project1].[EsEditable] AS [EsEditable], 
+    [Project1].[TieneOpciones] AS [TieneOpciones], 
+    [Project1].[LastModificationTime] AS [LastModificationTime], 
+    [Project1].[LastModifierUserId] AS [LastModifierUserId], 
+    [Project1].[CreationTime] AS [CreationTime], 
+    [Project1].[CreatorUserId] AS [CreatorUserId], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id1] AS [Id1], 
+    [Project1].[Valor1] AS [Valor1], 
+    [Project1].[Texto] AS [Texto], 
+    [Project1].[ParametroId] AS [ParametroId]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Codigo] AS [Codigo], 
+        [Extent1].[Nombre] AS [Nombre], 
+        [Extent1].[Descripcion] AS [Descripcion], 
+        [Extent1].[Categoria] AS [Categoria], 
+        [Extent1].[Tipo] AS [Tipo], 
+        [Extent1].[Valor] AS [Valor], 
+        [Extent1].[EsEditable] AS [EsEditable], 
+        [Extent1].[TieneOpciones] AS [TieneOpciones], 
+        [Extent1].[LastModificationTime] AS [LastModificationTime], 
+        [Extent1].[LastModifierUserId] AS [LastModifierUserId], 
+        [Extent1].[CreationTime] AS [CreationTime], 
+        [Extent1].[CreatorUserId] AS [CreatorUserId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Valor] AS [Valor1], 
+        [Extent2].[Texto] AS [Texto], 
+        [Extent2].[ParametroId] AS [ParametroId], 
+        CASE WHEN ([Extent2].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM  [SCH_USUARIOS].[parametros] AS [Extent1]
+        LEFT OUTER JOIN [SCH_USUARIOS].[parametro_opciones] AS [Extent2] ON [Extent1].[Id] = [Extent2].[ParametroId]
+    )  AS [Project1]
+    ORDER BY [Project1].[Id] ASC, [Project1].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 16:59:29 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 39 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 16:59:29 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:29:5929 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:35:5935 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 16:59:36:5936 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 17:02:01:21 | 16 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 17:02:01:21 | 16 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 17:02:01:21 | 16 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 17:02:01:21 | 16 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 25/04/2019 17:02:01:21 | 16 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 17:02:01 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:01:21 | 16 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [UnionAll1].[Id] AS [C1], 
+    [UnionAll1].[Id1] AS [C2], 
+    [UnionAll1].[SecurityStamp] AS [C3], 
+    [UnionAll1].[Cuenta] AS [C4], 
+    [UnionAll1].[Identificacion] AS [C5], 
+    [UnionAll1].[Nombres] AS [C6], 
+    [UnionAll1].[Apellidos] AS [C7], 
+    [UnionAll1].[Correo] AS [C8], 
+    [UnionAll1].[Estado] AS [C9], 
+    [UnionAll1].[PasswordResetCode] AS [C10], 
+    [UnionAll1].[FechaFinalizacionBloqueUtc] AS [C11], 
+    [UnionAll1].[CantidadAccesoFallido] AS [C12], 
+    [UnionAll1].[BloqueoHabilitado] AS [C13], 
+    [UnionAll1].[Password] AS [C14], 
+    [UnionAll1].[IsDeleted] AS [C15], 
+    [UnionAll1].[DeleterUserId] AS [C16], 
+    [UnionAll1].[DeletionTime] AS [C17], 
+    [UnionAll1].[LastModificationTime] AS [C18], 
+    [UnionAll1].[LastModifierUserId] AS [C19], 
+    [UnionAll1].[CreationTime] AS [C20], 
+    [UnionAll1].[CreatorUserId] AS [C21], 
+    [UnionAll1].[C1] AS [C22], 
+    [UnionAll1].[Id2] AS [C23], 
+    [UnionAll1].[EsAdministrador] AS [C24], 
+    [UnionAll1].[EsExterno] AS [C25], 
+    [UnionAll1].[Url] AS [C26], 
+    [UnionAll1].[Parametros] AS [C27], 
+    [UnionAll1].[Codigo] AS [C28], 
+    [UnionAll1].[Nombre] AS [C29], 
+    [UnionAll1].[LastModificationTime1] AS [C30], 
+    [UnionAll1].[LastModifierUserId1] AS [C31], 
+    [UnionAll1].[CreationTime1] AS [C32], 
+    [UnionAll1].[CreatorUserId1] AS [C33], 
+    [UnionAll1].[C2] AS [C34], 
+    [UnionAll1].[C3] AS [C35], 
+    [UnionAll1].[C4] AS [C36], 
+    [UnionAll1].[C5] AS [C37]
+    FROM  (SELECT 
+        CASE WHEN ([Join1].[usuarioId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1], 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Id] AS [Id1], 
+        [Limit1].[SecurityStamp] AS [SecurityStamp], 
+        [Limit1].[Cuenta] AS [Cuenta], 
+        [Limit1].[Identificacion] AS [Identificacion], 
+        [Limit1].[Nombres] AS [Nombres], 
+        [Limit1].[Apellidos] AS [Apellidos], 
+        [Limit1].[Correo] AS [Correo], 
+        [Limit1].[Estado] AS [Estado], 
+        [Limit1].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit1].[Password] AS [Password], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Limit1].[DeleterUserId] AS [DeleterUserId], 
+        [Limit1].[DeletionTime] AS [DeletionTime], 
+        [Limit1].[LastModificationTime] AS [LastModificationTime], 
+        [Limit1].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit1].[CreationTime] AS [CreationTime], 
+        [Limit1].[CreatorUserId] AS [CreatorUserId], 
+        [Join1].[Id] AS [Id2], 
+        [Join1].[EsAdministrador] AS [EsAdministrador], 
+        [Join1].[EsExterno] AS [EsExterno], 
+        [Join1].[Url] AS [Url], 
+        [Join1].[Parametros] AS [Parametros], 
+        [Join1].[Codigo] AS [Codigo], 
+        [Join1].[Nombre] AS [Nombre], 
+        [Join1].[LastModificationTime] AS [LastModificationTime1], 
+        [Join1].[LastModifierUserId] AS [LastModifierUserId1], 
+        [Join1].[CreationTime] AS [CreationTime1], 
+        [Join1].[CreatorUserId] AS [CreatorUserId1], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS varchar(1)) AS [C3], 
+        CAST(NULL AS varchar(1)) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5]
+        FROM   (SELECT TOP (1) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[SecurityStamp] AS [SecurityStamp], 
+            [Extent1].[Cuenta] AS [Cuenta], 
+            [Extent1].[Identificacion] AS [Identificacion], 
+            [Extent1].[Nombres] AS [Nombres], 
+            [Extent1].[Apellidos] AS [Apellidos], 
+            [Extent1].[Correo] AS [Correo], 
+            [Extent1].[Estado] AS [Estado], 
+            [Extent1].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent1].[Password] AS [Password], 
+            [Extent1].[IsDeleted] AS [IsDeleted], 
+            [Extent1].[DeleterUserId] AS [DeleterUserId], 
+            [Extent1].[DeletionTime] AS [DeletionTime], 
+            [Extent1].[LastModificationTime] AS [LastModificationTime], 
+            [Extent1].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent1].[CreationTime] AS [CreationTime], 
+            [Extent1].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent1]
+            WHERE (([Extent1].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent1].[Cuenta] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[usuarioId] AS [usuarioId], [Extent3].[Id] AS [Id], [Extent3].[EsAdministrador] AS [EsAdministrador], [Extent3].[EsExterno] AS [EsExterno], [Extent3].[Url] AS [Url], [Extent3].[Parametros] AS [Parametros], [Extent3].[Codigo] AS [Codigo], [Extent3].[Nombre] AS [Nombre], [Extent3].[LastModificationTime] AS [LastModificationTime], [Extent3].[LastModifierUserId] AS [LastModifierUserId], [Extent3].[CreationTime] AS [CreationTime], [Extent3].[CreatorUserId] AS [CreatorUserId]
+            FROM  [SCH_USUARIOS].[usuario_rol] AS [Extent2]
+            INNER JOIN [SCH_USUARIOS].[roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[rolId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[usuarioId]
+    UNION ALL
+        SELECT 
+        2 AS [C1], 
+        [Limit2].[Id] AS [Id], 
+        [Limit2].[Id] AS [Id1], 
+        [Limit2].[SecurityStamp] AS [SecurityStamp], 
+        [Limit2].[Cuenta] AS [Cuenta], 
+        [Limit2].[Identificacion] AS [Identificacion], 
+        [Limit2].[Nombres] AS [Nombres], 
+        [Limit2].[Apellidos] AS [Apellidos], 
+        [Limit2].[Correo] AS [Correo], 
+        [Limit2].[Estado] AS [Estado], 
+        [Limit2].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit2].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit2].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit2].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit2].[Password] AS [Password], 
+        [Limit2].[IsDeleted] AS [IsDeleted], 
+        [Limit2].[DeleterUserId] AS [DeleterUserId], 
+        [Limit2].[DeletionTime] AS [DeletionTime], 
+        [Limit2].[LastModificationTime] AS [LastModificationTime], 
+        [Limit2].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit2].[CreationTime] AS [CreationTime], 
+        [Limit2].[CreatorUserId] AS [CreatorUserId], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS bit) AS [C3], 
+        CAST(NULL AS bit) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5], 
+        CAST(NULL AS varchar(1)) AS [C6], 
+        CAST(NULL AS varchar(1)) AS [C7], 
+        CAST(NULL AS varchar(1)) AS [C8], 
+        CAST(NULL AS datetime2) AS [C9], 
+        CAST(NULL AS bigint) AS [C10], 
+        CAST(NULL AS datetime2) AS [C11], 
+        CAST(NULL AS bigint) AS [C12], 
+        [Join3].[Id] AS [Id2], 
+        [Join3].[Codigo] AS [Codigo], 
+        [Join3].[Nombre] AS [Nombre], 
+        [Join3].[Descripcion] AS [Descripcion]
+        FROM   (SELECT TOP (1) 
+            [Extent4].[Id] AS [Id], 
+            [Extent4].[SecurityStamp] AS [SecurityStamp], 
+            [Extent4].[Cuenta] AS [Cuenta], 
+            [Extent4].[Identificacion] AS [Identificacion], 
+            [Extent4].[Nombres] AS [Nombres], 
+            [Extent4].[Apellidos] AS [Apellidos], 
+            [Extent4].[Correo] AS [Correo], 
+            [Extent4].[Estado] AS [Estado], 
+            [Extent4].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent4].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent4].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent4].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent4].[Password] AS [Password], 
+            [Extent4].[IsDeleted] AS [IsDeleted], 
+            [Extent4].[DeleterUserId] AS [DeleterUserId], 
+            [Extent4].[DeletionTime] AS [DeletionTime], 
+            [Extent4].[LastModificationTime] AS [LastModificationTime], 
+            [Extent4].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent4].[CreationTime] AS [CreationTime], 
+            [Extent4].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent4]
+            WHERE (([Extent4].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent4].[Cuenta] = @p__linq__0) ) AS [Limit2]
+        INNER JOIN  (SELECT [Extent5].[usuarioId] AS [usuarioId], [Extent6].[Id] AS [Id], [Extent6].[Codigo] AS [Codigo], [Extent6].[Nombre] AS [Nombre], [Extent6].[Descripcion] AS [Descripcion]
+            FROM  [SCH_USUARIOS].[usuario_modulo] AS [Extent5]
+            INNER JOIN [SCH_USUARIOS].[modulos] AS [Extent6] ON [Extent6].[Id] = [Extent5].[moduloId] ) AS [Join3] ON [Limit2].[Id] = [Join3].[usuarioId]) AS [UnionAll1]
+    ORDER BY [UnionAll1].[Id1] ASC, [UnionAll1].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:01:21 | 16 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000001: 'False' (Type = Boolean, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- p__linq__0: 'admin' (Type = String, Size = 4000)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 83 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [UnionAll1].[Id] AS [C1], 
+    [UnionAll1].[Id1] AS [C2], 
+    [UnionAll1].[SecurityStamp] AS [C3], 
+    [UnionAll1].[Cuenta] AS [C4], 
+    [UnionAll1].[Identificacion] AS [C5], 
+    [UnionAll1].[Nombres] AS [C6], 
+    [UnionAll1].[Apellidos] AS [C7], 
+    [UnionAll1].[Correo] AS [C8], 
+    [UnionAll1].[Estado] AS [C9], 
+    [UnionAll1].[PasswordResetCode] AS [C10], 
+    [UnionAll1].[FechaFinalizacionBloqueUtc] AS [C11], 
+    [UnionAll1].[CantidadAccesoFallido] AS [C12], 
+    [UnionAll1].[BloqueoHabilitado] AS [C13], 
+    [UnionAll1].[Password] AS [C14], 
+    [UnionAll1].[IsDeleted] AS [C15], 
+    [UnionAll1].[DeleterUserId] AS [C16], 
+    [UnionAll1].[DeletionTime] AS [C17], 
+    [UnionAll1].[LastModificationTime] AS [C18], 
+    [UnionAll1].[LastModifierUserId] AS [C19], 
+    [UnionAll1].[CreationTime] AS [C20], 
+    [UnionAll1].[CreatorUserId] AS [C21], 
+    [UnionAll1].[C1] AS [C22], 
+    [UnionAll1].[Id2] AS [C23], 
+    [UnionAll1].[EsAdministrador] AS [C24], 
+    [UnionAll1].[EsExterno] AS [C25], 
+    [UnionAll1].[Url] AS [C26], 
+    [UnionAll1].[Parametros] AS [C27], 
+    [UnionAll1].[Codigo] AS [C28], 
+    [UnionAll1].[Nombre] AS [C29], 
+    [UnionAll1].[LastModificationTime1] AS [C30], 
+    [UnionAll1].[LastModifierUserId1] AS [C31], 
+    [UnionAll1].[CreationTime1] AS [C32], 
+    [UnionAll1].[CreatorUserId1] AS [C33], 
+    [UnionAll1].[C2] AS [C34], 
+    [UnionAll1].[C3] AS [C35], 
+    [UnionAll1].[C4] AS [C36], 
+    [UnionAll1].[C5] AS [C37]
+    FROM  (SELECT 
+        CASE WHEN ([Join1].[usuarioId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1], 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Id] AS [Id1], 
+        [Limit1].[SecurityStamp] AS [SecurityStamp], 
+        [Limit1].[Cuenta] AS [Cuenta], 
+        [Limit1].[Identificacion] AS [Identificacion], 
+        [Limit1].[Nombres] AS [Nombres], 
+        [Limit1].[Apellidos] AS [Apellidos], 
+        [Limit1].[Correo] AS [Correo], 
+        [Limit1].[Estado] AS [Estado], 
+        [Limit1].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit1].[Password] AS [Password], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Limit1].[DeleterUserId] AS [DeleterUserId], 
+        [Limit1].[DeletionTime] AS [DeletionTime], 
+        [Limit1].[LastModificationTime] AS [LastModificationTime], 
+        [Limit1].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit1].[CreationTime] AS [CreationTime], 
+        [Limit1].[CreatorUserId] AS [CreatorUserId], 
+        [Join1].[Id] AS [Id2], 
+        [Join1].[EsAdministrador] AS [EsAdministrador], 
+        [Join1].[EsExterno] AS [EsExterno], 
+        [Join1].[Url] AS [Url], 
+        [Join1].[Parametros] AS [Parametros], 
+        [Join1].[Codigo] AS [Codigo], 
+        [Join1].[Nombre] AS [Nombre], 
+        [Join1].[LastModificationTime] AS [LastModificationTime1], 
+        [Join1].[LastModifierUserId] AS [LastModifierUserId1], 
+        [Join1].[CreationTime] AS [CreationTime1], 
+        [Join1].[CreatorUserId] AS [CreatorUserId1], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS varchar(1)) AS [C3], 
+        CAST(NULL AS varchar(1)) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[SecurityStamp] AS [SecurityStamp], 
+            [Extent1].[Cuenta] AS [Cuenta], 
+            [Extent1].[Identificacion] AS [Identificacion], 
+            [Extent1].[Nombres] AS [Nombres], 
+            [Extent1].[Apellidos] AS [Apellidos], 
+            [Extent1].[Correo] AS [Correo], 
+            [Extent1].[Estado] AS [Estado], 
+            [Extent1].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent1].[Password] AS [Password], 
+            [Extent1].[IsDeleted] AS [IsDeleted], 
+            [Extent1].[DeleterUserId] AS [DeleterUserId], 
+            [Extent1].[DeletionTime] AS [DeletionTime], 
+            [Extent1].[LastModificationTime] AS [LastModificationTime], 
+            [Extent1].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent1].[CreationTime] AS [CreationTime], 
+            [Extent1].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent1]
+            WHERE (([Extent1].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[usuarioId] AS [usuarioId], [Extent3].[Id] AS [Id], [Extent3].[EsAdministrador] AS [EsAdministrador], [Extent3].[EsExterno] AS [EsExterno], [Extent3].[Url] AS [Url], [Extent3].[Parametros] AS [Parametros], [Extent3].[Codigo] AS [Codigo], [Extent3].[Nombre] AS [Nombre], [Extent3].[LastModificationTime] AS [LastModificationTime], [Extent3].[LastModifierUserId] AS [LastModifierUserId], [Extent3].[CreationTime] AS [CreationTime], [Extent3].[CreatorUserId] AS [CreatorUserId]
+            FROM  [SCH_USUARIOS].[usuario_rol] AS [Extent2]
+            INNER JOIN [SCH_USUARIOS].[roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[rolId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[usuarioId]
+    UNION ALL
+        SELECT 
+        2 AS [C1], 
+        [Limit2].[Id] AS [Id], 
+        [Limit2].[Id] AS [Id1], 
+        [Limit2].[SecurityStamp] AS [SecurityStamp], 
+        [Limit2].[Cuenta] AS [Cuenta], 
+        [Limit2].[Identificacion] AS [Identificacion], 
+        [Limit2].[Nombres] AS [Nombres], 
+        [Limit2].[Apellidos] AS [Apellidos], 
+        [Limit2].[Correo] AS [Correo], 
+        [Limit2].[Estado] AS [Estado], 
+        [Limit2].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit2].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit2].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit2].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit2].[Password] AS [Password], 
+        [Limit2].[IsDeleted] AS [IsDeleted], 
+        [Limit2].[DeleterUserId] AS [DeleterUserId], 
+        [Limit2].[DeletionTime] AS [DeletionTime], 
+        [Limit2].[LastModificationTime] AS [LastModificationTime], 
+        [Limit2].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit2].[CreationTime] AS [CreationTime], 
+        [Limit2].[CreatorUserId] AS [CreatorUserId], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS bit) AS [C3], 
+        CAST(NULL AS bit) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5], 
+        CAST(NULL AS varchar(1)) AS [C6], 
+        CAST(NULL AS varchar(1)) AS [C7], 
+        CAST(NULL AS varchar(1)) AS [C8], 
+        CAST(NULL AS datetime2) AS [C9], 
+        CAST(NULL AS bigint) AS [C10], 
+        CAST(NULL AS datetime2) AS [C11], 
+        CAST(NULL AS bigint) AS [C12], 
+        [Join3].[Id] AS [Id2], 
+        [Join3].[Codigo] AS [Codigo], 
+        [Join3].[Nombre] AS [Nombre], 
+        [Join3].[Descripcion] AS [Descripcion]
+        FROM   (SELECT TOP (2) 
+            [Extent4].[Id] AS [Id], 
+            [Extent4].[SecurityStamp] AS [SecurityStamp], 
+            [Extent4].[Cuenta] AS [Cuenta], 
+            [Extent4].[Identificacion] AS [Identificacion], 
+            [Extent4].[Nombres] AS [Nombres], 
+            [Extent4].[Apellidos] AS [Apellidos], 
+            [Extent4].[Correo] AS [Correo], 
+            [Extent4].[Estado] AS [Estado], 
+            [Extent4].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent4].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent4].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent4].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent4].[Password] AS [Password], 
+            [Extent4].[IsDeleted] AS [IsDeleted], 
+            [Extent4].[DeleterUserId] AS [DeleterUserId], 
+            [Extent4].[DeletionTime] AS [DeletionTime], 
+            [Extent4].[LastModificationTime] AS [LastModificationTime], 
+            [Extent4].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent4].[CreationTime] AS [CreationTime], 
+            [Extent4].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent4]
+            WHERE (([Extent4].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent4].[Id] = @p__linq__0) ) AS [Limit2]
+        INNER JOIN  (SELECT [Extent5].[usuarioId] AS [usuarioId], [Extent6].[Id] AS [Id], [Extent6].[Codigo] AS [Codigo], [Extent6].[Nombre] AS [Nombre], [Extent6].[Descripcion] AS [Descripcion]
+            FROM  [SCH_USUARIOS].[usuario_modulo] AS [Extent5]
+            INNER JOIN [SCH_USUARIOS].[modulos] AS [Extent6] ON [Extent6].[Id] = [Extent5].[moduloId] ) AS [Join3] ON [Limit2].[Id] = [Join3].[usuarioId]) AS [UnionAll1]
+    ORDER BY [UnionAll1].[Id1] ASC, [UnionAll1].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000001: 'False' (Type = Boolean, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 42 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [UnionAll1].[Id] AS [C1], 
+    [UnionAll1].[Id1] AS [C2], 
+    [UnionAll1].[SecurityStamp] AS [C3], 
+    [UnionAll1].[Cuenta] AS [C4], 
+    [UnionAll1].[Identificacion] AS [C5], 
+    [UnionAll1].[Nombres] AS [C6], 
+    [UnionAll1].[Apellidos] AS [C7], 
+    [UnionAll1].[Correo] AS [C8], 
+    [UnionAll1].[Estado] AS [C9], 
+    [UnionAll1].[PasswordResetCode] AS [C10], 
+    [UnionAll1].[FechaFinalizacionBloqueUtc] AS [C11], 
+    [UnionAll1].[CantidadAccesoFallido] AS [C12], 
+    [UnionAll1].[BloqueoHabilitado] AS [C13], 
+    [UnionAll1].[Password] AS [C14], 
+    [UnionAll1].[IsDeleted] AS [C15], 
+    [UnionAll1].[DeleterUserId] AS [C16], 
+    [UnionAll1].[DeletionTime] AS [C17], 
+    [UnionAll1].[LastModificationTime] AS [C18], 
+    [UnionAll1].[LastModifierUserId] AS [C19], 
+    [UnionAll1].[CreationTime] AS [C20], 
+    [UnionAll1].[CreatorUserId] AS [C21], 
+    [UnionAll1].[C1] AS [C22], 
+    [UnionAll1].[Id2] AS [C23], 
+    [UnionAll1].[EsAdministrador] AS [C24], 
+    [UnionAll1].[EsExterno] AS [C25], 
+    [UnionAll1].[Url] AS [C26], 
+    [UnionAll1].[Parametros] AS [C27], 
+    [UnionAll1].[Codigo] AS [C28], 
+    [UnionAll1].[Nombre] AS [C29], 
+    [UnionAll1].[LastModificationTime1] AS [C30], 
+    [UnionAll1].[LastModifierUserId1] AS [C31], 
+    [UnionAll1].[CreationTime1] AS [C32], 
+    [UnionAll1].[CreatorUserId1] AS [C33], 
+    [UnionAll1].[C2] AS [C34], 
+    [UnionAll1].[C3] AS [C35], 
+    [UnionAll1].[C4] AS [C36], 
+    [UnionAll1].[C5] AS [C37]
+    FROM  (SELECT 
+        CASE WHEN ([Join1].[usuarioId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1], 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Id] AS [Id1], 
+        [Limit1].[SecurityStamp] AS [SecurityStamp], 
+        [Limit1].[Cuenta] AS [Cuenta], 
+        [Limit1].[Identificacion] AS [Identificacion], 
+        [Limit1].[Nombres] AS [Nombres], 
+        [Limit1].[Apellidos] AS [Apellidos], 
+        [Limit1].[Correo] AS [Correo], 
+        [Limit1].[Estado] AS [Estado], 
+        [Limit1].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit1].[Password] AS [Password], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Limit1].[DeleterUserId] AS [DeleterUserId], 
+        [Limit1].[DeletionTime] AS [DeletionTime], 
+        [Limit1].[LastModificationTime] AS [LastModificationTime], 
+        [Limit1].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit1].[CreationTime] AS [CreationTime], 
+        [Limit1].[CreatorUserId] AS [CreatorUserId], 
+        [Join1].[Id] AS [Id2], 
+        [Join1].[EsAdministrador] AS [EsAdministrador], 
+        [Join1].[EsExterno] AS [EsExterno], 
+        [Join1].[Url] AS [Url], 
+        [Join1].[Parametros] AS [Parametros], 
+        [Join1].[Codigo] AS [Codigo], 
+        [Join1].[Nombre] AS [Nombre], 
+        [Join1].[LastModificationTime] AS [LastModificationTime1], 
+        [Join1].[LastModifierUserId] AS [LastModifierUserId1], 
+        [Join1].[CreationTime] AS [CreationTime1], 
+        [Join1].[CreatorUserId] AS [CreatorUserId1], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS varchar(1)) AS [C3], 
+        CAST(NULL AS varchar(1)) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[SecurityStamp] AS [SecurityStamp], 
+            [Extent1].[Cuenta] AS [Cuenta], 
+            [Extent1].[Identificacion] AS [Identificacion], 
+            [Extent1].[Nombres] AS [Nombres], 
+            [Extent1].[Apellidos] AS [Apellidos], 
+            [Extent1].[Correo] AS [Correo], 
+            [Extent1].[Estado] AS [Estado], 
+            [Extent1].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent1].[Password] AS [Password], 
+            [Extent1].[IsDeleted] AS [IsDeleted], 
+            [Extent1].[DeleterUserId] AS [DeleterUserId], 
+            [Extent1].[DeletionTime] AS [DeletionTime], 
+            [Extent1].[LastModificationTime] AS [LastModificationTime], 
+            [Extent1].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent1].[CreationTime] AS [CreationTime], 
+            [Extent1].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent1]
+            WHERE (([Extent1].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[usuarioId] AS [usuarioId], [Extent3].[Id] AS [Id], [Extent3].[EsAdministrador] AS [EsAdministrador], [Extent3].[EsExterno] AS [EsExterno], [Extent3].[Url] AS [Url], [Extent3].[Parametros] AS [Parametros], [Extent3].[Codigo] AS [Codigo], [Extent3].[Nombre] AS [Nombre], [Extent3].[LastModificationTime] AS [LastModificationTime], [Extent3].[LastModifierUserId] AS [LastModifierUserId], [Extent3].[CreationTime] AS [CreationTime], [Extent3].[CreatorUserId] AS [CreatorUserId]
+            FROM  [SCH_USUARIOS].[usuario_rol] AS [Extent2]
+            INNER JOIN [SCH_USUARIOS].[roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[rolId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[usuarioId]
+    UNION ALL
+        SELECT 
+        2 AS [C1], 
+        [Limit2].[Id] AS [Id], 
+        [Limit2].[Id] AS [Id1], 
+        [Limit2].[SecurityStamp] AS [SecurityStamp], 
+        [Limit2].[Cuenta] AS [Cuenta], 
+        [Limit2].[Identificacion] AS [Identificacion], 
+        [Limit2].[Nombres] AS [Nombres], 
+        [Limit2].[Apellidos] AS [Apellidos], 
+        [Limit2].[Correo] AS [Correo], 
+        [Limit2].[Estado] AS [Estado], 
+        [Limit2].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit2].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit2].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit2].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit2].[Password] AS [Password], 
+        [Limit2].[IsDeleted] AS [IsDeleted], 
+        [Limit2].[DeleterUserId] AS [DeleterUserId], 
+        [Limit2].[DeletionTime] AS [DeletionTime], 
+        [Limit2].[LastModificationTime] AS [LastModificationTime], 
+        [Limit2].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit2].[CreationTime] AS [CreationTime], 
+        [Limit2].[CreatorUserId] AS [CreatorUserId], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS bit) AS [C3], 
+        CAST(NULL AS bit) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5], 
+        CAST(NULL AS varchar(1)) AS [C6], 
+        CAST(NULL AS varchar(1)) AS [C7], 
+        CAST(NULL AS varchar(1)) AS [C8], 
+        CAST(NULL AS datetime2) AS [C9], 
+        CAST(NULL AS bigint) AS [C10], 
+        CAST(NULL AS datetime2) AS [C11], 
+        CAST(NULL AS bigint) AS [C12], 
+        [Join3].[Id] AS [Id2], 
+        [Join3].[Codigo] AS [Codigo], 
+        [Join3].[Nombre] AS [Nombre], 
+        [Join3].[Descripcion] AS [Descripcion]
+        FROM   (SELECT TOP (2) 
+            [Extent4].[Id] AS [Id], 
+            [Extent4].[SecurityStamp] AS [SecurityStamp], 
+            [Extent4].[Cuenta] AS [Cuenta], 
+            [Extent4].[Identificacion] AS [Identificacion], 
+            [Extent4].[Nombres] AS [Nombres], 
+            [Extent4].[Apellidos] AS [Apellidos], 
+            [Extent4].[Correo] AS [Correo], 
+            [Extent4].[Estado] AS [Estado], 
+            [Extent4].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent4].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent4].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent4].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent4].[Password] AS [Password], 
+            [Extent4].[IsDeleted] AS [IsDeleted], 
+            [Extent4].[DeleterUserId] AS [DeleterUserId], 
+            [Extent4].[DeletionTime] AS [DeletionTime], 
+            [Extent4].[LastModificationTime] AS [LastModificationTime], 
+            [Extent4].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent4].[CreationTime] AS [CreationTime], 
+            [Extent4].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent4]
+            WHERE (([Extent4].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent4].[Id] = @p__linq__0) ) AS [Limit2]
+        INNER JOIN  (SELECT [Extent5].[usuarioId] AS [usuarioId], [Extent6].[Id] AS [Id], [Extent6].[Codigo] AS [Codigo], [Extent6].[Nombre] AS [Nombre], [Extent6].[Descripcion] AS [Descripcion]
+            FROM  [SCH_USUARIOS].[usuario_modulo] AS [Extent5]
+            INNER JOIN [SCH_USUARIOS].[modulos] AS [Extent6] ON [Extent6].[Id] = [Extent5].[moduloId] ) AS [Join3] ON [Limit2].[Id] = [Join3].[usuarioId]) AS [UnionAll1]
+    ORDER BY [UnionAll1].[Id1] ASC, [UnionAll1].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000001: 'False' (Type = Boolean, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 44 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [UnionAll1].[Id] AS [C1], 
+    [UnionAll1].[Id1] AS [C2], 
+    [UnionAll1].[SecurityStamp] AS [C3], 
+    [UnionAll1].[Cuenta] AS [C4], 
+    [UnionAll1].[Identificacion] AS [C5], 
+    [UnionAll1].[Nombres] AS [C6], 
+    [UnionAll1].[Apellidos] AS [C7], 
+    [UnionAll1].[Correo] AS [C8], 
+    [UnionAll1].[Estado] AS [C9], 
+    [UnionAll1].[PasswordResetCode] AS [C10], 
+    [UnionAll1].[FechaFinalizacionBloqueUtc] AS [C11], 
+    [UnionAll1].[CantidadAccesoFallido] AS [C12], 
+    [UnionAll1].[BloqueoHabilitado] AS [C13], 
+    [UnionAll1].[Password] AS [C14], 
+    [UnionAll1].[IsDeleted] AS [C15], 
+    [UnionAll1].[DeleterUserId] AS [C16], 
+    [UnionAll1].[DeletionTime] AS [C17], 
+    [UnionAll1].[LastModificationTime] AS [C18], 
+    [UnionAll1].[LastModifierUserId] AS [C19], 
+    [UnionAll1].[CreationTime] AS [C20], 
+    [UnionAll1].[CreatorUserId] AS [C21], 
+    [UnionAll1].[C1] AS [C22], 
+    [UnionAll1].[Id2] AS [C23], 
+    [UnionAll1].[EsAdministrador] AS [C24], 
+    [UnionAll1].[EsExterno] AS [C25], 
+    [UnionAll1].[Url] AS [C26], 
+    [UnionAll1].[Parametros] AS [C27], 
+    [UnionAll1].[Codigo] AS [C28], 
+    [UnionAll1].[Nombre] AS [C29], 
+    [UnionAll1].[LastModificationTime1] AS [C30], 
+    [UnionAll1].[LastModifierUserId1] AS [C31], 
+    [UnionAll1].[CreationTime1] AS [C32], 
+    [UnionAll1].[CreatorUserId1] AS [C33], 
+    [UnionAll1].[C2] AS [C34], 
+    [UnionAll1].[C3] AS [C35], 
+    [UnionAll1].[C4] AS [C36], 
+    [UnionAll1].[C5] AS [C37]
+    FROM  (SELECT 
+        CASE WHEN ([Join1].[usuarioId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1], 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Id] AS [Id1], 
+        [Limit1].[SecurityStamp] AS [SecurityStamp], 
+        [Limit1].[Cuenta] AS [Cuenta], 
+        [Limit1].[Identificacion] AS [Identificacion], 
+        [Limit1].[Nombres] AS [Nombres], 
+        [Limit1].[Apellidos] AS [Apellidos], 
+        [Limit1].[Correo] AS [Correo], 
+        [Limit1].[Estado] AS [Estado], 
+        [Limit1].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit1].[Password] AS [Password], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Limit1].[DeleterUserId] AS [DeleterUserId], 
+        [Limit1].[DeletionTime] AS [DeletionTime], 
+        [Limit1].[LastModificationTime] AS [LastModificationTime], 
+        [Limit1].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit1].[CreationTime] AS [CreationTime], 
+        [Limit1].[CreatorUserId] AS [CreatorUserId], 
+        [Join1].[Id] AS [Id2], 
+        [Join1].[EsAdministrador] AS [EsAdministrador], 
+        [Join1].[EsExterno] AS [EsExterno], 
+        [Join1].[Url] AS [Url], 
+        [Join1].[Parametros] AS [Parametros], 
+        [Join1].[Codigo] AS [Codigo], 
+        [Join1].[Nombre] AS [Nombre], 
+        [Join1].[LastModificationTime] AS [LastModificationTime1], 
+        [Join1].[LastModifierUserId] AS [LastModifierUserId1], 
+        [Join1].[CreationTime] AS [CreationTime1], 
+        [Join1].[CreatorUserId] AS [CreatorUserId1], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS varchar(1)) AS [C3], 
+        CAST(NULL AS varchar(1)) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[SecurityStamp] AS [SecurityStamp], 
+            [Extent1].[Cuenta] AS [Cuenta], 
+            [Extent1].[Identificacion] AS [Identificacion], 
+            [Extent1].[Nombres] AS [Nombres], 
+            [Extent1].[Apellidos] AS [Apellidos], 
+            [Extent1].[Correo] AS [Correo], 
+            [Extent1].[Estado] AS [Estado], 
+            [Extent1].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent1].[Password] AS [Password], 
+            [Extent1].[IsDeleted] AS [IsDeleted], 
+            [Extent1].[DeleterUserId] AS [DeleterUserId], 
+            [Extent1].[DeletionTime] AS [DeletionTime], 
+            [Extent1].[LastModificationTime] AS [LastModificationTime], 
+            [Extent1].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent1].[CreationTime] AS [CreationTime], 
+            [Extent1].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent1]
+            WHERE (([Extent1].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[usuarioId] AS [usuarioId], [Extent3].[Id] AS [Id], [Extent3].[EsAdministrador] AS [EsAdministrador], [Extent3].[EsExterno] AS [EsExterno], [Extent3].[Url] AS [Url], [Extent3].[Parametros] AS [Parametros], [Extent3].[Codigo] AS [Codigo], [Extent3].[Nombre] AS [Nombre], [Extent3].[LastModificationTime] AS [LastModificationTime], [Extent3].[LastModifierUserId] AS [LastModifierUserId], [Extent3].[CreationTime] AS [CreationTime], [Extent3].[CreatorUserId] AS [CreatorUserId]
+            FROM  [SCH_USUARIOS].[usuario_rol] AS [Extent2]
+            INNER JOIN [SCH_USUARIOS].[roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[rolId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[usuarioId]
+    UNION ALL
+        SELECT 
+        2 AS [C1], 
+        [Limit2].[Id] AS [Id], 
+        [Limit2].[Id] AS [Id1], 
+        [Limit2].[SecurityStamp] AS [SecurityStamp], 
+        [Limit2].[Cuenta] AS [Cuenta], 
+        [Limit2].[Identificacion] AS [Identificacion], 
+        [Limit2].[Nombres] AS [Nombres], 
+        [Limit2].[Apellidos] AS [Apellidos], 
+        [Limit2].[Correo] AS [Correo], 
+        [Limit2].[Estado] AS [Estado], 
+        [Limit2].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit2].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit2].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit2].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit2].[Password] AS [Password], 
+        [Limit2].[IsDeleted] AS [IsDeleted], 
+        [Limit2].[DeleterUserId] AS [DeleterUserId], 
+        [Limit2].[DeletionTime] AS [DeletionTime], 
+        [Limit2].[LastModificationTime] AS [LastModificationTime], 
+        [Limit2].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit2].[CreationTime] AS [CreationTime], 
+        [Limit2].[CreatorUserId] AS [CreatorUserId], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS bit) AS [C3], 
+        CAST(NULL AS bit) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5], 
+        CAST(NULL AS varchar(1)) AS [C6], 
+        CAST(NULL AS varchar(1)) AS [C7], 
+        CAST(NULL AS varchar(1)) AS [C8], 
+        CAST(NULL AS datetime2) AS [C9], 
+        CAST(NULL AS bigint) AS [C10], 
+        CAST(NULL AS datetime2) AS [C11], 
+        CAST(NULL AS bigint) AS [C12], 
+        [Join3].[Id] AS [Id2], 
+        [Join3].[Codigo] AS [Codigo], 
+        [Join3].[Nombre] AS [Nombre], 
+        [Join3].[Descripcion] AS [Descripcion]
+        FROM   (SELECT TOP (2) 
+            [Extent4].[Id] AS [Id], 
+            [Extent4].[SecurityStamp] AS [SecurityStamp], 
+            [Extent4].[Cuenta] AS [Cuenta], 
+            [Extent4].[Identificacion] AS [Identificacion], 
+            [Extent4].[Nombres] AS [Nombres], 
+            [Extent4].[Apellidos] AS [Apellidos], 
+            [Extent4].[Correo] AS [Correo], 
+            [Extent4].[Estado] AS [Estado], 
+            [Extent4].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent4].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent4].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent4].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent4].[Password] AS [Password], 
+            [Extent4].[IsDeleted] AS [IsDeleted], 
+            [Extent4].[DeleterUserId] AS [DeleterUserId], 
+            [Extent4].[DeletionTime] AS [DeletionTime], 
+            [Extent4].[LastModificationTime] AS [LastModificationTime], 
+            [Extent4].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent4].[CreationTime] AS [CreationTime], 
+            [Extent4].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent4]
+            WHERE (([Extent4].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent4].[Id] = @p__linq__0) ) AS [Limit2]
+        INNER JOIN  (SELECT [Extent5].[usuarioId] AS [usuarioId], [Extent6].[Id] AS [Id], [Extent6].[Codigo] AS [Codigo], [Extent6].[Nombre] AS [Nombre], [Extent6].[Descripcion] AS [Descripcion]
+            FROM  [SCH_USUARIOS].[usuario_modulo] AS [Extent5]
+            INNER JOIN [SCH_USUARIOS].[modulos] AS [Extent6] ON [Extent6].[Id] = [Extent5].[moduloId] ) AS [Join3] ON [Limit2].[Id] = [Join3].[usuarioId]) AS [UnionAll1]
+    ORDER BY [UnionAll1].[Id1] ASC, [UnionAll1].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000001: 'False' (Type = Boolean, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 20 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 16 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection asynchronously at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Started transaction at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | INSERT [SCH_USUARIOS].[sessiones]([UsuarioId], [Cuenta], [CreationTime], [ClientIpAddress], [ClientName], [BrowserInfo], [ModuloId], [Result])
+VALUES (@0, @1, @2, @3, @4, @5, NULL, @6)
+SELECT [Id]
+FROM [SCH_USUARIOS].[sessiones]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity() | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @0: '1' (Type = Int32)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @1: 'admin' (Type = String, Size = 50)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @2: '25/4/2019 17:02:02' (Type = DateTime2)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @3: '192.168.100.101' (Type = String, Size = 64)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @4: 'DESKTOP-AQK2460' (Type = String, Size = 128)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @5: 'Chrome / 74.0 / WinNT' (Type = String, Size = 512)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @6: '2' (Type = Byte, Size = 1)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing asynchronously at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 38 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Committed transaction at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [UnionAll1].[Id] AS [C1], 
+    [UnionAll1].[Id1] AS [C2], 
+    [UnionAll1].[SecurityStamp] AS [C3], 
+    [UnionAll1].[Cuenta] AS [C4], 
+    [UnionAll1].[Identificacion] AS [C5], 
+    [UnionAll1].[Nombres] AS [C6], 
+    [UnionAll1].[Apellidos] AS [C7], 
+    [UnionAll1].[Correo] AS [C8], 
+    [UnionAll1].[Estado] AS [C9], 
+    [UnionAll1].[PasswordResetCode] AS [C10], 
+    [UnionAll1].[FechaFinalizacionBloqueUtc] AS [C11], 
+    [UnionAll1].[CantidadAccesoFallido] AS [C12], 
+    [UnionAll1].[BloqueoHabilitado] AS [C13], 
+    [UnionAll1].[Password] AS [C14], 
+    [UnionAll1].[IsDeleted] AS [C15], 
+    [UnionAll1].[DeleterUserId] AS [C16], 
+    [UnionAll1].[DeletionTime] AS [C17], 
+    [UnionAll1].[LastModificationTime] AS [C18], 
+    [UnionAll1].[LastModifierUserId] AS [C19], 
+    [UnionAll1].[CreationTime] AS [C20], 
+    [UnionAll1].[CreatorUserId] AS [C21], 
+    [UnionAll1].[C1] AS [C22], 
+    [UnionAll1].[Id2] AS [C23], 
+    [UnionAll1].[EsAdministrador] AS [C24], 
+    [UnionAll1].[EsExterno] AS [C25], 
+    [UnionAll1].[Url] AS [C26], 
+    [UnionAll1].[Parametros] AS [C27], 
+    [UnionAll1].[Codigo] AS [C28], 
+    [UnionAll1].[Nombre] AS [C29], 
+    [UnionAll1].[LastModificationTime1] AS [C30], 
+    [UnionAll1].[LastModifierUserId1] AS [C31], 
+    [UnionAll1].[CreationTime1] AS [C32], 
+    [UnionAll1].[CreatorUserId1] AS [C33], 
+    [UnionAll1].[C2] AS [C34], 
+    [UnionAll1].[C3] AS [C35], 
+    [UnionAll1].[C4] AS [C36], 
+    [UnionAll1].[C5] AS [C37]
+    FROM  (SELECT 
+        CASE WHEN ([Join1].[usuarioId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1], 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Id] AS [Id1], 
+        [Limit1].[SecurityStamp] AS [SecurityStamp], 
+        [Limit1].[Cuenta] AS [Cuenta], 
+        [Limit1].[Identificacion] AS [Identificacion], 
+        [Limit1].[Nombres] AS [Nombres], 
+        [Limit1].[Apellidos] AS [Apellidos], 
+        [Limit1].[Correo] AS [Correo], 
+        [Limit1].[Estado] AS [Estado], 
+        [Limit1].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit1].[Password] AS [Password], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Limit1].[DeleterUserId] AS [DeleterUserId], 
+        [Limit1].[DeletionTime] AS [DeletionTime], 
+        [Limit1].[LastModificationTime] AS [LastModificationTime], 
+        [Limit1].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit1].[CreationTime] AS [CreationTime], 
+        [Limit1].[CreatorUserId] AS [CreatorUserId], 
+        [Join1].[Id] AS [Id2], 
+        [Join1].[EsAdministrador] AS [EsAdministrador], 
+        [Join1].[EsExterno] AS [EsExterno], 
+        [Join1].[Url] AS [Url], 
+        [Join1].[Parametros] AS [Parametros], 
+        [Join1].[Codigo] AS [Codigo], 
+        [Join1].[Nombre] AS [Nombre], 
+        [Join1].[LastModificationTime] AS [LastModificationTime1], 
+        [Join1].[LastModifierUserId] AS [LastModifierUserId1], 
+        [Join1].[CreationTime] AS [CreationTime1], 
+        [Join1].[CreatorUserId] AS [CreatorUserId1], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS varchar(1)) AS [C3], 
+        CAST(NULL AS varchar(1)) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[SecurityStamp] AS [SecurityStamp], 
+            [Extent1].[Cuenta] AS [Cuenta], 
+            [Extent1].[Identificacion] AS [Identificacion], 
+            [Extent1].[Nombres] AS [Nombres], 
+            [Extent1].[Apellidos] AS [Apellidos], 
+            [Extent1].[Correo] AS [Correo], 
+            [Extent1].[Estado] AS [Estado], 
+            [Extent1].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent1].[Password] AS [Password], 
+            [Extent1].[IsDeleted] AS [IsDeleted], 
+            [Extent1].[DeleterUserId] AS [DeleterUserId], 
+            [Extent1].[DeletionTime] AS [DeletionTime], 
+            [Extent1].[LastModificationTime] AS [LastModificationTime], 
+            [Extent1].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent1].[CreationTime] AS [CreationTime], 
+            [Extent1].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent1]
+            WHERE (([Extent1].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[usuarioId] AS [usuarioId], [Extent3].[Id] AS [Id], [Extent3].[EsAdministrador] AS [EsAdministrador], [Extent3].[EsExterno] AS [EsExterno], [Extent3].[Url] AS [Url], [Extent3].[Parametros] AS [Parametros], [Extent3].[Codigo] AS [Codigo], [Extent3].[Nombre] AS [Nombre], [Extent3].[LastModificationTime] AS [LastModificationTime], [Extent3].[LastModifierUserId] AS [LastModifierUserId], [Extent3].[CreationTime] AS [CreationTime], [Extent3].[CreatorUserId] AS [CreatorUserId]
+            FROM  [SCH_USUARIOS].[usuario_rol] AS [Extent2]
+            INNER JOIN [SCH_USUARIOS].[roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[rolId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[usuarioId]
+    UNION ALL
+        SELECT 
+        2 AS [C1], 
+        [Limit2].[Id] AS [Id], 
+        [Limit2].[Id] AS [Id1], 
+        [Limit2].[SecurityStamp] AS [SecurityStamp], 
+        [Limit2].[Cuenta] AS [Cuenta], 
+        [Limit2].[Identificacion] AS [Identificacion], 
+        [Limit2].[Nombres] AS [Nombres], 
+        [Limit2].[Apellidos] AS [Apellidos], 
+        [Limit2].[Correo] AS [Correo], 
+        [Limit2].[Estado] AS [Estado], 
+        [Limit2].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit2].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit2].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit2].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit2].[Password] AS [Password], 
+        [Limit2].[IsDeleted] AS [IsDeleted], 
+        [Limit2].[DeleterUserId] AS [DeleterUserId], 
+        [Limit2].[DeletionTime] AS [DeletionTime], 
+        [Limit2].[LastModificationTime] AS [LastModificationTime], 
+        [Limit2].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit2].[CreationTime] AS [CreationTime], 
+        [Limit2].[CreatorUserId] AS [CreatorUserId], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS bit) AS [C3], 
+        CAST(NULL AS bit) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5], 
+        CAST(NULL AS varchar(1)) AS [C6], 
+        CAST(NULL AS varchar(1)) AS [C7], 
+        CAST(NULL AS varchar(1)) AS [C8], 
+        CAST(NULL AS datetime2) AS [C9], 
+        CAST(NULL AS bigint) AS [C10], 
+        CAST(NULL AS datetime2) AS [C11], 
+        CAST(NULL AS bigint) AS [C12], 
+        [Join3].[Id] AS [Id2], 
+        [Join3].[Codigo] AS [Codigo], 
+        [Join3].[Nombre] AS [Nombre], 
+        [Join3].[Descripcion] AS [Descripcion]
+        FROM   (SELECT TOP (2) 
+            [Extent4].[Id] AS [Id], 
+            [Extent4].[SecurityStamp] AS [SecurityStamp], 
+            [Extent4].[Cuenta] AS [Cuenta], 
+            [Extent4].[Identificacion] AS [Identificacion], 
+            [Extent4].[Nombres] AS [Nombres], 
+            [Extent4].[Apellidos] AS [Apellidos], 
+            [Extent4].[Correo] AS [Correo], 
+            [Extent4].[Estado] AS [Estado], 
+            [Extent4].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent4].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent4].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent4].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent4].[Password] AS [Password], 
+            [Extent4].[IsDeleted] AS [IsDeleted], 
+            [Extent4].[DeleterUserId] AS [DeleterUserId], 
+            [Extent4].[DeletionTime] AS [DeletionTime], 
+            [Extent4].[LastModificationTime] AS [LastModificationTime], 
+            [Extent4].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent4].[CreationTime] AS [CreationTime], 
+            [Extent4].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent4]
+            WHERE (([Extent4].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent4].[Id] = @p__linq__0) ) AS [Limit2]
+        INNER JOIN  (SELECT [Extent5].[usuarioId] AS [usuarioId], [Extent6].[Id] AS [Id], [Extent6].[Codigo] AS [Codigo], [Extent6].[Nombre] AS [Nombre], [Extent6].[Descripcion] AS [Descripcion]
+            FROM  [SCH_USUARIOS].[usuario_modulo] AS [Extent5]
+            INNER JOIN [SCH_USUARIOS].[modulos] AS [Extent6] ON [Extent6].[Id] = [Extent5].[moduloId] ) AS [Join3] ON [Limit2].[Id] = [Join3].[usuarioId]) AS [UnionAll1]
+    ORDER BY [UnionAll1].[Id1] ASC, [UnionAll1].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000001: 'False' (Type = Boolean, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 50 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [UnionAll1].[Id] AS [C1], 
+    [UnionAll1].[Id1] AS [C2], 
+    [UnionAll1].[SecurityStamp] AS [C3], 
+    [UnionAll1].[Cuenta] AS [C4], 
+    [UnionAll1].[Identificacion] AS [C5], 
+    [UnionAll1].[Nombres] AS [C6], 
+    [UnionAll1].[Apellidos] AS [C7], 
+    [UnionAll1].[Correo] AS [C8], 
+    [UnionAll1].[Estado] AS [C9], 
+    [UnionAll1].[PasswordResetCode] AS [C10], 
+    [UnionAll1].[FechaFinalizacionBloqueUtc] AS [C11], 
+    [UnionAll1].[CantidadAccesoFallido] AS [C12], 
+    [UnionAll1].[BloqueoHabilitado] AS [C13], 
+    [UnionAll1].[Password] AS [C14], 
+    [UnionAll1].[IsDeleted] AS [C15], 
+    [UnionAll1].[DeleterUserId] AS [C16], 
+    [UnionAll1].[DeletionTime] AS [C17], 
+    [UnionAll1].[LastModificationTime] AS [C18], 
+    [UnionAll1].[LastModifierUserId] AS [C19], 
+    [UnionAll1].[CreationTime] AS [C20], 
+    [UnionAll1].[CreatorUserId] AS [C21], 
+    [UnionAll1].[C1] AS [C22], 
+    [UnionAll1].[Id2] AS [C23], 
+    [UnionAll1].[EsAdministrador] AS [C24], 
+    [UnionAll1].[EsExterno] AS [C25], 
+    [UnionAll1].[Url] AS [C26], 
+    [UnionAll1].[Parametros] AS [C27], 
+    [UnionAll1].[Codigo] AS [C28], 
+    [UnionAll1].[Nombre] AS [C29], 
+    [UnionAll1].[LastModificationTime1] AS [C30], 
+    [UnionAll1].[LastModifierUserId1] AS [C31], 
+    [UnionAll1].[CreationTime1] AS [C32], 
+    [UnionAll1].[CreatorUserId1] AS [C33], 
+    [UnionAll1].[C2] AS [C34], 
+    [UnionAll1].[C3] AS [C35], 
+    [UnionAll1].[C4] AS [C36], 
+    [UnionAll1].[C5] AS [C37]
+    FROM  (SELECT 
+        CASE WHEN ([Join1].[usuarioId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1], 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Id] AS [Id1], 
+        [Limit1].[SecurityStamp] AS [SecurityStamp], 
+        [Limit1].[Cuenta] AS [Cuenta], 
+        [Limit1].[Identificacion] AS [Identificacion], 
+        [Limit1].[Nombres] AS [Nombres], 
+        [Limit1].[Apellidos] AS [Apellidos], 
+        [Limit1].[Correo] AS [Correo], 
+        [Limit1].[Estado] AS [Estado], 
+        [Limit1].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit1].[Password] AS [Password], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Limit1].[DeleterUserId] AS [DeleterUserId], 
+        [Limit1].[DeletionTime] AS [DeletionTime], 
+        [Limit1].[LastModificationTime] AS [LastModificationTime], 
+        [Limit1].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit1].[CreationTime] AS [CreationTime], 
+        [Limit1].[CreatorUserId] AS [CreatorUserId], 
+        [Join1].[Id] AS [Id2], 
+        [Join1].[EsAdministrador] AS [EsAdministrador], 
+        [Join1].[EsExterno] AS [EsExterno], 
+        [Join1].[Url] AS [Url], 
+        [Join1].[Parametros] AS [Parametros], 
+        [Join1].[Codigo] AS [Codigo], 
+        [Join1].[Nombre] AS [Nombre], 
+        [Join1].[LastModificationTime] AS [LastModificationTime1], 
+        [Join1].[LastModifierUserId] AS [LastModifierUserId1], 
+        [Join1].[CreationTime] AS [CreationTime1], 
+        [Join1].[CreatorUserId] AS [CreatorUserId1], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS varchar(1)) AS [C3], 
+        CAST(NULL AS varchar(1)) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[SecurityStamp] AS [SecurityStamp], 
+            [Extent1].[Cuenta] AS [Cuenta], 
+            [Extent1].[Identificacion] AS [Identificacion], 
+            [Extent1].[Nombres] AS [Nombres], 
+            [Extent1].[Apellidos] AS [Apellidos], 
+            [Extent1].[Correo] AS [Correo], 
+            [Extent1].[Estado] AS [Estado], 
+            [Extent1].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent1].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent1].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent1].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent1].[Password] AS [Password], 
+            [Extent1].[IsDeleted] AS [IsDeleted], 
+            [Extent1].[DeleterUserId] AS [DeleterUserId], 
+            [Extent1].[DeletionTime] AS [DeletionTime], 
+            [Extent1].[LastModificationTime] AS [LastModificationTime], 
+            [Extent1].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent1].[CreationTime] AS [CreationTime], 
+            [Extent1].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent1]
+            WHERE (([Extent1].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[usuarioId] AS [usuarioId], [Extent3].[Id] AS [Id], [Extent3].[EsAdministrador] AS [EsAdministrador], [Extent3].[EsExterno] AS [EsExterno], [Extent3].[Url] AS [Url], [Extent3].[Parametros] AS [Parametros], [Extent3].[Codigo] AS [Codigo], [Extent3].[Nombre] AS [Nombre], [Extent3].[LastModificationTime] AS [LastModificationTime], [Extent3].[LastModifierUserId] AS [LastModifierUserId], [Extent3].[CreationTime] AS [CreationTime], [Extent3].[CreatorUserId] AS [CreatorUserId]
+            FROM  [SCH_USUARIOS].[usuario_rol] AS [Extent2]
+            INNER JOIN [SCH_USUARIOS].[roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[rolId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[usuarioId]
+    UNION ALL
+        SELECT 
+        2 AS [C1], 
+        [Limit2].[Id] AS [Id], 
+        [Limit2].[Id] AS [Id1], 
+        [Limit2].[SecurityStamp] AS [SecurityStamp], 
+        [Limit2].[Cuenta] AS [Cuenta], 
+        [Limit2].[Identificacion] AS [Identificacion], 
+        [Limit2].[Nombres] AS [Nombres], 
+        [Limit2].[Apellidos] AS [Apellidos], 
+        [Limit2].[Correo] AS [Correo], 
+        [Limit2].[Estado] AS [Estado], 
+        [Limit2].[PasswordResetCode] AS [PasswordResetCode], 
+        [Limit2].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+        [Limit2].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+        [Limit2].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+        [Limit2].[Password] AS [Password], 
+        [Limit2].[IsDeleted] AS [IsDeleted], 
+        [Limit2].[DeleterUserId] AS [DeleterUserId], 
+        [Limit2].[DeletionTime] AS [DeletionTime], 
+        [Limit2].[LastModificationTime] AS [LastModificationTime], 
+        [Limit2].[LastModifierUserId] AS [LastModifierUserId], 
+        [Limit2].[CreationTime] AS [CreationTime], 
+        [Limit2].[CreatorUserId] AS [CreatorUserId], 
+        CAST(NULL AS int) AS [C2], 
+        CAST(NULL AS bit) AS [C3], 
+        CAST(NULL AS bit) AS [C4], 
+        CAST(NULL AS varchar(1)) AS [C5], 
+        CAST(NULL AS varchar(1)) AS [C6], 
+        CAST(NULL AS varchar(1)) AS [C7], 
+        CAST(NULL AS varchar(1)) AS [C8], 
+        CAST(NULL AS datetime2) AS [C9], 
+        CAST(NULL AS bigint) AS [C10], 
+        CAST(NULL AS datetime2) AS [C11], 
+        CAST(NULL AS bigint) AS [C12], 
+        [Join3].[Id] AS [Id2], 
+        [Join3].[Codigo] AS [Codigo], 
+        [Join3].[Nombre] AS [Nombre], 
+        [Join3].[Descripcion] AS [Descripcion]
+        FROM   (SELECT TOP (2) 
+            [Extent4].[Id] AS [Id], 
+            [Extent4].[SecurityStamp] AS [SecurityStamp], 
+            [Extent4].[Cuenta] AS [Cuenta], 
+            [Extent4].[Identificacion] AS [Identificacion], 
+            [Extent4].[Nombres] AS [Nombres], 
+            [Extent4].[Apellidos] AS [Apellidos], 
+            [Extent4].[Correo] AS [Correo], 
+            [Extent4].[Estado] AS [Estado], 
+            [Extent4].[PasswordResetCode] AS [PasswordResetCode], 
+            [Extent4].[FechaFinalizacionBloqueUtc] AS [FechaFinalizacionBloqueUtc], 
+            [Extent4].[CantidadAccesoFallido] AS [CantidadAccesoFallido], 
+            [Extent4].[BloqueoHabilitado] AS [BloqueoHabilitado], 
+            [Extent4].[Password] AS [Password], 
+            [Extent4].[IsDeleted] AS [IsDeleted], 
+            [Extent4].[DeleterUserId] AS [DeleterUserId], 
+            [Extent4].[DeletionTime] AS [DeletionTime], 
+            [Extent4].[LastModificationTime] AS [LastModificationTime], 
+            [Extent4].[LastModifierUserId] AS [LastModifierUserId], 
+            [Extent4].[CreationTime] AS [CreationTime], 
+            [Extent4].[CreatorUserId] AS [CreatorUserId]
+            FROM [SCH_USUARIOS].[usuarios] AS [Extent4]
+            WHERE (([Extent4].[IsDeleted] = @DynamicFilterParam_000001) ) AND ([Extent4].[Id] = @p__linq__0) ) AS [Limit2]
+        INNER JOIN  (SELECT [Extent5].[usuarioId] AS [usuarioId], [Extent6].[Id] AS [Id], [Extent6].[Codigo] AS [Codigo], [Extent6].[Nombre] AS [Nombre], [Extent6].[Descripcion] AS [Descripcion]
+            FROM  [SCH_USUARIOS].[usuario_modulo] AS [Extent5]
+            INNER JOIN [SCH_USUARIOS].[modulos] AS [Extent6] ON [Extent6].[Id] = [Extent5].[moduloId] ) AS [Join3] ON [Limit2].[Id] = [Join3].[usuarioId]) AS [UnionAll1]
+    ORDER BY [UnionAll1].[Id1] ASC, [UnionAll1].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000001: 'False' (Type = Boolean, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 36 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection asynchronously at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | Started transaction at 25/4/2019 17:02:02 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | INSERT [SCH_USUARIOS].[sessiones]([UsuarioId], [Cuenta], [CreationTime], [ClientIpAddress], [ClientName], [BrowserInfo], [ModuloId], [Result])
+VALUES (@0, @1, @2, @3, @4, @5, @6, @7)
+SELECT [Id]
+FROM [SCH_USUARIOS].[sessiones]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity() | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:02:22 | 7 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @0: '1' (Type = Int32)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @1: 'admin' (Type = String, Size = 50)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @2: '25/4/2019 17:02:02' (Type = DateTime2)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @3: '192.168.100.101' (Type = String, Size = 64)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @4: 'DESKTOP-AQK2460' (Type = String, Size = 128)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @5: 'Chrome / 74.0 / WinNT' (Type = String, Size = 512)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @6: '1' (Type = Int32)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- @7: '1' (Type = Byte, Size = 1)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 7 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing asynchronously at 25/4/2019 17:02:03 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 23 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 6 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 23 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 23 | com.cpp.calypso.web.PrincipalDbContext   | Committed transaction at 25/4/2019 17:02:03 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 25/04/2019 17:02:03:23 | 23 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:03 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Warn  | auth:ApplicationCookie:admin | 25/04/2019 17:02:03:23 | 22 | Abp.Logging.LogHelper                    | ISettingStore is not implemented, using AppSettingAbpSettingStore which does not support CreateAsync. Key Abp.Localization.DefaultLanguageName | AppSettingAbpSettingStore.CreateAsync => CastleNlogLogger.Warn => NLogLogger.Warn |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:03:23 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:03:23 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:03:23 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:03:23 | 22 | com.cpp.calypso.web.SecurityControllerHelper | Resultado de omitir controladores : [Inicio]. Cantidad de elementos que coincide con la nombre  de controlador desde el listado de omitidos : [1] | SecurityControllerHelper.SkipControllerActionSecurity => SecurityControllerHelper.SkipControllerSecurity => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:03:23 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Info  | auth:ApplicationCookie:admin | 25/04/2019 17:02:03:23 | 22 | Abp.Auditing.SimpleLogAuditingStore      | AUDIT LOG: com.cpp.calypso.web.InicioController.Index is executed by user 1 in 271 ms from 192.168.100.101 IP address with succeed. | SimpleLogAuditingStore.SaveAsync => CastleNlogLogger.Info => NLogLogger.Info |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:04:24 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Info  | auth:ApplicationCookie:admin | 25/04/2019 17:02:04:24 | 22 | Abp.Auditing.SimpleLogAuditingStore      | AUDIT LOG: com.cpp.calypso.comun.aplicacion.ParametroService.GetValor is executed by user 1 in 0 ms from 192.168.100.101 IP address with succeed. | SimpleLogAuditingStore.SaveAsync => CastleNlogLogger.Info => NLogLogger.Info |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:04:24 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:04:24 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:04:24 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:04:24 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:04:24 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 17:02:05 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Descripcion] AS [Descripcion], 
+    [Extent1].[ModuloId] AS [ModuloId], 
+    [Extent1].[Codigo] AS [Codigo], 
+    [Extent1].[Nombre] AS [Nombre]
+    FROM [SCH_USUARIOS].[menus] AS [Extent1]
+    WHERE [Extent1].[ModuloId] = @p__linq__0 | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 17:02:05 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 51 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:05 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 25/4/2019 17:02:05 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Descripcion] AS [Descripcion], 
+    [Project2].[ModuloId] AS [ModuloId], 
+    [Project2].[Codigo] AS [Codigo], 
+    [Project2].[Nombre] AS [Nombre], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[Id1] AS [Id1], 
+    [Project2].[Descripcion1] AS [Descripcion1], 
+    [Project2].[Url] AS [Url], 
+    [Project2].[Estado] AS [Estado], 
+    [Project2].[TipoId] AS [TipoId], 
+    [Project2].[Orden] AS [Orden], 
+    [Project2].[Icono] AS [Icono], 
+    [Project2].[MenuId] AS [MenuId], 
+    [Project2].[PadreId] AS [PadreId], 
+    [Project2].[FuncionalidadId] AS [FuncionalidadId], 
+    [Project2].[Codigo1] AS [Codigo1], 
+    [Project2].[Nombre1] AS [Nombre1]
+    FROM ( SELECT 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Descripcion] AS [Descripcion], 
+        [Limit1].[ModuloId] AS [ModuloId], 
+        [Limit1].[Codigo] AS [Codigo], 
+        [Limit1].[Nombre] AS [Nombre], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Descripcion] AS [Descripcion1], 
+        [Extent2].[Url] AS [Url], 
+        [Extent2].[Estado] AS [Estado], 
+        [Extent2].[TipoId] AS [TipoId], 
+        [Extent2].[Orden] AS [Orden], 
+        [Extent2].[Icono] AS [Icono], 
+        [Extent2].[MenuId] AS [MenuId], 
+        [Extent2].[PadreId] AS [PadreId], 
+        [Extent2].[FuncionalidadId] AS [FuncionalidadId], 
+        [Extent2].[Codigo] AS [Codigo1], 
+        [Extent2].[Nombre] AS [Nombre1], 
+        CASE WHEN ([Extent2].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Descripcion] AS [Descripcion], 
+            [Extent1].[ModuloId] AS [ModuloId], 
+            [Extent1].[Codigo] AS [Codigo], 
+            [Extent1].[Nombre] AS [Nombre]
+            FROM [SCH_USUARIOS].[menus] AS [Extent1]
+            WHERE [Extent1].[Codigo] = @p__linq__0 ) AS [Limit1]
+        LEFT OUTER JOIN [SCH_USUARIOS].[menuitems] AS [Extent2] ON [Limit1].[Id] = [Extent2].[MenuId]
+    )  AS [Project2]
+    ORDER BY [Project2].[Id] ASC, [Project2].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | -- p__linq__0: 'MAIN' (Type = String, Size = 4000)
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 25/4/2019 17:02:05 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 41 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 25/4/2019 17:02:05 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Info  | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | Abp.Auditing.SimpleLogAuditingStore      | AUDIT LOG: com.cpp.calypso.comun.aplicacion.MenuService.GetItemMenuAutorizados is executed by user 1 in 247 ms from 192.168.100.101 IP address with succeed. | SimpleLogAuditingStore.SaveAsync => CastleNlogLogger.Info => NLogLogger.Info |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Info  | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 22 | Abp.Auditing.SimpleLogAuditingStore      | AUDIT LOG: com.cpp.calypso.comun.aplicacion.ParametroService.GetValor is executed by user 1 in 0 ms from 192.168.100.101 IP address with succeed. | SimpleLogAuditingStore.SaveAsync => CastleNlogLogger.Info => NLogLogger.Info |  | !
+Warn  | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 16 | Abp.Logging.LogHelper                    | ISettingStore is not implemented, using AppSettingAbpSettingStore which does not support CreateAsync. Key Abp.Localization.DefaultLanguageName | AppSettingAbpSettingStore.CreateAsync => CastleNlogLogger.Warn => NLogLogger.Warn |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 16 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 16 | com.cpp.calypso.web.SecurityControllerHelper | Resultado de omitir controladores : [AbpScripts]. Cantidad de elementos que coincide con la nombre  de controlador desde el listado de omitidos : [1] | SecurityControllerHelper.SkipControllerActionSecurity => SecurityControllerHelper.SkipControllerSecurity => NLogLogger.DebugFormat |  | !
+Debug | auth:ApplicationCookie:admin | 25/04/2019 17:02:05:25 | 16 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !

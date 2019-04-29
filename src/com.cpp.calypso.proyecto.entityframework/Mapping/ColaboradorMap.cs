@@ -83,6 +83,7 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.TurnoId).HasColumnName("turno_id");
             Property(d => d.UsuarioId).HasColumnName("usuario_id");
             Property(d => d.ValidacionCedula).HasColumnName("validacion_cedula");
+            Property(d => d.HuellaDigital).HasColumnName("huella_digital");
 
             Property(d => d.IsDeleted).HasColumnName("vigente");
             Property(d => d.Version).HasColumnName("m_version");

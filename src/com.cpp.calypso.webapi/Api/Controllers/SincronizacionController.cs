@@ -14,18 +14,52 @@ namespace com.cpp.calypso.webapi.Api.Controllers
     {
         private readonly ICatalogoAsyncBaseCrudAppService _catalogoSync;
         private readonly ITipoCatalogoAsyncBaseCrudAppService _tipoCatalogoSync;
-
-
+        private readonly IArchivoAsyncBaseCrudAppService _archivoSync;
+        private readonly IOpcionComidaAsyncBaseCrudAppService _opcionComidaSync;
+        private readonly IEmpresaAsyncBaseCrudAppService _empresaSync;
+        private readonly IProveedorAsyncBaseCrudAppService _proveedorSync;
+        private readonly IContratoProveedorAsyncBaseCrudAppService _contratoProveedorSync;
+        private readonly ITipoOpcionComidaAsyncBaseCrudAppService _tipoOpcionComidaSync;
+        private readonly IColaboradorAsyncBaseCrudAppService _colaboradorSync;
+        private readonly IMenuProveedorAsyncBaseCrudAppService _menuProveedorSync;
+        private readonly ITipoAccionEmpresaAsyncBaseCrudAppService _tipoAccionEmpresaSync;
+        private readonly ISolicitudViandaAsyncBaseCrudAppService _solicitudViandaSync;
+        private readonly IDistribucionViandaAsyncBaseCrudAppService _distribucionViandaSync;
+        private readonly IDetalleDistribucionAsyncBaseCrudAppService _detalleDistribucionSync;
         private readonly List<string> _orden = new List<string>();
 
         public SincronizacionController(
             IHandlerExcepciones manejadorExcepciones,
             ICatalogoAsyncBaseCrudAppService catalogoSync,
-            ITipoCatalogoAsyncBaseCrudAppService tipoCatalogoSync
+            ITipoCatalogoAsyncBaseCrudAppService tipoCatalogoSync,
+            IArchivoAsyncBaseCrudAppService archivoSync,
+            IOpcionComidaAsyncBaseCrudAppService opcionComidaSync,
+            IEmpresaAsyncBaseCrudAppService empresaSync,
+            IProveedorAsyncBaseCrudAppService proveedorSync,
+            IContratoProveedorAsyncBaseCrudAppService contratoProveedorSync,
+            ITipoOpcionComidaAsyncBaseCrudAppService tipoOpcionComidaSync,
+            IColaboradorAsyncBaseCrudAppService colaboradorSync,
+            IMenuProveedorAsyncBaseCrudAppService menuProveedorSync,
+            ITipoAccionEmpresaAsyncBaseCrudAppService tipoAccionEmpresaSync,
+            ISolicitudViandaAsyncBaseCrudAppService solicitudViandaSync,
+            IDistribucionViandaAsyncBaseCrudAppService distribucionViandaSync,
+            IDetalleDistribucionAsyncBaseCrudAppService detalleDistribucionSync
             ) : base(manejadorExcepciones)
         {
             _catalogoSync = catalogoSync;
             _tipoCatalogoSync = tipoCatalogoSync;
+            _archivoSync = archivoSync;
+            _opcionComidaSync = opcionComidaSync;
+            _empresaSync = empresaSync;
+            _proveedorSync = proveedorSync;
+            _contratoProveedorSync = contratoProveedorSync;
+            _tipoOpcionComidaSync = tipoOpcionComidaSync;
+            _colaboradorSync = colaboradorSync;
+            _menuProveedorSync = menuProveedorSync;
+            _tipoAccionEmpresaSync = tipoAccionEmpresaSync;
+            _solicitudViandaSync = solicitudViandaSync;
+            _distribucionViandaSync = distribucionViandaSync;
+            _detalleDistribucionSync = detalleDistribucionSync;
             _orden.Add("catalogos");
         }
 
@@ -90,7 +124,113 @@ namespace com.cpp.calypso.webapi.Api.Controllers
                         respuesta.Add(tablaResult);
                     }
 
-                    
+                    if (nombre == "archivos")
+                    {
+                        var servicio = _archivoSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "opciones_comidas")
+                    {
+                        var servicio = _opcionComidaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "empresas")
+                    {
+                        var servicio = _empresaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "proveedores")
+                    {
+                        var servicio = _proveedorSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "contratos_proveedores")
+                    {
+                        var servicio = _contratoProveedorSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "tipos_opciones_comidas")
+                    {
+                        var servicio = _tipoOpcionComidaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "colaboradores")
+                    {
+                        var servicio = _colaboradorSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "menus_proveedor")
+                    {
+                        var servicio = _menuProveedorSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "tipos_acciones_empresas")
+                    {
+                        var servicio = _tipoAccionEmpresaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "solicitudes_viandas")
+                    {
+                        var servicio = _solicitudViandaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "distribuciones_viandas")
+                    {
+                        var servicio = _distribucionViandaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "detalles_distribuciones")
+                    {
+                        var servicio = _detalleDistribucionSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
                 }
             }
             catch (Exception exception)

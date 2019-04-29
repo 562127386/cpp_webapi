@@ -1,5 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace com.cpp.calypso.proyecto.dominio.Entidades
 {
@@ -214,6 +215,9 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public Catalogo CatalogoViaPago { get; set; }
 
         public DateTime? FechaAlta { get; set; }
+
+        [Required]
+        public string HuellaDigital { get; set; }
 
         public int Version { get; set; }
 

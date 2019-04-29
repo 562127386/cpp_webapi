@@ -134,6 +134,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("nombres", entidad.Nombres);
             objJson.Add("primer_apellido", entidad.PrimerApellido);
             objJson.Add("segundo_apellido", entidad.SegundoApellido);
+            objJson.Add("huella_digital", entidad.HuellaDigital);
 
             return objJson;
         }
@@ -172,7 +173,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.Nombres = (string)json["nombres"];
             entity.PrimerApellido = (string)json["primer_apellido"];
             entity.SegundoApellido = (string)json["segundo_apellido"];
-
+            entity.HuellaDigital = (string)json["huella_digital"];
 
 
 

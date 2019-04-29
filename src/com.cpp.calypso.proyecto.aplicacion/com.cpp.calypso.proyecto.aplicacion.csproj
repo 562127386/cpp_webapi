@@ -51,6 +51,9 @@
     <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.Caching.Abstractions.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
     </Reference>
@@ -174,6 +177,7 @@
     <Compile Include="Dto\TipoAccionEmpresaDto.cs" />
     <Compile Include="Dto\TipoCatalogoDto.cs" />
     <Compile Include="Dto\TipoOpcionComidaDto.cs" />
+    <Compile Include="Dto\UsuarioDto.cs" />
     <Compile Include="Dto\ZonaDto.cs" />
     <Compile Include="FooAsyncBaseCrudAppService.cs" />
     <Compile Include="Interfaces\IArchivo.cs" />
@@ -195,6 +199,7 @@
     <Compile Include="Interfaces\ITipoAccionEmpresa.cs" />
     <Compile Include="Interfaces\ITipoCatalogo.cs" />
     <Compile Include="Interfaces\ITipoOpcionComida.cs" />
+    <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Interfaces\IZona.cs" />
     <Compile Include="ProyectoAplicacionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -217,6 +222,7 @@
     <Compile Include="Service\TipoAccionEmpresaService.cs" />
     <Compile Include="Service\TipoCatalogoService.cs" />
     <Compile Include="Service\TipoOpcionComidaService.cs" />
+    <Compile Include="Service\UsuarioService.cs" />
     <Compile Include="Service\ZonaService.cs" />
   </ItemGroup>
   <ItemGroup>

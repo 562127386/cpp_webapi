@@ -15,8 +15,8 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(d => d.Id).HasColumnName("id");
-            Property(d => d.AccionId).HasColumnName("AccionId");
-            Property(d => d.EmpresaId).HasColumnName("EmpresaId");
+            Property(d => d.AccionId).HasColumnName("accion_id");
+            Property(d => d.EmpresaId).HasColumnName("empresa_id");
             Property(d => d.TipoComidaId).HasColumnName("tipo_comida_id");
             Property(d => d.HoraDesde).HasColumnName("hora_desde");
             Property(d => d.HoraHasta).HasColumnName("hora_hasta");
