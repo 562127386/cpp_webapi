@@ -14,7 +14,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public DateTime FechaConsumoVianda { get; set; }
 
-        public OrigenConsumoVianda OrigenConsumoId { get; set; }
+        public OrigenConsumoVianda? OrigenConsumoId { get; set; }
 
         public int Version { get; set; }
 

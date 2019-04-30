@@ -27,7 +27,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public string Observacion { get; set; }
 
-        public OrigenConsumo OrigenConsumoId { get; set; }
+        public OrigenConsumo? OrigenConsumoId { get; set; }
 
         public int Version { get; set; }
 

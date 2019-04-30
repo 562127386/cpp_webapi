@@ -181,10 +181,13 @@
     <Compile Include="Mapping\MenuProveedorMap.cs" />
     <Compile Include="Mapping\OpcionComidaMao.cs" />
     <Compile Include="Mapping\ProveedorMap.cs" />
+    <Compile Include="Mapping\ServicioProveedorMap.cs" />
+    <Compile Include="Mapping\ServicioRolMap.cs" />
     <Compile Include="Mapping\SolicitudViandaMap.cs" />
     <Compile Include="Mapping\TipoAccionEmpresaMap.cs" />
     <Compile Include="Mapping\TipoCatalogoMap.cs" />
     <Compile Include="Mapping\TipoOpcionComidaMap.cs" />
+    <Compile Include="Mapping\UsuarioMovilMap.cs" />
     <Compile Include="Mapping\ZonaMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectoEntityFrameworkModule.cs" />
