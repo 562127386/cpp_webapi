@@ -173,11 +173,14 @@
     <Compile Include="Dto\MenuProveedorDto.cs" />
     <Compile Include="Dto\OpcionComidaDto.cs" />
     <Compile Include="Dto\ProveedorDto.cs" />
+    <Compile Include="Dto\ServicioProveedorDto.cs" />
+    <Compile Include="Dto\ServicioRolDto.cs" />
     <Compile Include="Dto\SolicitudViandaDto.cs" />
     <Compile Include="Dto\TipoAccionEmpresaDto.cs" />
     <Compile Include="Dto\TipoCatalogoDto.cs" />
     <Compile Include="Dto\TipoOpcionComidaDto.cs" />
     <Compile Include="Dto\UsuarioDto.cs" />
+    <Compile Include="Dto\UsuarioMovilDto.cs" />
     <Compile Include="Dto\ZonaDto.cs" />
     <Compile Include="FooAsyncBaseCrudAppService.cs" />
     <Compile Include="Interfaces\IArchivo.cs" />
@@ -195,11 +198,14 @@
     <Compile Include="Interfaces\IMenuProveedor.cs" />
     <Compile Include="Interfaces\IOpcionComida.cs" />
     <Compile Include="Interfaces\IProveedor.cs" />
+    <Compile Include="Interfaces\IServicioProveedor.cs" />
+    <Compile Include="Interfaces\IServicioRol.cs" />
     <Compile Include="Interfaces\ISolicitudVianda.cs" />
     <Compile Include="Interfaces\ITipoAccionEmpresa.cs" />
     <Compile Include="Interfaces\ITipoCatalogo.cs" />
     <Compile Include="Interfaces\ITipoOpcionComida.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
+    <Compile Include="Interfaces\IUsuarioMovil.cs" />
     <Compile Include="Interfaces\IZona.cs" />
     <Compile Include="ProyectoAplicacionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -218,10 +224,13 @@
     <Compile Include="Service\MenuProveedorService.cs" />
     <Compile Include="Service\OpcionComidaService.cs" />
     <Compile Include="Service\ProveedorService.cs" />
+    <Compile Include="Service\ServicioProveedorService.cs" />
+    <Compile Include="Service\ServicioRolService.cs" />
     <Compile Include="Service\SolicitudViandaService.cs" />
     <Compile Include="Service\TipoAccionEmpresaService.cs" />
     <Compile Include="Service\TipoCatalogoService.cs" />
     <Compile Include="Service\TipoOpcionComidaService.cs" />
+    <Compile Include="Service\UsuarioMovilService.cs" />
     <Compile Include="Service\UsuarioService.cs" />
     <Compile Include="Service\ZonaService.cs" />
   </ItemGroup>

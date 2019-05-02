@@ -24,7 +24,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public int UsuarioGeneradorId { get; set; }
 
-        public OrigenConsumo OrigenConsumoId { get; set; }
+        public OrigenConsumo? OrigenConsumoId { get; set; }
 
         public int Version { get; set; }
 

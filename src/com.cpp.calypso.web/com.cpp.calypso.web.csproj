@@ -483,6 +483,22 @@
     <Compile Include="Migrations\201904270131090_RenameEmpresaId.Designer.cs">
       <DependentUpon>201904270131090_RenameEmpresaId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904301545578_OrigenesDeConsumosNull.cs" />
+    <Compile Include="Migrations\201904301545578_OrigenesDeConsumosNull.Designer.cs">
+      <DependentUpon>201904301545578_OrigenesDeConsumosNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904301629427_Servicios_Rol_Proveedores.cs" />
+    <Compile Include="Migrations\201904301629427_Servicios_Rol_Proveedores.Designer.cs">
+      <DependentUpon>201904301629427_Servicios_Rol_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904301640280_Schema_ServicioRol.cs" />
+    <Compile Include="Migrations\201904301640280_Schema_ServicioRol.Designer.cs">
+      <DependentUpon>201904301640280_Schema_ServicioRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904301833134_UsuariosMoviles.cs" />
+    <Compile Include="Migrations\201904301833134_UsuariosMoviles.Designer.cs">
+      <DependentUpon>201904301833134_UsuariosMoviles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -1006,6 +1022,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904270131090_RenameEmpresaId.resx">
       <DependentUpon>201904270131090_RenameEmpresaId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301545578_OrigenesDeConsumosNull.resx">
+      <DependentUpon>201904301545578_OrigenesDeConsumosNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301629427_Servicios_Rol_Proveedores.resx">
+      <DependentUpon>201904301629427_Servicios_Rol_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301640280_Schema_ServicioRol.resx">
+      <DependentUpon>201904301640280_Schema_ServicioRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301833134_UsuariosMoviles.resx">
+      <DependentUpon>201904301833134_UsuariosMoviles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

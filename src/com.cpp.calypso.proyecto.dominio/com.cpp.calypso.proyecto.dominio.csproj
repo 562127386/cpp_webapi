@@ -165,10 +165,13 @@
     <Compile Include="Entidades\MenuProveedor.cs" />
     <Compile Include="Entidades\OpcionComida.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\ServicioProveedor.cs" />
+    <Compile Include="Entidades\ServicioRol.cs" />
     <Compile Include="Entidades\SolicitudVianda.cs" />
     <Compile Include="Entidades\TipoAccionEmpresa.cs" />
     <Compile Include="Entidades\TipoCatalogo.cs" />
     <Compile Include="Entidades\TipoOpcionComida.cs" />
+    <Compile Include="Entidades\UsuarioMovil.cs" />
     <Compile Include="Entidades\Zona.cs" />
     <Compile Include="Foo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

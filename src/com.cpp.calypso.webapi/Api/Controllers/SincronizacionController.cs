@@ -26,6 +26,9 @@ namespace com.cpp.calypso.webapi.Api.Controllers
         private readonly ISolicitudViandaAsyncBaseCrudAppService _solicitudViandaSync;
         private readonly IDistribucionViandaAsyncBaseCrudAppService _distribucionViandaSync;
         private readonly IDetalleDistribucionAsyncBaseCrudAppService _detalleDistribucionSync;
+        private readonly IServicioProveedorAsyncBaseCrudAppService _servicioProveedorSync;
+        private readonly IServicioRolAsyncBaseCrudAppService _servicioRolSync;
+        private readonly IUsuarioMovilAsyncBaseCrudAppService _usuarioMovilSync;
         private readonly List<string> _orden = new List<string>();
 
         public SincronizacionController(
@@ -43,7 +46,10 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             ITipoAccionEmpresaAsyncBaseCrudAppService tipoAccionEmpresaSync,
             ISolicitudViandaAsyncBaseCrudAppService solicitudViandaSync,
             IDistribucionViandaAsyncBaseCrudAppService distribucionViandaSync,
-            IDetalleDistribucionAsyncBaseCrudAppService detalleDistribucionSync
+            IDetalleDistribucionAsyncBaseCrudAppService detalleDistribucionSync,
+            IServicioProveedorAsyncBaseCrudAppService servicioProveedorSync,
+            IServicioRolAsyncBaseCrudAppService servicioRolSync,
+            IUsuarioMovilAsyncBaseCrudAppService usuarioMovilSync
             ) : base(manejadorExcepciones)
         {
             _catalogoSync = catalogoSync;
@@ -60,6 +66,9 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             _solicitudViandaSync = solicitudViandaSync;
             _distribucionViandaSync = distribucionViandaSync;
             _detalleDistribucionSync = detalleDistribucionSync;
+            _servicioProveedorSync = servicioProveedorSync;
+            _servicioRolSync = servicioRolSync;
+            _usuarioMovilSync = usuarioMovilSync;
             _orden.Add("catalogos");
         }
 
@@ -226,6 +235,33 @@ namespace com.cpp.calypso.webapi.Api.Controllers
                     if (nombre == "detalles_distribuciones")
                     {
                         var servicio = _detalleDistribucionSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "servicios_proveedor")
+                    {
+                        var servicio = _servicioProveedorSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "servicios_roles")
+                    {
+                        var servicio = _servicioRolSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "usuarios")
+                    {
+                        var servicio = _usuarioMovilSync;
                         var result = servicio.Sync(version, cambios, usuariosIds);
                         tablaResult.Add("nombre", nombre);
                         tablaResult.Add("registros", result);
