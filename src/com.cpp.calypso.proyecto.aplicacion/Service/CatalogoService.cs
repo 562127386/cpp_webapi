@@ -194,16 +194,21 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                         SqlCommand command = new SqlCommand(query_string, connection);
                         command.Connection.Open();
                         //command.ExecuteNonQuery();
-                        List<Object> Listado = new List<Object>();
+
+                        List<Dictionary<string, object>> Listado = new List<Dictionary<string, object>>();
                         var reader = command.ExecuteReader();
                         if (reader.HasRows)
                         {
                             while (reader.Read())
                             {
+                                Dictionary<string, object> dato = new Dictionary<string, object>();
                                 for (int i = 0; i < reader.FieldCount; i++)
                                 {
-                                    Listado.Add(reader.GetValue(i));
+
+                                    dato.Add(reader.GetName(i), reader.GetValue(i));
+
                                 }
+                                Listado.Add(dato);
                             }
                         }
                         var JsonResult = JsonConvert.SerializeObject(Listado);
