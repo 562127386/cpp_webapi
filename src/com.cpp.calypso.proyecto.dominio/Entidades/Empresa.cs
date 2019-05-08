@@ -19,6 +19,10 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public TipoDeContribuyente TipoContribuyente { get; set; }
         public string CodigoSap { get; set; }
 
+        public DateTime? fs { get; set; }
+
+        public DateTime? fr { get; set; }
+
         public int Version { get; set; }
 
         public string Ref { get; set; }

@@ -15,6 +15,10 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public DateTime HoraDesde { get; set; }
         public DateTime HoraHasta { get; set; }
 
+        public DateTime? fs { get; set; }
+
+        public DateTime? fr { get; set; }
+
         public int Version { get; set; }
 
         public string Ref { get; set; }

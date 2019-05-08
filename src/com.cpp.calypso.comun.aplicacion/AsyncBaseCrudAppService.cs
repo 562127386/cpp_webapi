@@ -139,6 +139,12 @@ namespace com.cpp.calypso.comun.aplicacion
             return oDate;
         }
 
+        public virtual DateTime GetDateTimeFromStringFormat(string date)
+        {
+            DateTime oDate = DateTime.ParseExact(date, "dd-MM-yyyy", null);
+            return oDate;
+        }
+
         public virtual string GetStringFromDateTime(DateTime? oDate)
         {
             if (oDate == null)

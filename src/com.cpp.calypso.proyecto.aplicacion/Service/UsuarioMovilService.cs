@@ -147,5 +147,14 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.ActivoMovil = activo == 1 ? true : false;
             return entity;
         }
+
+        public UsuarioMovilDto FindByUsernamePin(string username, string pin)
+        {
+            var entity = Repository.GetAll()
+                .Where(o => o.Username == username)
+                .Where(o => o.Pin == pin)
+                .FirstOrDefault();
+            return MapToEntityDto(entity);
+        }
     }
 }

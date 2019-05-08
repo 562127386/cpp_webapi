@@ -10,5 +10,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Interfaces
     public interface IUsuarioMovilAsyncBaseCrudAppService : IAsyncBaseCrudAppService<UsuarioMovil, UsuarioMovilDto, PagedAndFilteredResultRequestDto>
     {
         JArray Sync(int version, JArray registrosJson, List<int> usuariosId);
+
+        UsuarioMovilDto FindByUsernamePin(string username, string pin);
     }
 }

@@ -26,6 +26,7 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Version).HasColumnName("m_version");
             Property(d => d.Ref).HasColumnName("m_ref");
 
+
             this.HasRequired(t => t.SolicitudVianda)
                 .WithMany()
                 .HasForeignKey(d => d.SolicitudViandaId)

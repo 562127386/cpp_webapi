@@ -158,6 +158,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\AccesoTemporalDto.cs" />
     <Compile Include="Dto\ArchivoDto.cs" />
     <Compile Include="Dto\CatalogoDto.cs" />
     <Compile Include="Dto\ColaboradorDto.cs" />
@@ -173,6 +174,8 @@
     <Compile Include="Dto\MenuProveedorDto.cs" />
     <Compile Include="Dto\OpcionComidaDto.cs" />
     <Compile Include="Dto\ProveedorDto.cs" />
+    <Compile Include="Dto\RegistroAccesoDto.cs" />
+    <Compile Include="Dto\RequisitoColaboradorDto.cs" />
     <Compile Include="Dto\ServicioProveedorDto.cs" />
     <Compile Include="Dto\ServicioRolDto.cs" />
     <Compile Include="Dto\SolicitudViandaDto.cs" />
@@ -183,6 +186,7 @@
     <Compile Include="Dto\UsuarioMovilDto.cs" />
     <Compile Include="Dto\ZonaDto.cs" />
     <Compile Include="FooAsyncBaseCrudAppService.cs" />
+    <Compile Include="Interfaces\IAccesoTemporal.cs" />
     <Compile Include="Interfaces\IArchivo.cs" />
     <Compile Include="Interfaces\ICatalogo.cs" />
     <Compile Include="Interfaces\IColaborador.cs" />
@@ -198,6 +202,8 @@
     <Compile Include="Interfaces\IMenuProveedor.cs" />
     <Compile Include="Interfaces\IOpcionComida.cs" />
     <Compile Include="Interfaces\IProveedor.cs" />
+    <Compile Include="Interfaces\IRegistroAcceso.cs" />
+    <Compile Include="Interfaces\IRequisitoColaborador.cs" />
     <Compile Include="Interfaces\IServicioProveedor.cs" />
     <Compile Include="Interfaces\IServicioRol.cs" />
     <Compile Include="Interfaces\ISolicitudVianda.cs" />
@@ -209,6 +215,7 @@
     <Compile Include="Interfaces\IZona.cs" />
     <Compile Include="ProyectoAplicacionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AccesoTemporalService.cs" />
     <Compile Include="Service\ArchivoService.cs" />
     <Compile Include="Service\CatalogoService.cs" />
     <Compile Include="Service\ColaboradorService.cs" />
@@ -224,6 +231,8 @@
     <Compile Include="Service\MenuProveedorService.cs" />
     <Compile Include="Service\OpcionComidaService.cs" />
     <Compile Include="Service\ProveedorService.cs" />
+    <Compile Include="Service\RegistroAccesoService.cs" />
+    <Compile Include="Service\RequisitoColaboradorService.cs" />
     <Compile Include="Service\ServicioProveedorService.cs" />
     <Compile Include="Service\ServicioRolService.cs" />
     <Compile Include="Service\SolicitudViandaService.cs" />

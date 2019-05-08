@@ -1,0 +1,1 @@
+Error | notauth:: | 30/04/2019 17:38:23:3823 | 6 | com.cpp.calypso.framework.ManejadorExcepciones | Excepcion: | HandleAbpExceptionEventHandler.HandleEvent => ManejadorExcepciones.HandleException => NLogLogger.Error | Usuario ó Clave incorrecta | !

@@ -188,6 +188,8 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public string Estado { get; set; }
 
+        public bool TieneAusentismo { get; set; }
+
         public bool RegistroMasivo { get; set; } = false;
 
         public int CatalogoEncuadreId { get; set; }
@@ -218,6 +220,10 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         [Required]
         public string HuellaDigital { get; set; }
+
+        public DateTime? fs { get; set; }
+
+        public DateTime? fr { get; set; }
 
         public int Version { get; set; }
 

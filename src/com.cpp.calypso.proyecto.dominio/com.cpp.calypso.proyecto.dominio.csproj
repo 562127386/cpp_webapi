@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constantes\CatalogosCodigos.cs" />
+    <Compile Include="Entidades\AccesoTemporal.cs" />
     <Compile Include="Entidades\Archivo.cs" />
     <Compile Include="Entidades\Catalogo.cs" />
     <Compile Include="Entidades\Colaborador.cs" />
@@ -165,6 +166,8 @@
     <Compile Include="Entidades\MenuProveedor.cs" />
     <Compile Include="Entidades\OpcionComida.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\RegistroAcceso.cs" />
+    <Compile Include="Entidades\RequisitoColaborador.cs" />
     <Compile Include="Entidades\ServicioProveedor.cs" />
     <Compile Include="Entidades\ServicioRol.cs" />
     <Compile Include="Entidades\SolicitudVianda.cs" />
