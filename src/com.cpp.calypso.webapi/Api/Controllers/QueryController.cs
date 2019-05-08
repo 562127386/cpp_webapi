@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace com.cpp.calypso.webapi.Api.Controllers
 {
-    [AllowAnonymous]
+    [System.Web.Http.AllowAnonymous]
     public class QueryController : BaseApiController
     {
         private readonly ICatalogoAsyncBaseCrudAppService _catalogoService;
