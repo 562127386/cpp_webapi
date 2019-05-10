@@ -392,6 +392,7 @@
     <Compile Include="Api\Controllers\Models\AuthPinModel.cs" />
     <Compile Include="Api\Controllers\Models\LoginModel.cs" />
     <Compile Include="Api\Controllers\Models\SincronizacionModel.cs" />
+    <Compile Include="Api\Controllers\MultipleQueryController.cs" />
     <Compile Include="Api\Controllers\QueryController.cs" />
     <Compile Include="Api\Controllers\RolController.cs" />
     <Compile Include="Api\Controllers\SincronizacionController.cs" />
@@ -445,6 +446,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Extensions\" />
     <Folder Include="Views\Auth\" />
+    <Folder Include="Views\MultipleQuery\" />
     <Folder Include="Views\Query\" />
   </ItemGroup>
   <ItemGroup>
