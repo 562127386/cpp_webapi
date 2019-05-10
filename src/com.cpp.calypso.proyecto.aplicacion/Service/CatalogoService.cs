@@ -222,5 +222,56 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                 return ex.Message;
             }
         }
+
+        public List<object> RealizarMultiplesConsultas(string query_string)
+        {
+            List<Object> Errores = new List<Object>();
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings[CatalogosCodigos.DEFAULT_NAME_CONNECTION_STRING].ConnectionString;
+                {
+                    using (SqlConnection connection = new SqlConnection(
+                               connectionString))
+                    {
+
+                        var listado_consultas = JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(query_string);
+
+                        foreach (var c in listado_consultas)
+                        {
+                            SqlCommand command = new SqlCommand(c.FirstOrDefault().Value.ToString(), connection);
+                            try
+                            {
+
+                                command.Connection.Open();
+                                var reader = command.ExecuteReader();
+                                object dato = new { Id = c.FirstOrDefault().Key.ToString(), result = reader.RecordsAffected + " fila(s) afectadas" };
+
+                                Errores.Add(dato);
+                                command.Connection.Close();
+                            }
+                            catch (Exception ex)
+                            {
+                                object dato = new { Id = c.FirstOrDefault().Key, result = ex.Message };
+                                Errores.Add(dato);
+                                command.Connection.Close();
+                            }
+                        }
+
+
+                        var JsonResult = JsonConvert.SerializeObject(Errores);
+
+                        return Errores;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                object dato = new { Id = "message", result = ex.Message };
+                Errores.Add(dato);
+                return Errores;
+            }
+        
+    }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using com.cpp.calypso.framework;
 using com.cpp.calypso.proyecto.aplicacion.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,46 @@ namespace com.cpp.calypso.webapi.Api.Controllers
                 };
             }
          
+            return new JsonResult
+            {
+                Data = new { success = false, errors = error }
+            };
+
+        }
+
+        public JsonResult DoMultipleQuery(string query)
+        {
+            string error = "";
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var data = _catalogoService.RealizarMultiplesConsultas(query);
+
+                    var result = JsonConvert.SerializeObject(data,
+                       Newtonsoft.Json.Formatting.None,
+                       new JsonSerializerSettings
+                       {
+                           ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                           NullValueHandling = NullValueHandling.Ignore
+                       });
+                    return new JsonResult
+                    {
+                        Data = result
+                    };
+
+                }
+            }
+            catch (Exception ex)
+            {
+                var result = ManejadorExcepciones.HandleException(ex);
+                error = result.Message;
+                return new JsonResult
+                {
+                    Data = new { success = false, errors = error }
+                };
+            }
+
             return new JsonResult
             {
                 Data = new { success = false, errors = error }

@@ -446,6 +446,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\techintpmdisqas - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\techintpmdisqas - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\com.cpp.calypso.comnu.dominio\com.cpp.calypso.comun.dominio.csproj">

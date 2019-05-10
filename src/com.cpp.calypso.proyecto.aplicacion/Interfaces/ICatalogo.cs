@@ -10,6 +10,6 @@ namespace com.cpp.calypso.proyecto.aplicacion.Interfaces
     {
         JArray Sync(int version, JArray registrosJson, List<int> usuariosId);
         string DoQuery(string query_string);
-
+        List<object> RealizarMultiplesConsultas(string query_string);
     }
 }
