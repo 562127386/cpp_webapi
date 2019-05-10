@@ -191,6 +191,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Dto
 
         public string Estado { get; set; }
 
+        public bool TieneAusentismo { get; set; }
+
         public bool RegistroMasivo { get; set; } = false;
 
         public int CatalogoEncuadreId { get; set; }

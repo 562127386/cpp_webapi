@@ -388,6 +388,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\Controllers\AuthController.cs" />
+    <Compile Include="Api\Controllers\Models\AuthPinModel.cs" />
     <Compile Include="Api\Controllers\Models\LoginModel.cs" />
     <Compile Include="Api\Controllers\Models\SincronizacionModel.cs" />
     <Compile Include="Api\Controllers\QueryController.cs" />
@@ -442,6 +444,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Views\Auth\" />
     <Folder Include="Views\Query\" />
   </ItemGroup>
   <ItemGroup>

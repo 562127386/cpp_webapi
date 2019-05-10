@@ -29,6 +29,13 @@ namespace com.cpp.calypso.webapi.Api.Controllers
         private readonly IServicioProveedorAsyncBaseCrudAppService _servicioProveedorSync;
         private readonly IServicioRolAsyncBaseCrudAppService _servicioRolSync;
         private readonly IUsuarioMovilAsyncBaseCrudAppService _usuarioMovilSync;
+        private readonly IConsumoAsyncBaseCrudAppService _consumoSync;
+        private readonly IConsumoQrAsyncBaseCrudAppService _consumoQrSync;
+        private readonly IConsumoViandaAsyncBaseCrudAppService _consumoViandaSync;
+        private readonly IConsumoViandaQrAsyncBaseCrudAppService _consumoViandaQrSync;
+        private readonly IAccesoTemporalAsyncBaseCrudAppService _accesoTemporalSync;
+        private readonly IRegistroAccesoAsyncBaseCrudAppService _registroAccesoSync;
+        private readonly IRequisitoColaboradorAsyncBaseCrudAppService _requisitoColaboradorSync;
         private readonly List<string> _orden = new List<string>();
 
         public SincronizacionController(
@@ -49,7 +56,14 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             IDetalleDistribucionAsyncBaseCrudAppService detalleDistribucionSync,
             IServicioProveedorAsyncBaseCrudAppService servicioProveedorSync,
             IServicioRolAsyncBaseCrudAppService servicioRolSync,
-            IUsuarioMovilAsyncBaseCrudAppService usuarioMovilSync
+            IUsuarioMovilAsyncBaseCrudAppService usuarioMovilSync,
+            IConsumoAsyncBaseCrudAppService consumoSync,
+            IConsumoQrAsyncBaseCrudAppService consumoQrSync,
+            IConsumoViandaAsyncBaseCrudAppService consumoViandaSync,
+            IConsumoViandaQrAsyncBaseCrudAppService consumoViandaQrSync,
+            IAccesoTemporalAsyncBaseCrudAppService accesoTemporalSync,
+            IRegistroAccesoAsyncBaseCrudAppService registroAccesoSync,
+            IRequisitoColaboradorAsyncBaseCrudAppService requisitoColaboradorSync
             ) : base(manejadorExcepciones)
         {
             _catalogoSync = catalogoSync;
@@ -69,6 +83,13 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             _servicioProveedorSync = servicioProveedorSync;
             _servicioRolSync = servicioRolSync;
             _usuarioMovilSync = usuarioMovilSync;
+            _consumoSync = consumoSync;
+            _consumoQrSync = consumoQrSync;
+            _consumoViandaSync = consumoViandaSync;
+            _consumoViandaQrSync = consumoViandaQrSync;
+            _accesoTemporalSync = accesoTemporalSync;
+            _registroAccesoSync = registroAccesoSync;
+            _requisitoColaboradorSync = requisitoColaboradorSync;
             _orden.Add("catalogos");
         }
 
@@ -262,6 +283,69 @@ namespace com.cpp.calypso.webapi.Api.Controllers
                     if (nombre == "usuarios")
                     {
                         var servicio = _usuarioMovilSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "consumos")
+                    {
+                        var servicio = _consumoSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "consumos_qr")
+                    {
+                        var servicio = _consumoQrSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "consumos_viandas")
+                    {
+                        var servicio = _consumoViandaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "consumos_viandas_qr")
+                    {
+                        var servicio = _consumoViandaQrSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "requisitos_colaboradores")
+                    {
+                        var servicio = _requisitoColaboradorSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "registros_accesos")
+                    {
+                        var servicio = _registroAccesoSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "accesos_temporal")
+                    {
+                        var servicio = _accesoTemporalSync;
                         var result = servicio.Sync(version, cambios, usuariosIds);
                         tablaResult.Add("nombre", nombre);
                         tablaResult.Add("registros", result);

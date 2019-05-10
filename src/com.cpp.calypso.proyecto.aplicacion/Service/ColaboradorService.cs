@@ -135,6 +135,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("primer_apellido", entidad.PrimerApellido);
             objJson.Add("segundo_apellido", entidad.SegundoApellido);
             objJson.Add("huella_digital", entidad.HuellaDigital);
+            objJson.Add("tiene_ausentismo", entidad.TieneAusentismo ? 1 : 0);
+            objJson.Add("estado", entidad.Estado);
 
             return objJson;
         }
@@ -174,7 +176,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.PrimerApellido = (string)json["primer_apellido"];
             entity.SegundoApellido = (string)json["segundo_apellido"];
             entity.HuellaDigital = (string)json["huella_digital"];
-
+            entity.Estado = (string)json["estado"];
+            entity.TieneAusentismo = (int)json["tiene_ausentismo"] == 1 ? true: false;
 
 
 

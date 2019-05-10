@@ -499,6 +499,22 @@
     <Compile Include="Migrations\201904301833134_UsuariosMoviles.Designer.cs">
       <DependentUpon>201904301833134_UsuariosMoviles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905071457512_Accesos.cs" />
+    <Compile Include="Migrations\201905071457512_Accesos.Designer.cs">
+      <DependentUpon>201905071457512_Accesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905071744175_Estado_Ausentismo_ToColaboradores.cs" />
+    <Compile Include="Migrations\201905071744175_Estado_Ausentismo_ToColaboradores.Designer.cs">
+      <DependentUpon>201905071744175_Estado_Ausentismo_ToColaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905082310395_CamposSincronizacion_Henry.cs" />
+    <Compile Include="Migrations\201905082310395_CamposSincronizacion_Henry.Designer.cs">
+      <DependentUpon>201905082310395_CamposSincronizacion_Henry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905082326153_Estandar_FS_FR.cs" />
+    <Compile Include="Migrations\201905082326153_Estandar_FS_FR.Designer.cs">
+      <DependentUpon>201905082326153_Estandar_FS_FR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -1034,6 +1050,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904301833134_UsuariosMoviles.resx">
       <DependentUpon>201904301833134_UsuariosMoviles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905071457512_Accesos.resx">
+      <DependentUpon>201905071457512_Accesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905071744175_Estado_Ausentismo_ToColaboradores.resx">
+      <DependentUpon>201905071744175_Estado_Ausentismo_ToColaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905082310395_CamposSincronizacion_Henry.resx">
+      <DependentUpon>201905082310395_CamposSincronizacion_Henry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905082326153_Estandar_FS_FR.resx">
+      <DependentUpon>201905082326153_Estandar_FS_FR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

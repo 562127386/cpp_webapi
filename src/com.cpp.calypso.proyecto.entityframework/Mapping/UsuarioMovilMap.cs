@@ -31,6 +31,7 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Username).HasColumnName("username");
             Property(d => d.UsuarioId).HasColumnName("usuario_id");
             Property(d => d.Rol).HasColumnName("rol");
+
         }
     }
 }

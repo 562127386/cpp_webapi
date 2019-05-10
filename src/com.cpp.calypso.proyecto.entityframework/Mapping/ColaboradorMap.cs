@@ -84,10 +84,13 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.UsuarioId).HasColumnName("usuario_id");
             Property(d => d.ValidacionCedula).HasColumnName("validacion_cedula");
             Property(d => d.HuellaDigital).HasColumnName("huella_digital");
+            Property(d => d.TieneAusentismo).HasColumnName("tiene_ausentismo");
+
 
             Property(d => d.IsDeleted).HasColumnName("vigente");
             Property(d => d.Version).HasColumnName("m_version");
             Property(d => d.Ref).HasColumnName("m_ref");
+
 
             this.HasRequired(t => t.CatalogoTipoIdentificacion)
                 .WithMany()
