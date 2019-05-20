@@ -14,9 +14,15 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
         : AsyncBaseCrudAppService<MenuProveedor, MenuProveedorDto, PagedAndFilteredResultRequestDto>,
         IMenuProveedorAsyncBaseCrudAppService
     {
-        public MenuProveedorAsyncBaseCrudAppService(IBaseRepository<MenuProveedor> repository) : base(repository)
+        private readonly IBaseRepository<Archivo> _archivoRepository;
+
+        public MenuProveedorAsyncBaseCrudAppService(
+            IBaseRepository<MenuProveedor> repository,
+            IBaseRepository<Archivo> archivoRepository
+            ) : base(repository)
         {
             Repository = repository;
+            _archivoRepository = archivoRepository;
         }
 
         public IBaseRepository<MenuProveedor> Repository { get; }
@@ -79,6 +85,17 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                 Int32 unixTimestamp2 = (Int32)(DateTime.UtcNow.Subtract(new DateTime())).TotalSeconds;
                 instancia.Version = unixTimestamp;
 
+
+                // Asignar el archivo al menu proveedor
+                var archivoRef = instancia.DocumentacionRef;
+                var archivo = _archivoRepository.GetAll()
+                    .Where(o => o.Ref == archivoRef)
+                    .FirstOrDefault();
+
+                if(archivo != null)
+                    instancia.DocumentacionId = archivo.Id;
+
+
                 if (instancia.Id == 0)
                 {
                     try
@@ -135,6 +152,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("fecha_inicial", GetStringFromDateTime(entidad.FechaInicial));
             objJson.Add("fecha_final", GetStringFromDateTime(entidad.FechaFinal));
             objJson.Add("proveedor_id", entidad.ProveedorId);
+
+
             return objJson;
         }
 
@@ -167,11 +186,18 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
 
             entity.Aprobado = (bool)json.GetValue("aprobado");
             entity.Descripcion = (string)json.GetValue("descripcion");
-            entity.DocumentacionId = (int)json.GetValue("archivo_id");
+            var archivoEsNull = json.GetValue("archivo_id").Type == JTokenType.Null;
+            if(!archivoEsNull)
+                entity.DocumentacionId = (int)json.GetValue("archivo_id");
+
             entity.DocumentacionRef = (string)json.GetValue("archivo_ref");
-            entity.FechaAprobacion = GetDateTimeFromString((string)json.GetValue("fecha_aprobacion"));
-            entity.FechaInicial = GetDateTimeFromString((string)json.GetValue("fecha_inicial"));
-            entity.FechaFinal = GetDateTimeFromString((string)json.GetValue("fecha_final"));
+
+            var fechaAprobacionEsNull = json.GetValue("fecha_aprobacion").Type == JTokenType.Null;
+            if(!fechaAprobacionEsNull)
+                entity.FechaAprobacion = GetDateTimeFromString((string)json.GetValue("fecha_aprobacion"));
+
+            entity.FechaInicial = GetDateFromString((string)json.GetValue("fecha_inicial"));
+            entity.FechaFinal = GetDateFromString((string)json.GetValue("fecha_final"));
             entity.ProveedorId = (int)json.GetValue("proveedor_id");
 
 

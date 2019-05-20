@@ -36,6 +36,15 @@ namespace com.cpp.calypso.webapi.Api.Controllers
         private readonly IAccesoTemporalAsyncBaseCrudAppService _accesoTemporalSync;
         private readonly IRegistroAccesoAsyncBaseCrudAppService _registroAccesoSync;
         private readonly IRequisitoColaboradorAsyncBaseCrudAppService _requisitoColaboradorSync;
+        private readonly IChoferAsyncBaseCrudAppService _choferSync;
+        private readonly IVehiculoAsyncBaseCrudAppService _vehiculoSync;
+        private readonly IRutaAsyncBaseCrudAppService _rutasSync;
+        private readonly IRutaHorarioAsyncBaseCrudAppService _rutaHorarioSync;
+        private readonly IRutaHorarioVehiculoAsyncBaseCrudAppService _rutaHorarioVehiculoSync;
+        private readonly ILugarAsyncBaseCrudAppService _lugarSync;
+        private readonly IConsumoTransporteAsyncBaseCrudAppService _consumoTransporteSync;
+        private readonly IOperacionDiariaAsyncBaseCrudAppService _operacionDiariaSync;
+        private readonly IOperacionDiariaRutaAsyncBaseCrudAppService _operacionDiariaRutaSync;
         private readonly List<string> _orden = new List<string>();
 
         public SincronizacionController(
@@ -63,7 +72,16 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             IConsumoViandaQrAsyncBaseCrudAppService consumoViandaQrSync,
             IAccesoTemporalAsyncBaseCrudAppService accesoTemporalSync,
             IRegistroAccesoAsyncBaseCrudAppService registroAccesoSync,
-            IRequisitoColaboradorAsyncBaseCrudAppService requisitoColaboradorSync
+            IRequisitoColaboradorAsyncBaseCrudAppService requisitoColaboradorSync,
+            IChoferAsyncBaseCrudAppService choferSync,
+            IVehiculoAsyncBaseCrudAppService vehiculoSync,
+            IRutaAsyncBaseCrudAppService rutasSync,
+            IRutaHorarioAsyncBaseCrudAppService rutaHorarioSync,
+            IRutaHorarioVehiculoAsyncBaseCrudAppService rutaHorarioVehiculoSync,
+            ILugarAsyncBaseCrudAppService lugarSync,
+            IConsumoTransporteAsyncBaseCrudAppService consumoTransporteSync,
+            IOperacionDiariaAsyncBaseCrudAppService operacionDiariaSync,
+            IOperacionDiariaRutaAsyncBaseCrudAppService operacionDiariaRutaSync
             ) : base(manejadorExcepciones)
         {
             _catalogoSync = catalogoSync;
@@ -90,6 +108,15 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             _accesoTemporalSync = accesoTemporalSync;
             _registroAccesoSync = registroAccesoSync;
             _requisitoColaboradorSync = requisitoColaboradorSync;
+            _choferSync = choferSync;
+            _vehiculoSync = vehiculoSync;
+            _rutasSync = rutasSync;
+            _rutaHorarioSync = rutaHorarioSync;
+            _rutaHorarioVehiculoSync = rutaHorarioVehiculoSync;
+            _lugarSync = lugarSync;
+            _consumoTransporteSync = consumoTransporteSync;
+            _operacionDiariaSync = operacionDiariaSync;
+            _operacionDiariaRutaSync = operacionDiariaRutaSync;
             _orden.Add("catalogos");
         }
 
@@ -346,6 +373,87 @@ namespace com.cpp.calypso.webapi.Api.Controllers
                     if (nombre == "accesos_temporal")
                     {
                         var servicio = _accesoTemporalSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "lugares")
+                    {
+                        var servicio = _lugarSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "choferes")
+                    {
+                        var servicio = _choferSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "vehiculos")
+                    {
+                        var servicio = _vehiculoSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "rutas")
+                    {
+                        var servicio = _rutasSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "rutas_horarios")
+                    {
+                        var servicio = _rutaHorarioSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "rutas_horarios_vehiculos")
+                    {
+                        var servicio = _rutaHorarioVehiculoSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "operaciones_diarias")
+                    {
+                        var servicio = _operacionDiariaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "operaciones_diarias_rutas")
+                    {
+                        var servicio = _operacionDiariaRutaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "consumos_transporte")
+                    {
+                        var servicio = _consumoTransporteSync;
                         var result = servicio.Sync(version, cambios, usuariosIds);
                         tablaResult.Add("nombre", nombre);
                         tablaResult.Add("registros", result);

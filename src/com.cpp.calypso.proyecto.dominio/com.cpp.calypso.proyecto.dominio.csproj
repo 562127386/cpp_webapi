@@ -153,9 +153,11 @@
     <Compile Include="Entidades\AccesoTemporal.cs" />
     <Compile Include="Entidades\Archivo.cs" />
     <Compile Include="Entidades\Catalogo.cs" />
+    <Compile Include="Entidades\Chofer.cs" />
     <Compile Include="Entidades\Colaborador.cs" />
     <Compile Include="Entidades\Consumo.cs" />
     <Compile Include="Entidades\ConsumoQr.cs" />
+    <Compile Include="Entidades\ConsumoTransporte.cs" />
     <Compile Include="Entidades\ConsumoVianda.cs" />
     <Compile Include="Entidades\ConsumoViandaQr.cs" />
     <Compile Include="Entidades\ContratoProveedor.cs" />
@@ -163,11 +165,17 @@
     <Compile Include="Entidades\DistribucionVianda.cs" />
     <Compile Include="Entidades\Empresa.cs" />
     <Compile Include="Entidades\Locacion.cs" />
+    <Compile Include="Entidades\Lugar.cs" />
     <Compile Include="Entidades\MenuProveedor.cs" />
     <Compile Include="Entidades\OpcionComida.cs" />
+    <Compile Include="Entidades\OperacionDiaria.cs" />
+    <Compile Include="Entidades\OperacionDiariaRuta.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\RegistroAcceso.cs" />
     <Compile Include="Entidades\RequisitoColaborador.cs" />
+    <Compile Include="Entidades\Ruta.cs" />
+    <Compile Include="Entidades\RutaHorario.cs" />
+    <Compile Include="Entidades\RutaHorarioVehiculo.cs" />
     <Compile Include="Entidades\ServicioProveedor.cs" />
     <Compile Include="Entidades\ServicioRol.cs" />
     <Compile Include="Entidades\SolicitudVianda.cs" />
@@ -175,6 +183,7 @@
     <Compile Include="Entidades\TipoCatalogo.cs" />
     <Compile Include="Entidades\TipoOpcionComida.cs" />
     <Compile Include="Entidades\UsuarioMovil.cs" />
+    <Compile Include="Entidades\Vehiculo.cs" />
     <Compile Include="Entidades\Zona.cs" />
     <Compile Include="Foo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

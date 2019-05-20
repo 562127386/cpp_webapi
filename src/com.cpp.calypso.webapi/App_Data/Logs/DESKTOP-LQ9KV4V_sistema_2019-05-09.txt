@@ -1,0 +1,1 @@
+Error | notauth:: | 09/05/2019 14:18:33:1833 | 38 | com.cpp.calypso.framework.ManejadorExcepciones | Excepcion: | HandleAbpExceptionEventHandler.HandleEvent => ManejadorExcepciones.HandleException => NLogLogger.Error | An error occurred while updating the entries. See the inner exception for details. | !

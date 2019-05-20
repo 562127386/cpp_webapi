@@ -9,11 +9,8 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
     {
         public int SolicitanteId { get; set; }
 
-        public Colaborador Solicitante { get; set; }
+        public int? LocacionId { get; set; }
 
-        public int LocacionId { get; set; }
-
-        public Locacion Locacion { get; set; }
 
         public int TipoComidaId { get; set; }
 
@@ -23,9 +20,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public Catalogo Disciplina { get; set; }
 
-        public int AreaId { get; set; }
-
-        public Catalogo Area { get; set; }
+        public int? AreaId { get; set; }
 
         public DateTime FechaSolicitud { get; set; }
 
@@ -54,8 +49,6 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public string Observaciones { get; set; }
 
         public int? AnotadorId { get; set; }
-
-        public Colaborador Anotador { get; set; }
 
         public DateTime? HoraEntregaRestaurante { get; set; }
 

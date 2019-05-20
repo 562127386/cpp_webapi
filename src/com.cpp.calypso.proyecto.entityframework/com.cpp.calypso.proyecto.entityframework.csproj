@@ -168,9 +168,11 @@
     <Compile Include="Mapping\AccesoTemporalMap.cs" />
     <Compile Include="Mapping\ArchivoMap.cs" />
     <Compile Include="Mapping\CatalogoMap.cs" />
+    <Compile Include="Mapping\ChoferMap.cs" />
     <Compile Include="Mapping\ColaboradorMap.cs" />
     <Compile Include="Mapping\ConsumoMap.cs" />
     <Compile Include="Mapping\ConsumoQrMap.cs" />
+    <Compile Include="Mapping\ConsumoTransporteMap.cs" />
     <Compile Include="Mapping\ConsumoViandaMap.cs" />
     <Compile Include="Mapping\ConsumoViandaQrMap.cs" />
     <Compile Include="Mapping\ContratoProveedorMap.cs" />
@@ -179,11 +181,17 @@
     <Compile Include="Mapping\EmpresaMap.cs" />
     <Compile Include="Mapping\FooMap.cs" />
     <Compile Include="Mapping\LocacionMap.cs" />
+    <Compile Include="Mapping\LugarMap.cs" />
     <Compile Include="Mapping\MenuProveedorMap.cs" />
     <Compile Include="Mapping\OpcionComidaMao.cs" />
+    <Compile Include="Mapping\OperacionDiariaMap.cs" />
+    <Compile Include="Mapping\OperacionDiariaRutaMap.cs" />
     <Compile Include="Mapping\ProveedorMap.cs" />
     <Compile Include="Mapping\RegistroAccesoMap.cs" />
     <Compile Include="Mapping\RequisitoColaboradorMap.cs" />
+    <Compile Include="Mapping\RutaHorarioMap.cs" />
+    <Compile Include="Mapping\RutaHorarioVehiculoMap.cs" />
+    <Compile Include="Mapping\RutaMap.cs" />
     <Compile Include="Mapping\ServicioProveedorMap.cs" />
     <Compile Include="Mapping\ServicioRolMap.cs" />
     <Compile Include="Mapping\SolicitudViandaMap.cs" />
@@ -191,6 +199,7 @@
     <Compile Include="Mapping\TipoCatalogoMap.cs" />
     <Compile Include="Mapping\TipoOpcionComidaMap.cs" />
     <Compile Include="Mapping\UsuarioMovilMap.cs" />
+    <Compile Include="Mapping\VehiculoMap.cs" />
     <Compile Include="Mapping\ZonaMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectoEntityFrameworkModule.cs" />

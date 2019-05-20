@@ -132,8 +132,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("locacion_id", entidad.LocacionId);
             objJson.Add("tipo_operacion_comida_id", entidad.TipoComidaId);
             objJson.Add("disciplina_id", entidad.DisciplinaId);
-            objJson.Add("fecha_solicitud", GetStringFromDateTime(entidad.FechaSolicitud));
-            objJson.Add("fecha_alcance", GetStringFromDateTime(entidad.FechaAlcancce));
+            objJson.Add("fecha_solicitud", GetStringFromDate(entidad.FechaSolicitud));
+            objJson.Add("fecha_alcance", GetStringFromDate(entidad.FechaAlcancce));
             objJson.Add("pedido_viandas", entidad.PedidoViandas);
             objJson.Add("total_pedido", entidad.TotalPedido);
             objJson.Add("consumido", entidad.Consumido);
@@ -182,24 +182,53 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.LocacionId = (int)json["locacion_id"];
             entity.TipoComidaId = (int)json["tipo_operacion_comida_id"];
             entity.DisciplinaId = (int)json["disciplina_id"];
-            entity.FechaSolicitud = GetDateTimeFromString((string)json["fecha_solicitud"]);
-            entity.FechaAlcancce = GetDateTimeFromString((string)json["fecha_alcance"]);
+            entity.FechaSolicitud = GetDateFromString((string)json["fecha_solicitud"]);
+
+            if (json.GetValue("fecha_alcance").Type != JTokenType.Null)
+                entity.FechaAlcancce = GetDateFromString((string)json["fecha_alcance"]);
+
             entity.PedidoViandas = (int)json["pedido_viandas"];
             entity.TotalPedido = (int)json["total_pedido"];
-            entity.Consumido = (int)json["consumido"];
-            entity.ConsumoJustificado = (int)json["consumido_justificado"];
-            entity.TotalConsumido = (int)json["total_consumido"];
+
+            if (json.GetValue("consumido").Type != JTokenType.Null)
+                entity.Consumido = (int)json["consumido"];
+
+            if (json.GetValue("consumido_justificado").Type != JTokenType.Null)
+                entity.ConsumoJustificado = (int)json["consumido_justificado"];
+
+
+            if (json.GetValue("total_consumido").Type != JTokenType.Null)
+                entity.TotalConsumido = (int)json["total_consumido"];
+
             //Falta Por Justificar
-            entity.Estado = (SolicitudViandaEstado)Enum.ToObject(typeof(SolicitudViandaEstado), (int)json["estado"]);
-            entity.SolicitudOriginalId = (int)json["solicitud_original_id"];
+
+
+            //entity.Estado = (SolicitudViandaEstado)Enum.ToObject(typeof(SolicitudViandaEstado), (int)json["estado"]);
+            entity.Estado = GetEstado((int)json["estado"]);
+
+            if (json.GetValue("solicitud_original_id").Type != JTokenType.Null)
+                entity.SolicitudOriginalId = (int)json["solicitud_original_id"];
+
             entity.ReferenciaUbicacion = (string)json["referencia_ubicacion"];
-            entity.AreaId = (int)json["area_id"];
+
+            if (json.GetValue("area_id").Type != JTokenType.Null)
+                entity.AreaId = (int)json["area_id"];
+
             entity.Observaciones = (string)json["observaciones"];
             entity.AnotadorId = (int)json["anotador_id"];
-            entity.HoraEntregaRestaurante = GetDateTimeFromString((string)json["hora_entrega_restaurante"]);
-            entity.HoraEntregaTransportista = GetDateTimeFromString((string)json["hora_entrega_transportista"]);
+
+            if (json.GetValue("hora_entrega_restaurante").Type != JTokenType.Null)
+                entity.HoraEntregaRestaurante = GetDateTimeFromString((string)json["hora_entrega_restaurante"]);
+
+
+            if (json.GetValue("hora_entrega_tranportista").Type != JTokenType.Null)
+                entity.HoraEntregaTransportista = GetDateTimeFromString((string)json["hora_entrega_tranportista"]);
+
             //Fata Origen
-            entity.AlcanceViandas = (int)json["alcance_viandas"];
+
+            if (json.GetValue("alcance_viandas").Type != JTokenType.Null)
+                entity.AlcanceViandas = (int)json["alcance_viandas"];
+
             //Falta Total Recibido
             //Falta Hora Entrega Anotador
 
@@ -208,6 +237,24 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
 
 
             return entity;
+        }
+
+
+        public SolicitudViandaEstado GetEstado(int value)
+        {
+            switch (value)
+            {
+                case 1:
+                    return SolicitudViandaEstado.Registrado;
+                case 4:
+                    return SolicitudViandaEstado.AsignadaTransporte;
+                case 5:
+                    return SolicitudViandaEstado.DespachadaTransporte;
+                case 6:
+                    return SolicitudViandaEstado.EntregadaAnotador;
+                default:
+                    return SolicitudViandaEstado.Registrado;
+            }
         }
     }
 }

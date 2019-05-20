@@ -16,11 +16,11 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public bool Aprobado { get; set; }
 
-        public DateTime FechaAprobacion { get; set; }
+        public DateTime? FechaAprobacion { get; set; }
 
         public string Descripcion { get; set; }
 
-        public int DocumentacionId { get; set; }
+        public int? DocumentacionId { get; set; }
 
         public string DocumentacionRef { get; set; }
 

@@ -42,16 +42,6 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Ref).HasColumnName("m_ref");
 
 
-            this.HasRequired(t => t.Solicitante)
-                .WithMany()
-                .HasForeignKey(d => d.SolicitanteId)
-                .WillCascadeOnDelete(false);
-
-            this.HasRequired(t => t.Locacion)
-                .WithMany()
-                .HasForeignKey(d => d.LocacionId)
-                .WillCascadeOnDelete(false);
-
             this.HasRequired(t => t.TipoComida)
                 .WithMany()
                 .HasForeignKey(d => d.TipoComidaId)
@@ -62,20 +52,11 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
                 .HasForeignKey(d => d.DisciplinaId)
                 .WillCascadeOnDelete(false);
 
-            this.HasRequired(t => t.Area)
-                .WithMany()
-                .HasForeignKey(d => d.AreaId)
-                .WillCascadeOnDelete(false);
-
             this.HasOptional(t => t.SolicitudOriginal)
                 .WithMany()
                 .HasForeignKey(d => d.SolicitudOriginalId)
                 .WillCascadeOnDelete(false);
 
-            this.HasOptional(t => t.Anotador)
-                .WithMany()
-                .HasForeignKey(d => d.AnotadorId)
-                .WillCascadeOnDelete(false);
         }
     }
 }

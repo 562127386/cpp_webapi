@@ -1,0 +1,132 @@
+Debug | notauth:: | 08/05/2019 18:36:03:363 | 1 | Abp.Modules.AbpModuleManager             | Loading Abp modules... | AbpModuleManager.LoadAllModules => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Found 17 ABP modules in total. | AbpModuleManager.LoadAllModules => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.web.App_Start.WebModule, com.cpp.calypso.web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.comun.entityframework.ComunEntityFrameworkModule, com.cpp.calypso.comun.entityframework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.comun.dominio.ComunDominioModule, com.cpp.calypso.comun.dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.framework.FrameworkModule, com.cpp.calypso.framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.seguridad.entityframework.SeguridadEntityFrameworkModule, com.cpp.calypso.entityframework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.proyecto.entityframework.ProyectoEntityFrameworkModule, com.cpp.calypso.proyecto.entityframework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.comun.aplicacion.ComunAplicacionModule, com.cpp.calypso.comun.aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.seguridad.aplicacion.SeguridadAplicacionModule, com.cpp.calypso.seguridad.aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: com.cpp.calypso.proyecto.aplicacion.ProyectoAplicacionModule, com.cpp.calypso.proyecto.aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null | AbpModuleManager.CreateModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.Modules.AbpModuleManager             | 17 modules loaded. | AbpModuleManager.LoadAllModules => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:04:364 | 1 | Abp.EntityFramework.AbpEntityFrameworkModule | Registering DbContext: com.cpp.calypso.web.PrincipalDbContext, com.cpp.calypso.web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null | AbpEntityFrameworkModule.RegisterGenericRepositoriesAndMatchDbContexes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.Localization.LocalizationManager     | Initializing 2 localization sources. | LocalizationManager.InitializeSources => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.Localization.LocalizationManager     | Initialized localization source: Abp | LocalizationManager.InitializeSources => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.Localization.LocalizationManager     | Initialized localization source: AbpWeb | LocalizationManager.InitializeSources => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.BackgroundJobs.BackgroundJobManager  | Start background worker: Abp.BackgroundJobs.BackgroundJobManager | BackgroundWorkerBase.Start => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | Found 36 classes define auto mapping attributes | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.ModuloFuncionalidDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.CrearUsuarioDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.ModuloDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.MyUsuarioDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.RolDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.RolPermisosDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.PermisoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.AccionDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.seguridad.aplicacion.UsuarioDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.AccesoTemporalDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ArchivoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.CatalogoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ColaboradorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ConsumoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ConsumoQrDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ConsumoViandaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ConsumoViandaQrDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ContratoProveedorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.DetalleDistribucionDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.DistribucionViandaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.EmpresaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.LocacionDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.MenuProveedorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.OpcionComidaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ProveedorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.RegistroAccesoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.RequisitoColaboradorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ServicioProveedorDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ServicioRolDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.SolicitudViandaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.TipoAccionEmpresaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.TipoCatalogoDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.TipoOpcionComidaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.UsuarioDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.UsuarioMovilDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:08:368 | 1 | Abp.AutoMapper.AbpAutoMapperModule       | com.cpp.calypso.proyecto.aplicacion.Dto.ZonaDto | AbpAutoMapperModule.FindAndAutoMapTypes => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:09:369 | 1 | Abp.Logging.LogHelper                    | Dynamic web api controller is created for type 'com.cpp.calypso.seguridad.aplicacion.IAuditoriaService' with service name 'app/auditoriaService'. | AbpWebApiModule.PostInitialize => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:09:369 | 1 | Abp.Logging.LogHelper                    | Dynamic web api controller is created for type 'com.cpp.calypso.seguridad.aplicacion.IModuloService' with service name 'app/moduloService'. | AbpWebApiModule.PostInitialize => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:09:369 | 1 | Abp.Logging.LogHelper                    | Dynamic web api controller is created for type 'com.cpp.calypso.seguridad.aplicacion.IRolService' with service name 'app/rolService'. | AbpWebApiModule.PostInitialize => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:09:369 | 1 | Abp.Logging.LogHelper                    | Dynamic web api controller is created for type 'com.cpp.calypso.seguridad.aplicacion.IUsuarioService' with service name 'app/usuarioService'. | AbpWebApiModule.PostInitialize => CastleNlogLogger.DebugFormat => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:10:3610 | 9 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:10:3610 | 9 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:10:3610 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:10:3610 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:11:3611 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:16:3616 | 10 | com.cpp.calypso.web.PrincipalDbContext   | Opened connection at 8/5/2019 18:36:16 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:16:3616 | 10 | com.cpp.calypso.web.PrincipalDbContext   | SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Codigo] AS [Codigo], 
+    [Project1].[Nombre] AS [Nombre], 
+    [Project1].[Descripcion] AS [Descripcion], 
+    [Project1].[Categoria] AS [Categoria], 
+    [Project1].[Tipo] AS [Tipo], 
+    [Project1].[Valor] AS [Valor], 
+    [Project1].[EsEditable] AS [EsEditable], 
+    [Project1].[TieneOpciones] AS [TieneOpciones], 
+    [Project1].[LastModificationTime] AS [LastModificationTime], 
+    [Project1].[LastModifierUserId] AS [LastModifierUserId], 
+    [Project1].[CreationTime] AS [CreationTime], 
+    [Project1].[CreatorUserId] AS [CreatorUserId], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id1] AS [Id1], 
+    [Project1].[Valor1] AS [Valor1], 
+    [Project1].[Texto] AS [Texto], 
+    [Project1].[ParametroId] AS [ParametroId]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Codigo] AS [Codigo], 
+        [Extent1].[Nombre] AS [Nombre], 
+        [Extent1].[Descripcion] AS [Descripcion], 
+        [Extent1].[Categoria] AS [Categoria], 
+        [Extent1].[Tipo] AS [Tipo], 
+        [Extent1].[Valor] AS [Valor], 
+        [Extent1].[EsEditable] AS [EsEditable], 
+        [Extent1].[TieneOpciones] AS [TieneOpciones], 
+        [Extent1].[LastModificationTime] AS [LastModificationTime], 
+        [Extent1].[LastModifierUserId] AS [LastModifierUserId], 
+        [Extent1].[CreationTime] AS [CreationTime], 
+        [Extent1].[CreatorUserId] AS [CreatorUserId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Valor] AS [Valor1], 
+        [Extent2].[Texto] AS [Texto], 
+        [Extent2].[ParametroId] AS [ParametroId], 
+        CASE WHEN ([Extent2].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM  [SCH_USUARIOS].[parametros] AS [Extent1]
+        LEFT OUTER JOIN [SCH_USUARIOS].[parametro_opciones] AS [Extent2] ON [Extent1].[Id] = [Extent2].[ParametroId]
+    )  AS [Project1]
+    ORDER BY [Project1].[Id] ASC, [Project1].[C1] ASC | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:16:3616 | 10 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:16:3616 | 10 | com.cpp.calypso.web.PrincipalDbContext   | -- Executing at 8/5/2019 18:36:16 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:17:3617 | 10 | com.cpp.calypso.web.PrincipalDbContext   | -- Completed in 93 ms with result: SqlDataReader
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:17:3617 | 10 | com.cpp.calypso.web.PrincipalDbContext   | 
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:17:3617 | 10 | com.cpp.calypso.web.PrincipalDbContext   | Closed connection at 8/5/2019 18:36:17 -05:00
+ | PrincipalDbContext.<Init>b__21_0 => CastleNlogLogger.Debug => NLogLogger.Debug |  | !
+Debug | notauth:: | 08/05/2019 18:36:17:3617 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:17:3617 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:17:3617 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:17:3617 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:17:3617 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:24:3624 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !
+Debug | notauth:: | 08/05/2019 18:36:27:3627 | 10 | com.cpp.calypso.web.GenericApplication   | Call GenericApplication.Construct | RuntimeMethodHandle.InvokeMethod => GenericApplication..ctor => NLogLogger.DebugFormat |  | !

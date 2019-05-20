@@ -139,6 +139,23 @@ namespace com.cpp.calypso.comun.aplicacion
             return oDate;
         }
 
+        public virtual string GetStringFromTimeSpan(TimeSpan? oDate)
+        {
+            if (oDate == null)
+            {
+                return "";
+            }
+            var time = oDate.GetValueOrDefault().ToString(@"hh\:mm\:ss");
+            return time;
+            //return String.Format("{0:HH:mm:ss}", oDate);
+        }
+
+        public virtual TimeSpan GetTimeSpanFromString(string date)
+        {
+            var oDate = TimeSpan.ParseExact(date, "HH:mm:ss", null);
+            return oDate;
+        }
+
         public virtual DateTime GetDateTimeFromStringFormat(string date)
         {
             DateTime oDate = DateTime.ParseExact(date, "dd-MM-yyyy", null);

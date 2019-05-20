@@ -515,6 +515,38 @@
     <Compile Include="Migrations\201905082326153_Estandar_FS_FR.Designer.cs">
       <DependentUpon>201905082326153_Estandar_FS_FR.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905091848210_MenuProveedor_ArchivoNull.cs" />
+    <Compile Include="Migrations\201905091848210_MenuProveedor_ArchivoNull.Designer.cs">
+      <DependentUpon>201905091848210_MenuProveedor_ArchivoNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905091925340_MenuProveedor_FechaProbacionNull.cs" />
+    <Compile Include="Migrations\201905091925340_MenuProveedor_FechaProbacionNull.Designer.cs">
+      <DependentUpon>201905091925340_MenuProveedor_FechaProbacionNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905162303223_Entidades_Transporte.cs" />
+    <Compile Include="Migrations\201905162303223_Entidades_Transporte.Designer.cs">
+      <DependentUpon>201905162303223_Entidades_Transporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905171626217_RutaHorarioVehiculo_Estado.cs" />
+    <Compile Include="Migrations\201905171626217_RutaHorarioVehiculo_Estado.Designer.cs">
+      <DependentUpon>201905171626217_RutaHorarioVehiculo_Estado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905171819573_ConsumoTransporte.cs" />
+    <Compile Include="Migrations\201905171819573_ConsumoTransporte.Designer.cs">
+      <DependentUpon>201905171819573_ConsumoTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905201611202_ConsumoTransporte_ColaboradorNull.cs" />
+    <Compile Include="Migrations\201905201611202_ConsumoTransporte_ColaboradorNull.Designer.cs">
+      <DependentUpon>201905201611202_ConsumoTransporte_ColaboradorNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905202132160_SolicitudViandas_AreaNull.cs" />
+    <Compile Include="Migrations\201905202132160_SolicitudViandas_AreaNull.Designer.cs">
+      <DependentUpon>201905202132160_SolicitudViandas_AreaNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905202210377_SolicitudViandas_catalogos.cs" />
+    <Compile Include="Migrations\201905202210377_SolicitudViandas_catalogos.Designer.cs">
+      <DependentUpon>201905202210377_SolicitudViandas_catalogos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -1062,6 +1094,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905082326153_Estandar_FS_FR.resx">
       <DependentUpon>201905082326153_Estandar_FS_FR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905091848210_MenuProveedor_ArchivoNull.resx">
+      <DependentUpon>201905091848210_MenuProveedor_ArchivoNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905091925340_MenuProveedor_FechaProbacionNull.resx">
+      <DependentUpon>201905091925340_MenuProveedor_FechaProbacionNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905162303223_Entidades_Transporte.resx">
+      <DependentUpon>201905162303223_Entidades_Transporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905171626217_RutaHorarioVehiculo_Estado.resx">
+      <DependentUpon>201905171626217_RutaHorarioVehiculo_Estado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905171819573_ConsumoTransporte.resx">
+      <DependentUpon>201905171819573_ConsumoTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905201611202_ConsumoTransporte_ColaboradorNull.resx">
+      <DependentUpon>201905201611202_ConsumoTransporte_ColaboradorNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905202132160_SolicitudViandas_AreaNull.resx">
+      <DependentUpon>201905202132160_SolicitudViandas_AreaNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905202210377_SolicitudViandas_catalogos.resx">
+      <DependentUpon>201905202210377_SolicitudViandas_catalogos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
