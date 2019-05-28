@@ -144,8 +144,10 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("referencia_ubicacion", entidad.ReferenciaUbicacion);
             objJson.Add("area_id", entidad.AreaId);
             objJson.Add("observaciones", entidad.SolicitudOriginalId);
-
-
+            objJson.Add("anotador_id", entidad.AnotadorId);
+            objJson.Add("hora_entrega_restaurante", GetStringFromDateTime(entidad.HoraEntregaRestaurante));
+            objJson.Add("hora_entrega_tranportista", GetStringFromDateTime(entidad.HoraEntregaRestaurante));
+            objJson.Add("alcance_viandas", entidad.AlcanceViandas);
 
 
             return objJson;
@@ -185,7 +187,12 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.FechaSolicitud = GetDateFromString((string)json["fecha_solicitud"]);
 
             if (json.GetValue("fecha_alcance").Type != JTokenType.Null)
-                entity.FechaAlcancce = GetDateFromString((string)json["fecha_alcance"]);
+            {
+                var fechaAlcance = (string)json["fecha_alcance"];
+                if (fechaAlcance.Length > 0)
+                    entity.FechaAlcancce = GetDateFromString((string)json["fecha_alcance"]);
+            }
+                
 
             entity.PedidoViandas = (int)json["pedido_viandas"];
             entity.TotalPedido = (int)json["total_pedido"];
@@ -218,11 +225,26 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.AnotadorId = (int)json["anotador_id"];
 
             if (json.GetValue("hora_entrega_restaurante").Type != JTokenType.Null)
-                entity.HoraEntregaRestaurante = GetDateTimeFromString((string)json["hora_entrega_restaurante"]);
-
+            {
+                var hora = (string)json["hora_entrega_restaurante"];
+                if (hora.Length > 0)
+                    entity.HoraEntregaRestaurante = GetDateTimeFromString((string)json["hora_entrega_restaurante"]);
+            }
 
             if (json.GetValue("hora_entrega_tranportista").Type != JTokenType.Null)
-                entity.HoraEntregaTransportista = GetDateTimeFromString((string)json["hora_entrega_tranportista"]);
+            {
+                var hora = (string)json["hora_entrega_tranportista"];
+                if (hora.Length > 0)
+                    entity.HoraEntregaTransportista = GetDateTimeFromString((string)json["hora_entrega_tranportista"]);
+            }
+
+            if (json.GetValue("hora_entrega_anotador").Type != JTokenType.Null)
+            {
+                var hora = (string)json["hora_entrega_anotador"];
+                if (hora.Length > 0)
+                    entity.HoraEntregaTransportista = GetDateTimeFromString((string)json["hora_entrega_anotador"]);
+            }
+
 
             //Fata Origen
 

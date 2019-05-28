@@ -18,7 +18,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Dto
         public int EsExterno { get; set; }
         public string Coordenadas { get; set; }
         public string CodigoSap { get; set; }
-        public string Usuario { get; set; }
+        public int Usuario { get; set; }
         public int Version { get; set; }
 
         public string Ref { get; set; }

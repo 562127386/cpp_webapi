@@ -547,6 +547,10 @@
     <Compile Include="Migrations\201905202210377_SolicitudViandas_catalogos.Designer.cs">
       <DependentUpon>201905202210377_SolicitudViandas_catalogos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905281501152_Cambios_BDD.cs" />
+    <Compile Include="Migrations\201905281501152_Cambios_BDD.Designer.cs">
+      <DependentUpon>201905281501152_Cambios_BDD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -1118,6 +1122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905202210377_SolicitudViandas_catalogos.resx">
       <DependentUpon>201905202210377_SolicitudViandas_catalogos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905281501152_Cambios_BDD.resx">
+      <DependentUpon>201905281501152_Cambios_BDD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

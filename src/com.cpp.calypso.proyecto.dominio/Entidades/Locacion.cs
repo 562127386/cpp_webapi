@@ -7,8 +7,11 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
     public class Locacion : Entity, ISoftDelete
     {
         public int Codigo { get; set; }
+
         public int ZonaId { get; set; }
+
         public Zona Zona { get; set; }
+
         public string Nombre { get; set; }
 
         public DateTime? fs { get; set; }
@@ -20,5 +23,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public string Ref { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        public string uid { get; set; }
     }
 }

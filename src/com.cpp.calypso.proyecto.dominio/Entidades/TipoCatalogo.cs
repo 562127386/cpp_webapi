@@ -7,8 +7,11 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
     public class TipoCatalogo : Entity, ISoftDelete
     {
         public string Nombre { get; set; }
+
         public string Codigo { get; set; }
+
         public string TipoOrdenamiento { get; set; }
+
         public bool Editable { get; set; }
 
         public DateTime? fs { get; set; }
@@ -20,5 +23,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public string Ref { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        public string uid { get; set; }
     }
 }

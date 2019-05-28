@@ -28,5 +28,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public bool IsDeleted { get; set; }
 
+        public string uid { get; set; }
+
     }
 }

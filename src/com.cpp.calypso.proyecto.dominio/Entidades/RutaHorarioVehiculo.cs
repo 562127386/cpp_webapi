@@ -49,7 +49,6 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public int? UsuarioEliminacion { get; set; }
 
-
         public DateTime? fs { get; set; }
 
         public DateTime? fr { get; set; }
@@ -59,5 +58,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public string Ref { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        public string uid { get; set; }
     }
 }

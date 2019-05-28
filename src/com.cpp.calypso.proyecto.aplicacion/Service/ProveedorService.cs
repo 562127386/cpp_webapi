@@ -185,7 +185,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.Coordenadas = (string)json["coordenadas"];
             entity.CodigoSap = (string)json["codigo"];
             //obj.Orde = (string)json["codigo"]; No hay orden de compra
-            entity.Usuario = (string)json["usuario"];
+            entity.Usuario = (int)json["usuario"];
 
 
             return entity;

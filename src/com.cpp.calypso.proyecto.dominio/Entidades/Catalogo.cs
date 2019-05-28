@@ -49,5 +49,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public string Ref { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        public string uid { get; set; }
     }
 }

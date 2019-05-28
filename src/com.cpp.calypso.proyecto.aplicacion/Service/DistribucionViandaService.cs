@@ -172,7 +172,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.ConductorAsigandoId = (int)json.GetValue("conductor_asignado_id");
             entity.Estado = (int)json.GetValue("estado");
             entity.Fecha = GetDateFromString((string)json.GetValue("fecha"));
-            entity.HoraAsigancionTransporte = GetDateFromString((string)json.GetValue("hora_asignacion_transporte"));
+            entity.HoraAsigancionTransporte = GetDateTimeFromString((string)json.GetValue("hora_asignacion_transporte"));
             entity.Liquidado = (int)json.GetValue("liquidado");
             entity.ProveedorId = (int)json.GetValue("proveedor_id");
             entity.TipoComidaId = (int)json.GetValue("tipo_comida_id");
