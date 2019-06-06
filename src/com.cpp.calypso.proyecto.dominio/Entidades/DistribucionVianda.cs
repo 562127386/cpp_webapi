@@ -19,7 +19,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         public int Liquidado { get; set; }
         public int ConductorAsigandoId { get; set; }
         public Colaborador ConductorAsigando { get; set; }
-        public DateTime HoraAsigancionTransporte { get; set; }
+        public DateTime? HoraAsigancionTransporte { get; set; }
 
         public DateTime? fs { get; set; }
 

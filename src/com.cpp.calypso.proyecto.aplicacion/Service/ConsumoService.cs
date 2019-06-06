@@ -171,7 +171,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.OpcionComidaId = (int)json["opcion_comida_id"];
             entity.TipoComidaId = (int)json["tipo_comida_id"];
             entity.ColaboradorId = (int)json["colaborador_id"];
-            entity.Fecha = GetDateTimeFromStringFormat((string)json["fecha"]);
+            entity.Fecha = GetDateTimeFromString((string)json["fecha"]);
             entity.Observacion = (string)json["observacion"];
 
             return entity;

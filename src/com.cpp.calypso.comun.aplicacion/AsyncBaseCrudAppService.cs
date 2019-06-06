@@ -124,6 +124,15 @@ namespace com.cpp.calypso.comun.aplicacion
             return oDate;
         }
 
+
+        public virtual DateTime GetDateFromStringFormat(string date)
+        {
+            DateTime oDate = DateTime.ParseExact(date, "dd-MM-yyyy", null);
+            var stringFormat = oDate.ToString("yyyy-MM-dd");
+            var dateFormar = DateTime.ParseExact(stringFormat, "yyyy-MM-dd", null);
+            return dateFormar;
+        }
+
         public virtual string GetStringFromDate(DateTime? oDate)
         {
             if (oDate == null)
@@ -158,7 +167,7 @@ namespace com.cpp.calypso.comun.aplicacion
 
         public virtual DateTime GetDateTimeFromStringFormat(string date)
         {
-            DateTime oDate = DateTime.ParseExact(date, "dd-MM-yyyy", null);
+            DateTime oDate = DateTime.ParseExact(date, "yyyy-MM-dd", null);
             return oDate;
         }
 

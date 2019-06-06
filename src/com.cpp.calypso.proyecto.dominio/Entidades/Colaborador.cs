@@ -134,25 +134,25 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public Empresa Empresa { get; set; }
 
-        public int PaisNacimientoId { get; set; }
+        public int? PaisNacimientoId { get; set; }
 
-        public int LocacionTrabajoId { get; set; }
+        public int? LocacionTrabajoId { get; set; }
 
         public Locacion LocacionTrabajo { get; set; }
 
-        public int UsuarioId { get; set; }
+        public int? UsuarioId { get; set; }
 
         public int? ContratoId { get; set; }
 
-        public int TurnoId { get; set; }
+        public int? TurnoId { get; set; }
 
-        public TimeSpan HorarioDesde { get; set; }
+        public TimeSpan? HorarioDesde { get; set; }
 
-        public TimeSpan HorarioHasta { get; set; }
+        public TimeSpan? HorarioHasta { get; set; }
 
         public int? EmpleadoIdSap { get; set; }
 
-        public int CandidatoIdSap { get; set; }
+        public int? CandidatoIdSap { get; set; }
 
         public string NumeroIdentificacion { get; set; }
 
@@ -190,7 +190,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public bool TieneAusentismo { get; set; }
 
-        public bool RegistroMasivo { get; set; } = false;
+        public bool? RegistroMasivo { get; set; } = false;
 
         public int? CatalogoEncuadreId { get; set; }
 

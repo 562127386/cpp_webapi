@@ -22,7 +22,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public string CodigoSap { get; set; }
 
-        public int Usuario { get; set; }
+        public int? Usuario { get; set; }
 
         public virtual ICollection<ContratoProveedor> Contratos { get; set; }
 

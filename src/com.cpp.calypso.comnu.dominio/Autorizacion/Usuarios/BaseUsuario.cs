@@ -108,8 +108,8 @@ namespace com.cpp.calypso.comun.dominio
         [LongitudMayor(128)]
         public virtual string Password { get; set; }
 
+        public string uid { get; set; }
 
-        
 
         public override string ToString()
         {

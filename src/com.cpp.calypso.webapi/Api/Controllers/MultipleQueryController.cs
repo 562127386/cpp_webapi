@@ -1,9 +1,7 @@
 ﻿using com.cpp.calypso.framework;
 using com.cpp.calypso.proyecto.aplicacion.Interfaces;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Web;
 using System.Web.Mvc;
 
@@ -22,14 +20,19 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             _catalogoService = catalogoService;
         }
 
-        public JsonResult DoQuery(string query)
+        public JsonResult DoQuery()
         {
+            var bodyStream = new StreamReader(HttpContext.Current.Request.InputStream);
+            bodyStream.BaseStream.Seek(0, SeekOrigin.Begin);
+            var bodyText = bodyStream.ReadToEnd();
+
+
             string error = "";
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var data = _catalogoService.RealizarMultiplesConsultas(query);
+                    var data = _catalogoService.RealizarMultiplesConsultas(bodyText);
 
                     return new JsonResult
                     {
