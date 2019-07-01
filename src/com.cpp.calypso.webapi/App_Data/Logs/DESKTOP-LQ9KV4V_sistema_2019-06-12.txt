@@ -1,0 +1,1 @@
+Error | notauth:: | 12/06/2019 10:29:19:2919 | 9 | com.cpp.calypso.framework.ManejadorExcepciones | Excepcion: | HandleAbpExceptionEventHandler.HandleEvent => ManejadorExcepciones.HandleException => NLogLogger.Error | Se anuló la transacción. | !

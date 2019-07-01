@@ -394,8 +394,11 @@
     <Compile Include="Api\Controllers\Models\SincronizacionModel.cs" />
     <Compile Include="Api\Controllers\MultipleQueryController.cs" />
     <Compile Include="Api\Controllers\QueryController.cs" />
+    <Compile Include="Api\Controllers\ReporteMovilController.cs" />
     <Compile Include="Api\Controllers\RolController.cs" />
     <Compile Include="Api\Controllers\SincronizacionController.cs" />
+    <Compile Include="Api\Controllers\SolicitudPinController.cs" />
+    <Compile Include="Api\Controllers\SolicitudReporteMovilController.cs" />
     <Compile Include="Api\Controllers\TestController.cs" />
     <Compile Include="Api\Controllers\TokenController.cs" />
     <Compile Include="App_Start\Startup.cs" />
@@ -448,9 +451,14 @@
     <Folder Include="Views\Auth\" />
     <Folder Include="Views\MultipleQuery\" />
     <Folder Include="Views\Query\" />
+    <Folder Include="Views\ReporteMovil\" />
+    <Folder Include="Views\SolicitudPin\" />
+    <Folder Include="Views\SolicitudReporteMovil\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\techintpmdis - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\techintpmdis - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\techintpmdisqas - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\techintpmdisqas - Web Deploy.pubxml" />
   </ItemGroup>

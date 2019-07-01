@@ -14,10 +14,14 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
 {
     public class ServicioProveedorAsyncBaseCrudAppService : AsyncBaseCrudAppService<ServicioProveedor, ServicioProveedorDto, PagedAndFilteredResultRequestDto>, IServicioProveedorAsyncBaseCrudAppService
     {
+        private readonly IBaseRepository<Proveedor> _proveedoRepository;
+
         public ServicioProveedorAsyncBaseCrudAppService(
-            IBaseRepository<ServicioProveedor> repository
+            IBaseRepository<ServicioProveedor> repository,
+            IBaseRepository<Proveedor> proveedoRepository
             ) : base(repository)
         {
+            _proveedoRepository = proveedoRepository;
             Repository = repository;
         }
 
@@ -111,8 +115,17 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
 
         public List<ServicioProveedor> GetRegistros(int version, List<int> usuarios)
         {
+            var proveedoresLogeados = _proveedoRepository.GetAll()
+                .Where(o => o.IsDeleted || o.IsDeleted == false)
+                .Where(o => usuarios.Contains((int) o.Usuario))
+                .Select(proveedor => proveedor.Id)
+                .ToList();
+
+
             var registros = Repository.GetAll()
                 .Where(o => o.Version > version)
+                .Where(o => o.IsDeleted || o.IsDeleted == false)
+                .Where(o => proveedoresLogeados.Contains(o.ProveedorId))
                 .ToList()
                 ;
             return registros;

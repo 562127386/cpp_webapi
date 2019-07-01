@@ -24,7 +24,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
         public JArray Sync(int version, JArray registrosJson, List<int> usuarios)
         {
             var diccionario = Sincronizar(version, registrosJson, usuarios);
-            var registros = GetRegistros(version, usuarios);
+            var registros = GetRegistros(version, usuarios, diccionario);
 
             var json = GenerarRegistrosMovil(diccionario, registros);
             return json;
@@ -106,11 +106,15 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             return lKeyBinding;
         }
 
-        public List<DistribucionVianda> GetRegistros(int version, List<int> usuarios)
+        public List<DistribucionVianda> GetRegistros(int version, List<int> usuarios, Dictionary<int, int> diccionario)
         {
+            var solicitudesViandasEnMovil = diccionario.Keys.ToList();
+            var fechaActual = DateTime.Today;
             var registros = Repository.GetAll()
-                .Where(o => o.Version > version)
-                .ToList()
+                    .Where(o => o.Version > version)
+                    .Where(o => o.IsDeleted || o.IsDeleted == false)
+                    .Where(o => solicitudesViandasEnMovil.Contains(o.Id) || o.Fecha == fechaActual)
+                    .ToList()
                 ;
             return registros;
         }
@@ -171,8 +175,31 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
 
             entity.ConductorAsigandoId = (int)json.GetValue("conductor_asignado_id");
             entity.Estado = (int)json.GetValue("estado");
-            entity.Fecha = GetDateFromString((string)json.GetValue("fecha"));
-            entity.HoraAsigancionTransporte = GetDateTimeFromString((string)json.GetValue("hora_asignacion_transporte"));
+
+            var fechaIsNull = json.GetValue("fecha").Type == JTokenType.Null;
+            if (!fechaIsNull)
+            {
+                var fechaString = (string) json.GetValue("fecha");
+                if (fechaString.Length > 10)
+                {
+                    entity.Fecha = GetDateTimeFromString((string)json.GetValue("fecha"));
+                }
+                else
+                {
+                    entity.Fecha = GetDateFromString((string)json.GetValue("fecha"));
+                }
+            }
+
+            var horaAsignacion = json.GetValue("hora_asignacion_transporte").Type == JTokenType.Null;
+            if (!horaAsignacion)
+            {
+                var horaAsignacionString = (string) json.GetValue("hora_asignacion_transporte");
+                if (horaAsignacionString.Length > 0)
+                {
+                    entity.HoraAsigancionTransporte = GetDateTimeFromString((string)json.GetValue("hora_asignacion_transporte"));
+                }  
+            }
+            
             entity.Liquidado = (int)json.GetValue("liquidado");
             entity.ProveedorId = (int)json.GetValue("proveedor_id");
             entity.TipoComidaId = (int)json.GetValue("tipo_comida_id");

@@ -31,7 +31,6 @@ add-migration 'Estructura_Inicial'  -ProjectName com.cpp.calypso.web -StartupPro
 3. Instalar la base de datos se ejecuta:
 Update-Database -ConfigurationTypeName Configuration  -ProjectName com.cpp.calypso.web -StartupProjectName com.cpp.calypso.web
 
-
 4. Agregar otro bloque
 add-migration 'Datos Iniciales'  -ProjectName  com.cpp.calypso.web -StartupProjectName com.cpp.calypso.web
 

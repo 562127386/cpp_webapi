@@ -200,7 +200,7 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public Catalogo CatalogoEncargadoPersonal { get; set; }
 
-        public bool? ValidacionCedula { get; set; } = false;
+        public bool ValidacionCedula { get; set; } = false;
 
         public string NombresApellidos { get; set; }
 
@@ -218,8 +218,17 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public DateTime? FechaAlta { get; set; }
 
-        [Required]
         public string HuellaDigital { get; set; }
+
+        public bool TieneDerechoAlimentacion { get; set; }
+
+        public bool TieneDerechoHospedaje { get; set; }
+
+        public bool TieneDerechoTransporte { get; set; }
+
+        public bool TieneAcceso { get; set; }
+
+        public string ObservacionesAcceso { get; set; }
 
         public DateTime? fs { get; set; }
 

@@ -28,7 +28,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
         public JArray Sync(int version, JArray registrosJson, List<int> usuarios)
         {
             var diccionario = Sincronizar(version, registrosJson, usuarios);
-            var registros = GetRegistros(version, usuarios);
+            var registros = GetRegistros(version, usuarios, diccionario);
 
             var json = GenerarRegistrosMovil(diccionario, registros);
             return json;
@@ -116,11 +116,15 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             return lKeyBinding;
         }
 
-        public List<ConsumoTransporte> GetRegistros(int version, List<int> usuarios)
+        public List<ConsumoTransporte> GetRegistros(int version, List<int> usuarios, Dictionary<int, int> diccionario)
         {
+            var solicitudesViandasEnMovil = diccionario.Keys.ToList();
+
             var registros = Repository.GetAll()
-                .Where(o => o.Version > version)
-                .ToList()
+                    .Where(o => o.Version > version)
+                    .Where(o => o.IsDeleted || o.IsDeleted == false)
+                    .Where(o => solicitudesViandasEnMovil.Contains(o.Id))
+                    .ToList()
                 ;
             return registros;
         }

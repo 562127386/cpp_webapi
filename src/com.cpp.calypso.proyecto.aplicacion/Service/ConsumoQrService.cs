@@ -6,6 +6,7 @@ using com.cpp.calypso.proyecto.dominio.Entidades;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 namespace com.cpp.calypso.proyecto.aplicacion.Service
 {
@@ -23,7 +24,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
         public JArray Sync(int version, JArray registrosJson, List<int> usuarios)
         {
             var diccionario = Sincronizar(version, registrosJson, usuarios);
-            var registros = GetRegistros(version, usuarios);
+            var registros = GetRegistros(version, usuarios, diccionario);
 
             var json = GenerarRegistrosMovil(diccionario, registros);
             return json;
@@ -105,11 +106,16 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             return lKeyBinding;
         }
 
-        public List<ConsumoQr> GetRegistros(int version, List<int> usuarios)
+        public List<ConsumoQr> GetRegistros(int version, List<int> usuarios, Dictionary<int, int> diccionario)
         {
+            var idEnMovil = diccionario.Keys.ToList();
+            var fechaActual = DateTime.Today;
+
             var registros = Repository.GetAll()
-                .Where(o => o.Version > version)
-                .ToList()
+                    .Where(o => o.Version > version)
+                    .Where(o => o.IsDeleted || o.IsDeleted == false)
+                    .Where(o => idEnMovil.Contains(o.Id) || DbFunctions.TruncateTime(o.FechaConsumo) == fechaActual)
+                    .ToList()
                 ;
             return registros;
         }

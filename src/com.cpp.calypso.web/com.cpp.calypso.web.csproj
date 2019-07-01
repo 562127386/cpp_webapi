@@ -555,6 +555,38 @@
     <Compile Include="Migrations\201905281804317_Usuario_uid.Designer.cs">
       <DependentUpon>201905281804317_Usuario_uid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906102357000_TablasHospedaje.cs" />
+    <Compile Include="Migrations\201906102357000_TablasHospedaje.Designer.cs">
+      <DependentUpon>201906102357000_TablasHospedaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906112237450_CambiosColaboradores.cs" />
+    <Compile Include="Migrations\201906112237450_CambiosColaboradores.Designer.cs">
+      <DependentUpon>201906112237450_CambiosColaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906121520185_Hospedaje_CamposNull.cs" />
+    <Compile Include="Migrations\201906121520185_Hospedaje_CamposNull.Designer.cs">
+      <DependentUpon>201906121520185_Hospedaje_CamposNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906121706359_Hospedaje_CreationAudit.cs" />
+    <Compile Include="Migrations\201906121706359_Hospedaje_CreationAudit.Designer.cs">
+      <DependentUpon>201906121706359_Hospedaje_CreationAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906121739414_Hospedaje_DetalleReservasNull.cs" />
+    <Compile Include="Migrations\201906121739414_Hospedaje_DetalleReservasNull.Designer.cs">
+      <DependentUpon>201906121739414_Hospedaje_DetalleReservasNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906132202214_SolicitudReportesMovil.cs" />
+    <Compile Include="Migrations\201906132202214_SolicitudReportesMovil.Designer.cs">
+      <DependentUpon>201906132202214_SolicitudReportesMovil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906191721337_ConsumosSinReserva_ColaboradorNull.cs" />
+    <Compile Include="Migrations\201906191721337_ConsumosSinReserva_ColaboradorNull.Designer.cs">
+      <DependentUpon>201906191721337_ConsumosSinReserva_ColaboradorNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907011416108_SolitudPin.cs" />
+    <Compile Include="Migrations\201907011416108_SolitudPin.Designer.cs">
+      <DependentUpon>201907011416108_SolitudPin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -994,6 +1026,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Proyecto\Models\" />
     <Folder Include="Areas\Proyecto\Views\Shared\" />
+    <Folder Include="Areas\Proyecto\Views\Test\" />
     <Folder Include="Areas\Seguridad\Views\Shared\" />
     <Folder Include="Templates\" />
     <Folder Include="Views\Layout\" />
@@ -1132,6 +1165,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905281804317_Usuario_uid.resx">
       <DependentUpon>201905281804317_Usuario_uid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906102357000_TablasHospedaje.resx">
+      <DependentUpon>201906102357000_TablasHospedaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906112237450_CambiosColaboradores.resx">
+      <DependentUpon>201906112237450_CambiosColaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906121520185_Hospedaje_CamposNull.resx">
+      <DependentUpon>201906121520185_Hospedaje_CamposNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906121706359_Hospedaje_CreationAudit.resx">
+      <DependentUpon>201906121706359_Hospedaje_CreationAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906121739414_Hospedaje_DetalleReservasNull.resx">
+      <DependentUpon>201906121739414_Hospedaje_DetalleReservasNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906132202214_SolicitudReportesMovil.resx">
+      <DependentUpon>201906132202214_SolicitudReportesMovil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906191721337_ConsumosSinReserva_ColaboradorNull.resx">
+      <DependentUpon>201906191721337_ConsumosSinReserva_ColaboradorNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907011416108_SolitudPin.resx">
+      <DependentUpon>201907011416108_SolitudPin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

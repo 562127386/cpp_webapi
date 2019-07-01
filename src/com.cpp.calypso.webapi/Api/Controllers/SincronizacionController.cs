@@ -45,6 +45,13 @@ namespace com.cpp.calypso.webapi.Api.Controllers
         private readonly IConsumoTransporteAsyncBaseCrudAppService _consumoTransporteSync;
         private readonly IOperacionDiariaAsyncBaseCrudAppService _operacionDiariaSync;
         private readonly IOperacionDiariaRutaAsyncBaseCrudAppService _operacionDiariaRutaSync;
+        private readonly IHabitacionAsyncBaseCrudAppService _habitacionSync;
+        private readonly IEspacioHabitacionAsyncBaseCrudAppService _espacioHabitacionSync;
+        private readonly IReservaHotelAsyncBaseCrudAppService _reservaHotelSync;
+        private readonly IReservaHotelQrAsyncBaseCrudAppService _reservaHotelQrSync;
+        private readonly IDetalleReservaAsyncBaseCrudAppService _detalleReservaSync;
+        private readonly IDetalleReservaQrAsyncBaseCrudAppService _detalleReservaQrSync;
+        private readonly IConsumoSinReservaHospedajeAsyncBaseCrudAppService _consumoSinReservaHospedajeSync;
         private readonly List<string> _orden = new List<string>();
 
         public SincronizacionController(
@@ -81,7 +88,14 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             ILugarAsyncBaseCrudAppService lugarSync,
             IConsumoTransporteAsyncBaseCrudAppService consumoTransporteSync,
             IOperacionDiariaAsyncBaseCrudAppService operacionDiariaSync,
-            IOperacionDiariaRutaAsyncBaseCrudAppService operacionDiariaRutaSync
+            IOperacionDiariaRutaAsyncBaseCrudAppService operacionDiariaRutaSync,
+            IHabitacionAsyncBaseCrudAppService habitacionSync,
+            IEspacioHabitacionAsyncBaseCrudAppService espacioHabitacionSync,
+            IReservaHotelAsyncBaseCrudAppService reservaHotelSync,
+            IReservaHotelQrAsyncBaseCrudAppService reservaHotelQrSync,
+            IDetalleReservaAsyncBaseCrudAppService detalleReservaSync,
+            IDetalleReservaQrAsyncBaseCrudAppService detalleReservaQrSync,
+            IConsumoSinReservaHospedajeAsyncBaseCrudAppService consumoSinReservaHospedajeSync
             ) : base(manejadorExcepciones)
         {
             _catalogoSync = catalogoSync;
@@ -117,6 +131,13 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             _consumoTransporteSync = consumoTransporteSync;
             _operacionDiariaSync = operacionDiariaSync;
             _operacionDiariaRutaSync = operacionDiariaRutaSync;
+            _habitacionSync = habitacionSync;
+            _espacioHabitacionSync = espacioHabitacionSync;
+            _reservaHotelSync = reservaHotelSync;
+            _reservaHotelQrSync = reservaHotelQrSync;
+            _detalleReservaSync = detalleReservaSync;
+            _detalleReservaQrSync = detalleReservaQrSync;
+            _consumoSinReservaHospedajeSync = consumoSinReservaHospedajeSync;
             _orden.Add("catalogos");
         }
 
@@ -459,6 +480,71 @@ namespace com.cpp.calypso.webapi.Api.Controllers
                         tablaResult.Add("registros", result);
                         respuesta.Add(tablaResult);
                     }
+
+                    if (nombre == "habitaciones")
+                    {
+                        var servicio = _habitacionSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "espacios_habitaciones")
+                    {
+                        var servicio = _espacioHabitacionSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "reservas_hoteles")
+                    {
+                        var servicio = _reservaHotelSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "reservas_hoteles_qr")
+                    {
+                        var servicio = _reservaHotelQrSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "detalles_reservas")
+                    {
+                        var servicio = _detalleReservaSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "detalles_reservas_qr")
+                    {
+                        var servicio = _detalleReservaQrSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "consumos_sin_reserva_hospedaje")
+                    {
+                        var servicio = _consumoSinReservaHospedajeSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+
                 }
             }
             catch (Exception exception)
@@ -467,7 +553,10 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             }
 
             var base64Encode = System.Text.Encoding.UTF8.GetBytes(respuesta.ToString());
-            return Convert.ToBase64String(base64Encode);
+            var base64String = Convert.ToBase64String(base64Encode);
+            var base64EncodedBytes = System.Convert.FromBase64String(base64String);
+            var original = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+            return base64String;
         }
     }
 }

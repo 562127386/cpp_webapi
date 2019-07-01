@@ -86,7 +86,11 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.HuellaDigital).HasColumnName("huella_digital");
             Property(d => d.TieneAusentismo).HasColumnName("tiene_ausentismo");
 
-
+            Property(d => d.TieneDerechoAlimentacion).HasColumnName("tiene_derecho_alimentacion");
+            Property(d => d.TieneDerechoHospedaje).HasColumnName("tiene_derecho_hospedaje");
+            Property(d => d.TieneDerechoTransporte).HasColumnName("tiene_derecho_transporte");
+            Property(d => d.TieneAcceso).HasColumnName("tiene_acceso");
+            Property(d => d.ObservacionesAcceso).HasColumnName("observaciones_acceso");
             Property(d => d.IsDeleted).HasColumnName("vigente");
             Property(d => d.Version).HasColumnName("m_version");
             Property(d => d.Ref).HasColumnName("m_ref");

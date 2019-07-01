@@ -48,6 +48,12 @@
     <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
@@ -165,13 +171,18 @@
     <Compile Include="Dto\ColaboradorDto.cs" />
     <Compile Include="Dto\ConsumoDto.cs" />
     <Compile Include="Dto\ConsumoQrDto.cs" />
+    <Compile Include="Dto\ConsumoSinReservaHospedajeDto.cs" />
     <Compile Include="Dto\ConsumoTransporteDto.cs" />
     <Compile Include="Dto\ConsumoViandaDto.cs" />
     <Compile Include="Dto\ConsumoViandaQrDto.cs" />
     <Compile Include="Dto\ContratoProveedorDto.cs" />
     <Compile Include="Dto\DetalleDistribucionDto.cs" />
+    <Compile Include="Dto\DetalleReservaDto.cs" />
+    <Compile Include="Dto\DetalleReservaQrDto.cs" />
     <Compile Include="Dto\DistribucionViandaDto.cs" />
     <Compile Include="Dto\EmpresaDto.cs" />
+    <Compile Include="Dto\EspacioHabitacionDto.cs" />
+    <Compile Include="Dto\HabitacionDto.cs" />
     <Compile Include="Dto\LocacionDto.cs" />
     <Compile Include="Dto\LugarDto.cs" />
     <Compile Include="Dto\MenuProveedorDto.cs" />
@@ -180,12 +191,17 @@
     <Compile Include="Dto\OperacionDiariaRutaDto.cs" />
     <Compile Include="Dto\ProveedorDto.cs" />
     <Compile Include="Dto\RegistroAccesoDto.cs" />
+    <Compile Include="Dto\ReporteMovilDto.cs" />
     <Compile Include="Dto\RequisitoColaboradorDto.cs" />
+    <Compile Include="Dto\ReservaHotelDto.cs" />
+    <Compile Include="Dto\ReservaHotelQrDto.cs" />
     <Compile Include="Dto\RutaDto.cs" />
     <Compile Include="Dto\RutaHorarioDto.cs" />
     <Compile Include="Dto\RutaHorarioVehiculoDto.cs" />
     <Compile Include="Dto\ServicioProveedorDto.cs" />
     <Compile Include="Dto\ServicioRolDto.cs" />
+    <Compile Include="Dto\SolicitudPinDto.cs" />
+    <Compile Include="Dto\SolicitudReporteMovilDto.cs" />
     <Compile Include="Dto\SolicitudViandaDto.cs" />
     <Compile Include="Dto\TipoAccionEmpresaDto.cs" />
     <Compile Include="Dto\TipoCatalogoDto.cs" />
@@ -195,6 +211,10 @@
     <Compile Include="Dto\VehiculoDto.cs" />
     <Compile Include="Dto\ZonaDto.cs" />
     <Compile Include="FooAsyncBaseCrudAppService.cs" />
+    <Compile Include="Interfaces\IConsumoSinReservaHospedaje.cs" />
+    <Compile Include="Interfaces\IDetalleReserva.cs" />
+    <Compile Include="Interfaces\IDetalleReservaQr.cs" />
+    <Compile Include="Interfaces\IEspacioHabitacion.cs" />
     <Compile Include="Interfaces\IAccesoTemporal.cs" />
     <Compile Include="Interfaces\IArchivo.cs" />
     <Compile Include="Interfaces\ICatalogo.cs" />
@@ -209,6 +229,7 @@
     <Compile Include="Interfaces\IDetalleDistribucion.cs" />
     <Compile Include="Interfaces\IDistribucionVianda.cs" />
     <Compile Include="Interfaces\IEmpresa.cs" />
+    <Compile Include="Interfaces\IHabitacion.cs" />
     <Compile Include="Interfaces\ILocacion.cs" />
     <Compile Include="Interfaces\ILugar.cs" />
     <Compile Include="Interfaces\IMenuProveedor.cs" />
@@ -217,12 +238,17 @@
     <Compile Include="Interfaces\IOperacionDiariaRuta.cs" />
     <Compile Include="Interfaces\IProveedor.cs" />
     <Compile Include="Interfaces\IRegistroAcceso.cs" />
+    <Compile Include="Interfaces\IReporteMovil.cs" />
     <Compile Include="Interfaces\IRequisitoColaborador.cs" />
+    <Compile Include="Interfaces\IReservaHotel.cs" />
+    <Compile Include="Interfaces\IReservaHotelQr.cs" />
     <Compile Include="Interfaces\IRuta.cs" />
     <Compile Include="Interfaces\IRutaHorario.cs" />
     <Compile Include="Interfaces\IRutaHorarioVehiculo.cs" />
     <Compile Include="Interfaces\IServicioProveedor.cs" />
     <Compile Include="Interfaces\IServicioRol.cs" />
+    <Compile Include="Interfaces\ISolicitudPin.cs" />
+    <Compile Include="Interfaces\ISolicitudReporteMovil.cs" />
     <Compile Include="Interfaces\ISolicitudVianda.cs" />
     <Compile Include="Interfaces\ITipoAccionEmpresa.cs" />
     <Compile Include="Interfaces\ITipoCatalogo.cs" />
@@ -240,13 +266,18 @@
     <Compile Include="Service\ColaboradorService.cs" />
     <Compile Include="Service\ConsumoQrService.cs" />
     <Compile Include="Service\ConsumoService.cs" />
+    <Compile Include="Service\ConsumoSinReservaHospedajeService.cs" />
     <Compile Include="Service\ConsumoTransporteService.cs" />
     <Compile Include="Service\ConsumoViandaService.cs" />
     <Compile Include="Service\ConsumoViandaQrService.cs" />
     <Compile Include="Service\ContratoProveedorService.cs" />
     <Compile Include="Service\DetalleDistribucionService.cs" />
+    <Compile Include="Service\DetalleReservaQrService.cs" />
+    <Compile Include="Service\DetalleReservaService.cs" />
     <Compile Include="Service\DistribucionViandaService.cs" />
     <Compile Include="Service\EmpresaService.cs" />
+    <Compile Include="Service\EspacioHabitacionService.cs" />
+    <Compile Include="Service\HabitacionService.cs" />
     <Compile Include="Service\LocacionService.cs" />
     <Compile Include="Service\LugarService.cs" />
     <Compile Include="Service\MenuProveedorService.cs" />
@@ -255,12 +286,17 @@
     <Compile Include="Service\OperacionDiariaService.cs" />
     <Compile Include="Service\ProveedorService.cs" />
     <Compile Include="Service\RegistroAccesoService.cs" />
+    <Compile Include="Service\ReporteMovilService.cs" />
     <Compile Include="Service\RequisitoColaboradorService.cs" />
+    <Compile Include="Service\ReservaHotelQrService.cs" />
+    <Compile Include="Service\ReservaHotelService.cs" />
     <Compile Include="Service\RutaHorarioService.cs" />
     <Compile Include="Service\RutaHorarioVehiculoService.cs" />
     <Compile Include="Service\RutaService.cs" />
     <Compile Include="Service\ServicioProveedorService.cs" />
     <Compile Include="Service\ServicioRolService.cs" />
+    <Compile Include="Service\SolicitudPinService.cs" />
+    <Compile Include="Service\SolicitudReporteMovilService.cs" />
     <Compile Include="Service\SolicitudViandaService.cs" />
     <Compile Include="Service\TipoAccionEmpresaService.cs" />
     <Compile Include="Service\TipoCatalogoService.cs" />

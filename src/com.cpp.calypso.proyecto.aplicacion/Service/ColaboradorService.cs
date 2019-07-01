@@ -137,7 +137,12 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("huella_digital", entidad.HuellaDigital);
             objJson.Add("tiene_ausentismo", entidad.TieneAusentismo ? 1 : 0);
             objJson.Add("estado", entidad.Estado);
-
+            objJson.Add("tiene_derecho_alimentacion", entidad.TieneDerechoAlimentacion);
+            objJson.Add("tiene_derecho_hospedaje", entidad.TieneDerechoHospedaje);
+            objJson.Add("tiene_derecho_transporte", entidad.TieneDerechoTransporte);
+            objJson.Add("tiene_acceso", entidad.TieneAcceso);
+            objJson.Add("observaciones_acceso", entidad.ObservacionesAcceso);
+            objJson.Add("validacion_cedula", entidad.ValidacionCedula ? 1 : 0);
             return objJson;
         }
 
@@ -179,6 +184,12 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.Estado = (string)json["estado"];
             entity.TieneAusentismo = (int)json["tiene_ausentismo"] == 1 ? true: false;
 
+            entity.TieneDerechoAlimentacion = (int)json["tiene_derecho_alimentacion"] == 1 ? true : false;
+            entity.TieneDerechoHospedaje = (int)json["tiene_derecho_hospedaje"] == 1 ? true : false;
+            entity.TieneDerechoTransporte = (int)json["tiene_derecho_transporte"] == 1 ? true : false;
+            entity.TieneAcceso = (int)json["tiene_acceso"] == 1 ? true : false;
+            entity.ObservacionesAcceso = (string)json["observaciones_acceso"];
+            entity.ValidacionCedula = (int)json["validacion_cedula"] == 1 ? true : false;
 
 
             return entity;

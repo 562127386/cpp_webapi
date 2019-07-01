@@ -75,10 +75,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
 
         public List<UsuarioMovil> GetRegistros(JArray registrosJson, List<int> usuarios)
         {
-            var entities = new List<UsuarioMovil>();
-
             var registros = Repository.GetAll()
-                 .Where(o => usuarios.Contains(o.UsuarioId))
+                 .Where(o => usuarios.Contains(o.UsuarioId) || o.Rol == "ANO")
                  .ToList()
                  ;
             return registros;
@@ -153,6 +151,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             var entity = Repository.GetAll()
                 .Where(o => o.Username == username)
                 .Where(o => o.Pin == pin)
+                .Where(o => o.ActivoMovil)
                 .FirstOrDefault();
             return MapToEntityDto(entity);
         }
