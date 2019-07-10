@@ -141,7 +141,10 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("ordinal", entidad.Ordinal);
             objJson.Add("predeterminado", entidad.Predeterminado);
             objJson.Add("tipo_catalogo_id", entidad.TipoCatalogoId);
-
+            objJson.Add("valor_texto", entidad.ValorTexto);
+            objJson.Add("valor_numerico", entidad.ValorNumerico);
+            objJson.Add("valor_fecha", GetStringFromDate(entidad.ValorFecha));
+            objJson.Add("valor_binario", entidad.ValorBinario.GetValueOrDefault() ? 1 : 0);
             return objJson;
         }
 
@@ -178,6 +181,10 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.TipoCatalogoId = (int)json.GetValue("tipo_catalogo_id");
             entity.Predeterminado = (bool)json.GetValue("predeterminado");
             entity.Ordinal = (int)json.GetValue("ordinal");
+            entity.ValorTexto = (string)json.GetValue("valor_texto");
+            entity.ValorNumerico = (decimal)json.GetValue("valor_numerico");
+            entity.ValorFecha = GetDateFromString((string)json.GetValue("valor_fecha"));
+            entity.ValorBinario = (int)json.GetValue("valor_binario") == 1 ? true : false;
 
             return entity;
         }

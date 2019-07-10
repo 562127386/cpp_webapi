@@ -391,12 +391,16 @@
     <Compile Include="Api\Controllers\AuthController.cs" />
     <Compile Include="Api\Controllers\Models\AuthPinModel.cs" />
     <Compile Include="Api\Controllers\Models\LoginModel.cs" />
+    <Compile Include="Api\Controllers\Models\SincronizacionLogModel.cs" />
+    <Compile Include="Api\Controllers\Models\SincronizacionManualModel.cs" />
     <Compile Include="Api\Controllers\Models\SincronizacionModel.cs" />
     <Compile Include="Api\Controllers\MultipleQueryController.cs" />
     <Compile Include="Api\Controllers\QueryController.cs" />
     <Compile Include="Api\Controllers\ReporteMovilController.cs" />
     <Compile Include="Api\Controllers\RolController.cs" />
     <Compile Include="Api\Controllers\SincronizacionController.cs" />
+    <Compile Include="Api\Controllers\SincronizacionLogController.cs" />
+    <Compile Include="Api\Controllers\SincronizacionManualController.cs" />
     <Compile Include="Api\Controllers\SolicitudPinController.cs" />
     <Compile Include="Api\Controllers\SolicitudReporteMovilController.cs" />
     <Compile Include="Api\Controllers\TestController.cs" />
@@ -452,6 +456,8 @@
     <Folder Include="Views\MultipleQuery\" />
     <Folder Include="Views\Query\" />
     <Folder Include="Views\ReporteMovil\" />
+    <Folder Include="Views\SincronizacionLog\" />
+    <Folder Include="Views\SincronizacionManual\" />
     <Folder Include="Views\SolicitudPin\" />
     <Folder Include="Views\SolicitudReporteMovil\" />
   </ItemGroup>

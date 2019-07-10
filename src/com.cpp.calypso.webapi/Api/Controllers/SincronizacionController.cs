@@ -558,5 +558,6 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             var original = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
             return base64String;
         }
+
     }
 }

@@ -138,11 +138,30 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("proveedor_id", entidad.ProveedorId);
             objJson.Add("opcion_comida_id", entidad.OpcionComidaId);
             objJson.Add("tipo_comida_id", entidad.TipoComidaId);
+            objJson.Add("origen_consumo_id", getOrigenConsumo(entidad.OrigenConsumoId));
             objJson.Add("colaborador_id", entidad.ColaboradorId);
             objJson.Add("fecha", GetStringFromDateTime(entidad.Fecha));
             objJson.Add("observacion", entidad.Observacion);
 
             return objJson;
+        }
+
+        public string getOrigenConsumo(OrigenConsumo? origen)
+        {
+            if (!origen.HasValue) return 3 + "";
+
+            if (origen == OrigenConsumo.Qr)
+            {
+                return 2 + "";
+            } else if (origen == OrigenConsumo.Cedula)
+            {
+                return 1 + "";
+            } else if (origen == OrigenConsumo.Huella)
+            {
+                return 3 + "";
+            }
+
+            return 3 + "";
         }
 
         public Consumo JsonToObject(JObject json)
@@ -179,7 +198,27 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.Fecha = GetDateTimeFromString((string)json["fecha"]);
             entity.Observacion = (string)json["observacion"];
 
+            var origenConsumoNull = json.GetValue("origen_consumo_id").Type == JTokenType.Null;
+            if(!origenConsumoNull)
+                entity.OrigenConsumoId = getOrigenConsumoEnum((int)json["origen_consumo_id"]);
+
             return entity;
+        }
+
+        public OrigenConsumo getOrigenConsumoEnum(int origen)
+        {
+            if (origen == 1)
+            {
+                return OrigenConsumo.Cedula;
+            } else if (origen == 2)
+            {
+                return OrigenConsumo.Qr;
+            } else if (origen == 3)
+            {
+                return OrigenConsumo.Huella;
+            }
+
+            return OrigenConsumo.Huella;
         }
     }
 }

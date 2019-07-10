@@ -103,6 +103,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("ultimo_acceso", entidad.UltimoAcceso);
             objJson.Add("rol", entidad.Rol);
             objJson.Add("activo_movil", GetStringFromBool(entidad.ActivoMovil));
+            objJson.Add("codigo_sincronizacion", entidad.CodigoSincronizacion);
             return objJson;
         }
 
@@ -139,6 +140,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.ApellidosNombres = (string)json["apellidos_nombres"];
             entity.Pin = (string)json["pin"];
             entity.Rol = (string)json["rol"];
+            entity.CodigoSincronizacion = (string)json["codigo_sincronizacion"];
             entity.FechaCreacion = GetDateFromString((string)json["fecha_creacion"]);
             entity.UltimoAcceso = GetDateFromString((string)json["ultimo_acceso"]);
             var activo = (int)json["activo_movil"];

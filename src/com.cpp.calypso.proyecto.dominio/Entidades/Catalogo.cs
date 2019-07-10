@@ -40,6 +40,14 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
         [DisplayName("Ordinal")]
         public int Ordinal { get; set; }
 
+        public string ValorTexto { get; set; }
+
+        public decimal? ValorNumerico { get; set; }
+
+        public DateTime? ValorFecha { get; set; }
+
+        public bool? ValorBinario { get; set; }
+
         public DateTime? fs { get; set; }
 
         public DateTime? fr { get; set; }

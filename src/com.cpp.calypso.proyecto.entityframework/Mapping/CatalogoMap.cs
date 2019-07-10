@@ -20,6 +20,12 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Descripcion).HasColumnName("descripcion");
             Property(d => d.Predeterminado).HasColumnName("predeterminado");
             Property(d => d.TipoCatalogoId).HasColumnName("tipo_catalogo_id");
+
+            Property(d => d.ValorTexto).HasColumnName("valor_texto");
+            Property(d => d.ValorNumerico).HasColumnName("valor_numerico");
+            Property(d => d.ValorFecha).HasColumnName("valor_fecha");
+            Property(d => d.ValorBinario).HasColumnName("valor_binario");
+
             Property(d => d.Ordinal).HasColumnName("ordinal");
             Property(d => d.IsDeleted).HasColumnName("vigente");
             Property(d => d.Version).HasColumnName("m_version");

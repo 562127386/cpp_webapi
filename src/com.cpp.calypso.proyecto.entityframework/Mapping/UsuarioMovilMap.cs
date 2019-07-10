@@ -29,6 +29,7 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.Pin).HasColumnName("pin");
             Property(d => d.UltimoAcceso).HasColumnName("ultimo_acceso");
             Property(d => d.Username).HasColumnName("username");
+            Property(d => d.CodigoSincronizacion).HasColumnName("codigo_sincronizacion");
             Property(d => d.UsuarioId).HasColumnName("usuario_id");
             Property(d => d.Rol).HasColumnName("rol");
 

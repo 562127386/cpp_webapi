@@ -587,6 +587,26 @@
     <Compile Include="Migrations\201907011416108_SolitudPin.Designer.cs">
       <DependentUpon>201907011416108_SolitudPin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907031411333_Valores_Catalogos.cs" />
+    <Compile Include="Migrations\201907031411333_Valores_Catalogos.Designer.cs">
+      <DependentUpon>201907031411333_Valores_Catalogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907031554447_Valores_CatalogosNull.cs" />
+    <Compile Include="Migrations\201907031554447_Valores_CatalogosNull.Designer.cs">
+      <DependentUpon>201907031554447_Valores_CatalogosNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907082114086_RespaldoMovil.cs" />
+    <Compile Include="Migrations\201907082114086_RespaldoMovil.Designer.cs">
+      <DependentUpon>201907082114086_RespaldoMovil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907082300526_CodigoSincronizacion.cs" />
+    <Compile Include="Migrations\201907082300526_CodigoSincronizacion.Designer.cs">
+      <DependentUpon>201907082300526_CodigoSincronizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907101607007_SincronizacionesLog.cs" />
+    <Compile Include="Migrations\201907101607007_SincronizacionesLog.Designer.cs">
+      <DependentUpon>201907101607007_SincronizacionesLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -1189,6 +1209,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907011416108_SolitudPin.resx">
       <DependentUpon>201907011416108_SolitudPin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907031411333_Valores_Catalogos.resx">
+      <DependentUpon>201907031411333_Valores_Catalogos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907031554447_Valores_CatalogosNull.resx">
+      <DependentUpon>201907031554447_Valores_CatalogosNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907082114086_RespaldoMovil.resx">
+      <DependentUpon>201907082114086_RespaldoMovil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907082300526_CodigoSincronizacion.resx">
+      <DependentUpon>201907082300526_CodigoSincronizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907101607007_SincronizacionesLog.resx">
+      <DependentUpon>201907101607007_SincronizacionesLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -152,7 +152,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("segundo_apellido", entidad.SegundoApellido);
             objJson.Add("origen_consumo_id", entidad.OrigenConsumoId);
             objJson.Add("tipo_habitacion_id", entidad.TipoHabitacionId);
-            objJson.Add("fecha_registro", entidad.FechaRegistro);
+            objJson.Add("fecha_registro", GetStringFromDate(entidad.FechaRegistro));
             objJson.Add("numero_habitacion", entidad.NumeroHabitacion);
             objJson.Add("autorizacion", entidad.Autorizacion);
 

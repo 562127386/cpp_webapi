@@ -11,11 +11,25 @@ namespace com.cpp.calypso.proyecto.aplicacion.Dto
     public class CatalogoDto : EntityDto
     {
         public string Nombre { get; set; }
+
         public string Codigo { get; set; }
+
         public string Descripcion { get; set; }
+
         public int TipoCatalogoId { get; set; }
+
         public bool Predeterminado { get; set; }
+
         public int Ordinal { get; set; }
+
+        public string ValorTexto { get; set; }
+
+        public decimal? ValorNumerico { get; set; }
+
+        public DateTime? ValorFecha { get; set; }
+
+        public bool? ValorBinario { get; set; }
+
         public int Version { get; set; }
 
         public string Ref { get; set; }

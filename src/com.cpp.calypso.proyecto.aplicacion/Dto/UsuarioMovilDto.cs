@@ -25,6 +25,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Dto
 
         public bool ActivoMovil { get; set; }
 
+        public string CodigoSincronizacion { get; set; }
+
         public int Version { get; set; }
 
         public string Ref { get; set; }

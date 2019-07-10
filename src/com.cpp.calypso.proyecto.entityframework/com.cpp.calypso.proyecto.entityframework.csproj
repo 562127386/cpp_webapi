@@ -197,11 +197,13 @@
     <Compile Include="Mapping\RequisitoColaboradorMap.cs" />
     <Compile Include="Mapping\ReservaHotelMap.cs" />
     <Compile Include="Mapping\ReservaHotelQrMap.cs" />
+    <Compile Include="Mapping\RespaldoMovilMap.cs" />
     <Compile Include="Mapping\RutaHorarioMap.cs" />
     <Compile Include="Mapping\RutaHorarioVehiculoMap.cs" />
     <Compile Include="Mapping\RutaMap.cs" />
     <Compile Include="Mapping\ServicioProveedorMap.cs" />
     <Compile Include="Mapping\ServicioRolMap.cs" />
+    <Compile Include="Mapping\SincronizacionLogMap.cs" />
     <Compile Include="Mapping\SolicitudPinMap.cs" />
     <Compile Include="Mapping\SolicitudReporteMovilMap.cs" />
     <Compile Include="Mapping\SolicitudViandaMap.cs" />
