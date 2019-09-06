@@ -8,5 +8,6 @@ namespace com.cpp.calypso.proyecto.aplicacion.Interfaces
 {
     public interface ISincronizacionLogAsyncBaseCrudAppService : IAsyncBaseCrudAppService<SincronizacionLog, SincronizacionLogDto, PagedAndFilteredResultRequestDto>
     {
+        void CreateLog(string exceptionString);
     }
 }

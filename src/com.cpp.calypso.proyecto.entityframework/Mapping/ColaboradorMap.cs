@@ -90,6 +90,7 @@ namespace com.cpp.calypso.proyecto.entityframework.Mapping
             Property(d => d.TieneDerechoHospedaje).HasColumnName("tiene_derecho_hospedaje");
             Property(d => d.TieneDerechoTransporte).HasColumnName("tiene_derecho_transporte");
             Property(d => d.TieneAcceso).HasColumnName("tiene_acceso");
+            Property(d => d.TipoComidaPermitidos).HasColumnName("tipos_comida_permitidos");
             Property(d => d.ObservacionesAcceso).HasColumnName("observaciones_acceso");
             Property(d => d.IsDeleted).HasColumnName("vigente");
             Property(d => d.Version).HasColumnName("m_version");

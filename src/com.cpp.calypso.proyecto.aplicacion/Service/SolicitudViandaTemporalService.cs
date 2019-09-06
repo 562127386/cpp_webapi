@@ -1,31 +1,25 @@
-﻿using com.cpp.calypso.comun.aplicacion;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using com.cpp.calypso.comun.aplicacion;
 using com.cpp.calypso.comun.dominio;
 using com.cpp.calypso.proyecto.aplicacion.Dto;
 using com.cpp.calypso.proyecto.aplicacion.Interfaces;
 using com.cpp.calypso.proyecto.dominio.Entidades;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-
 
 namespace com.cpp.calypso.proyecto.aplicacion.Service
 {
-    public class ServicioProveedorAsyncBaseCrudAppService : AsyncBaseCrudAppService<ServicioProveedor, ServicioProveedorDto, PagedAndFilteredResultRequestDto>, IServicioProveedorAsyncBaseCrudAppService
+    public class SolicitudViandaTemporalAsyncBaseCrudAppService : AsyncBaseCrudAppService<SolicitudViandaTemporal, SolicitudViandaTemporalDto, PagedAndFilteredResultRequestDto>, ISolicitudViandaTemporalAsyncBaseCrudAppService
     {
-        private readonly IBaseRepository<Proveedor> _proveedoRepository;
-
-        public ServicioProveedorAsyncBaseCrudAppService(
-            IBaseRepository<ServicioProveedor> repository,
-            IBaseRepository<Proveedor> proveedoRepository
+        public SolicitudViandaTemporalAsyncBaseCrudAppService(
+            IBaseRepository<SolicitudViandaTemporal> repository
             ) : base(repository)
         {
-            _proveedoRepository = proveedoRepository;
-            Repository = repository;
         }
 
-        public IBaseRepository<ServicioProveedor> Repository { get; }
 
 
         public JArray Sync(int version, JArray registrosJson, List<int> usuarios)
@@ -46,7 +40,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             return lKeyBinding;
         }
 
-        public JArray GenerarRegistrosMovil(Dictionary<int, int> diccionario, List<ServicioProveedor> registros)
+        public JArray GenerarRegistrosMovil(Dictionary<int, int> diccionario, List<SolicitudViandaTemporal> registros)
         {
             //IList<TEntityDto> registros = GetRegistros(version, usuariosId);
 
@@ -79,10 +73,9 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             {
 
                 //Recuperamos la instacia de la entidad concreta
-                ServicioProveedor instancia = JsonToObject(obj);
+                SolicitudViandaTemporal instancia = JsonToObject(obj);
 
                 Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
-                Int32 unixTimestamp2 = (Int32)(DateTime.UtcNow.Subtract(new DateTime())).TotalSeconds;
                 instancia.Version = unixTimestamp;
 
                 if (instancia.Id == 0)
@@ -102,7 +95,6 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                 }
                 else
                 {
-
                     //Si la instancia ha sido persistida realizamos un update
                     Repository.Update(instancia);
 
@@ -113,25 +105,16 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             return lKeyBinding;
         }
 
-        public List<ServicioProveedor> GetRegistros(int version, List<int> usuarios)
+        public List<SolicitudViandaTemporal> GetRegistros(int version, List<int> usuarios)
         {
-            var proveedoresLogeados = _proveedoRepository.GetAll()
-                .Where(o => o.IsDeleted || o.IsDeleted == false)
-                .Where(o => usuarios.Contains((int) o.Usuario))
-                .Select(proveedor => proveedor.Id)
-                .ToList();
-
-
             var registros = Repository.GetAll()
-                //.Where(o => o.Version >= version)
-                .Where(o => o.IsDeleted || o.IsDeleted == false)
-                .Where(o => proveedoresLogeados.Contains(o.ProveedorId))
+                .Where(o => o.Version > version)
                 .ToList()
                 ;
             return registros;
         }
 
-        public JObject ObjectToJson(ServicioProveedor entidad)
+        public JObject ObjectToJson(SolicitudViandaTemporal entidad)
         {
             JObject objJson = new JObject();
 
@@ -143,17 +126,20 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("m_version", entidad.Version);
             objJson.Add("vigente", GetStringFromBool(entidad.IsDeleted == false));
 
+            //objJson.Add("tipo", entidad.TipoContenido);
+            objJson.Add("solicitante_id", entidad.SolicitanteId);
+            objJson.Add("fecha_solicitud", GetStringFromDate(entidad.FechaSolicitud));
+            objJson.Add("tipo_comida", entidad.TipoComidaId);
+            objJson.Add("total_pedido", entidad.TotalPedido);
+            objJson.Add("total_consumido", entidad.TotalConsumido);
 
-            objJson.Add("servicio_id", entidad.ServicioId);
-            objJson.Add("proveedor_id", entidad.ProveedorId);
-            objJson.Add("estado", entidad.Estado == ServicioEstado.Inactivo ? 0 : 1);
             return objJson;
         }
 
-        public ServicioProveedor JsonToObject(JObject json)
+        public SolicitudViandaTemporal JsonToObject(JObject json)
         {
 
-            var entity = new ServicioProveedor();
+            var entity = new SolicitudViandaTemporal();
             if (json.Property("m_id") != null && (int)json.Property("m_id") != 0)
             {
                 int id = (int)json["m_id"];
@@ -177,10 +163,13 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
                 entity.IsDeleted = (bool)json["vigente"] == false;
             }
 
-            entity.ServicioId = (int)json["servicio_id"];
-            entity.ProveedorId = (int)json["proveedor_id"];
-            int estado = (int)json["estado"];
-            entity.Estado = estado == 0 ? ServicioEstado.Inactivo : ServicioEstado.Activo;
+
+            //entity.TipoContenido = (string)json["tipo"];
+            entity.SolicitanteId = (int)json["solicitante_id"];
+            entity.FechaSolicitud = GetDateFromString((string)json["fecha_solicitud"]);
+            entity.TipoComidaId = (int)json["tipo_comida"];
+            entity.TotalConsumido = (int)json["total_consumido"];
+            entity.TotalPedido = (int)json["total_pedido"];
 
             return entity;
         }

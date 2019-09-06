@@ -143,6 +143,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("tiene_acceso", entidad.TieneAcceso);
             objJson.Add("observaciones_acceso", entidad.ObservacionesAcceso);
             objJson.Add("validacion_cedula", entidad.ValidacionCedula ? 1 : 0);
+            objJson.Add("tipos_comida_permitidos", entidad.TipoComidaPermitidos);
             return objJson;
         }
 
@@ -190,8 +191,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             entity.TieneAcceso = (int)json["tiene_acceso"] == 1 ? true : false;
             entity.ObservacionesAcceso = (string)json["observaciones_acceso"];
             entity.ValidacionCedula = (int)json["validacion_cedula"] == 1 ? true : false;
-
-
+            entity.TipoComidaPermitidos = (string)json["tipos_comida_permitidos"];
+            
             return entity;
         }
     }

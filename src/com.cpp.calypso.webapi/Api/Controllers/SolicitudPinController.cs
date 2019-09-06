@@ -23,6 +23,7 @@ namespace com.cpp.calypso.webapi.Api.Controllers
         [System.Web.Mvc.HttpPost]
         public ActionResult SolicitarPin(string correo)
         
+        
         {
              _solicitudPinService.SolicitarPin(correo);
 

@@ -230,6 +230,8 @@ namespace com.cpp.calypso.proyecto.dominio.Entidades
 
         public string ObservacionesAcceso { get; set; }
 
+        public string TipoComidaPermitidos { get; set; }
+
         public DateTime? fs { get; set; }
 
         public DateTime? fr { get; set; }

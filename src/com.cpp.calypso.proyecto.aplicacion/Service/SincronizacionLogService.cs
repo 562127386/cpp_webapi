@@ -18,5 +18,16 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             ) : base(repository)
         {
         }
+
+        public void CreateLog(string exceptionString)
+        {
+            var ex = new SincronizacionLog()
+            {
+                Log = exceptionString,
+                UsuarioId = 1
+            };
+
+            var newId = Repository.InsertAndGetId(ex);
+        }
     }
 }

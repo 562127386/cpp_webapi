@@ -1,0 +1,1 @@
+Error | notauth:: | 05/09/2019 17:58:08:588 | 12 | com.cpp.calypso.framework.ManejadorExcepciones | Excepcion: | HandleAbpExceptionEventHandler.HandleEvent => ManejadorExcepciones.HandleException => NLogLogger.Error | Method arguments are not valid! See ValidationErrors for details. | !

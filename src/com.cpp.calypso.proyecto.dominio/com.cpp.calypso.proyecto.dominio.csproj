@@ -161,6 +161,8 @@
     <Compile Include="Entidades\ConsumoTransporte.cs" />
     <Compile Include="Entidades\ConsumoVianda.cs" />
     <Compile Include="Entidades\ConsumoViandaQr.cs" />
+    <Compile Include="Entidades\ConsumoViandaQrTemporal.cs" />
+    <Compile Include="Entidades\ConsumoViandaTemporal.cs" />
     <Compile Include="Entidades\ContratoProveedor.cs" />
     <Compile Include="Entidades\DetalleDistribucion.cs" />
     <Compile Include="Entidades\DetalleReserva.cs" />
@@ -191,6 +193,7 @@
     <Compile Include="Entidades\SolicitudPin.cs" />
     <Compile Include="Entidades\SolicitudReporteMovil.cs" />
     <Compile Include="Entidades\SolicitudVianda.cs" />
+    <Compile Include="Entidades\SolicitudViandaTemporal.cs" />
     <Compile Include="Entidades\TipoAccionEmpresa.cs" />
     <Compile Include="Entidades\TipoCatalogo.cs" />
     <Compile Include="Entidades\TipoOpcionComida.cs" />

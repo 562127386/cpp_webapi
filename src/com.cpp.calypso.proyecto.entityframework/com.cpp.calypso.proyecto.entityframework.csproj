@@ -176,6 +176,8 @@
     <Compile Include="Mapping\ConsumoTransporteMap.cs" />
     <Compile Include="Mapping\ConsumoViandaMap.cs" />
     <Compile Include="Mapping\ConsumoViandaQrMap.cs" />
+    <Compile Include="Mapping\ConsumoViandaQrTemporalMap.cs" />
+    <Compile Include="Mapping\ConsumoViandaTemporalMap.cs" />
     <Compile Include="Mapping\ContratoProveedorMap.cs" />
     <Compile Include="Mapping\DetalleDistribucionMap.cs" />
     <Compile Include="Mapping\DetalleReservaMap.cs" />
@@ -207,6 +209,7 @@
     <Compile Include="Mapping\SolicitudPinMap.cs" />
     <Compile Include="Mapping\SolicitudReporteMovilMap.cs" />
     <Compile Include="Mapping\SolicitudViandaMap.cs" />
+    <Compile Include="Mapping\SolicitudViandaTemporalMap.cs" />
     <Compile Include="Mapping\TipoAccionEmpresaMap.cs" />
     <Compile Include="Mapping\TipoCatalogoMap.cs" />
     <Compile Include="Mapping\TipoOpcionComidaMap.cs" />

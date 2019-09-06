@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace com.cpp.calypso.webapi.Api.Controllers
@@ -52,6 +53,10 @@ namespace com.cpp.calypso.webapi.Api.Controllers
         private readonly IDetalleReservaAsyncBaseCrudAppService _detalleReservaSync;
         private readonly IDetalleReservaQrAsyncBaseCrudAppService _detalleReservaQrSync;
         private readonly IConsumoSinReservaHospedajeAsyncBaseCrudAppService _consumoSinReservaHospedajeSync;
+        private readonly ISincronizacionLogAsyncBaseCrudAppService _sincronizacionLogService;
+        private readonly ISolicitudViandaTemporalAsyncBaseCrudAppService _solicitudViandaTemporalSync;
+        private readonly IConsumoViandaTemporalAsyncBaseCrudAppService _consumoViandaTemporalSync;
+        private readonly IConsumoViandaQrTemporalAsyncBaseCrudAppService _consumoViandaQrTemporalSync;
         private readonly List<string> _orden = new List<string>();
 
         public SincronizacionController(
@@ -95,7 +100,11 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             IReservaHotelQrAsyncBaseCrudAppService reservaHotelQrSync,
             IDetalleReservaAsyncBaseCrudAppService detalleReservaSync,
             IDetalleReservaQrAsyncBaseCrudAppService detalleReservaQrSync,
-            IConsumoSinReservaHospedajeAsyncBaseCrudAppService consumoSinReservaHospedajeSync
+            IConsumoSinReservaHospedajeAsyncBaseCrudAppService consumoSinReservaHospedajeSync,
+            ISincronizacionLogAsyncBaseCrudAppService sincronizacionLogService,
+            ISolicitudViandaTemporalAsyncBaseCrudAppService solicitudViandaTemporalSync,
+            IConsumoViandaTemporalAsyncBaseCrudAppService consumoViandaTemporalSync,
+            IConsumoViandaQrTemporalAsyncBaseCrudAppService consumoViandaQrTemporalSync
             ) : base(manejadorExcepciones)
         {
             _catalogoSync = catalogoSync;
@@ -138,6 +147,10 @@ namespace com.cpp.calypso.webapi.Api.Controllers
             _detalleReservaSync = detalleReservaSync;
             _detalleReservaQrSync = detalleReservaQrSync;
             _consumoSinReservaHospedajeSync = consumoSinReservaHospedajeSync;
+            _sincronizacionLogService = sincronizacionLogService;
+            _solicitudViandaTemporalSync = solicitudViandaTemporalSync;
+            _consumoViandaTemporalSync = consumoViandaTemporalSync;
+            _consumoViandaQrTemporalSync = consumoViandaQrTemporalSync;
             _orden.Add("catalogos");
         }
 
@@ -544,12 +557,47 @@ namespace com.cpp.calypso.webapi.Api.Controllers
                         respuesta.Add(tablaResult);
                     }
 
+                    
+                    if (nombre == "solicitudes_viandas_temporal")
+                    {
+                        var servicio = _solicitudViandaTemporalSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "consumos_viandas_temporal")
+                    {
+                        var servicio = _consumoViandaTemporalSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
+                    if (nombre == "consumos_viandas_qr_temporal")
+                    {
+                        var servicio = _consumoViandaQrTemporalSync;
+                        var result = servicio.Sync(version, cambios, usuariosIds);
+                        tablaResult.Add("nombre", nombre);
+                        tablaResult.Add("registros", result);
+                        respuesta.Add(tablaResult);
+                    }
+
 
                 }
             }
             catch (Exception exception)
             {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+                //_sincronizacionLogService.CreateLog(exception.ToString());
+                var message = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                {
+                    Content = new StringContent(exception.Message),
+                    ReasonPhrase = "Internal server error"
+                };
+                throw new HttpResponseException(message);
             }
 
             var base64Encode = System.Text.Encoding.UTF8.GetBytes(respuesta.ToString());

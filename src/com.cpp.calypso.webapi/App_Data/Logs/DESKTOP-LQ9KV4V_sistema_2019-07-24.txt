@@ -1,0 +1,1 @@
+Error | notauth:: | 24/07/2019 14:54:05:545 | 97 | com.cpp.calypso.framework.ManejadorExcepciones | Excepcion: | HandleAbpExceptionEventHandler.HandleEvent => ManejadorExcepciones.HandleException => NLogLogger.Error | Operación cancelada. | !

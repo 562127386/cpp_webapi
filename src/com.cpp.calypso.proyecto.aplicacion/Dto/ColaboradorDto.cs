@@ -221,6 +221,8 @@ namespace com.cpp.calypso.proyecto.aplicacion.Dto
 
         public DateTime? FechaAlta { get; set; }
 
+        public string TipoComidaPermitidos { get; set; }
+
         public int Version { get; set; }
 
         public string Ref { get; set; }

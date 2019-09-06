@@ -607,6 +607,18 @@
     <Compile Include="Migrations\201907101607007_SincronizacionesLog.Designer.cs">
       <DependentUpon>201907101607007_SincronizacionesLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907111648469_TiposComidaPermitidos_Colaborador.cs" />
+    <Compile Include="Migrations\201907111648469_TiposComidaPermitidos_Colaborador.Designer.cs">
+      <DependentUpon>201907111648469_TiposComidaPermitidos_Colaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907111655490_TiposComidaPermitidos_Rename.cs" />
+    <Compile Include="Migrations\201907111655490_TiposComidaPermitidos_Rename.Designer.cs">
+      <DependentUpon>201907111655490_TiposComidaPermitidos_Rename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909052103210_Solicitudes_Viandas_Temporales.cs" />
+    <Compile Include="Migrations\201909052103210_Solicitudes_Viandas_Temporales.Designer.cs">
+      <DependentUpon>201909052103210_Solicitudes_Viandas_Temporales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuditableEntityViewModel.cs" />
     <Compile Include="Models\AuditoriaViewModel.cs" />
@@ -1224,6 +1236,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907101607007_SincronizacionesLog.resx">
       <DependentUpon>201907101607007_SincronizacionesLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907111648469_TiposComidaPermitidos_Colaborador.resx">
+      <DependentUpon>201907111648469_TiposComidaPermitidos_Colaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907111655490_TiposComidaPermitidos_Rename.resx">
+      <DependentUpon>201907111655490_TiposComidaPermitidos_Rename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909052103210_Solicitudes_Viandas_Temporales.resx">
+      <DependentUpon>201909052103210_Solicitudes_Viandas_Temporales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\MvcResources.Overwrite.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -137,7 +137,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             objJson.Add("tipo_operacion_comida_id", entidad.TipoComidaId);
             objJson.Add("disciplina_id", entidad.DisciplinaId);
             objJson.Add("fecha_solicitud", GetStringFromDate(entidad.FechaSolicitud));
-            objJson.Add("fecha_alcance", GetStringFromDate(entidad.FechaAlcancce));
+            objJson.Add("fecha_alcance", GetStringFromDateTime(entidad.FechaAlcancce));
             objJson.Add("pedido_viandas", entidad.PedidoViandas);
             objJson.Add("total_pedido", entidad.TotalPedido);
             objJson.Add("consumido", entidad.Consumido);
@@ -194,7 +194,7 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             {
                 var fechaAlcance = (string)json["fecha_alcance"];
                 if (fechaAlcance.Length > 0)
-                    entity.FechaAlcancce = GetDateFromString((string)json["fecha_alcance"]);
+                    entity.FechaAlcancce = GetDateTimeFromString(fechaAlcance);
             }
                 
 
@@ -239,7 +239,17 @@ namespace com.cpp.calypso.proyecto.aplicacion.Service
             {
                 var hora = (string)json["hora_entrega_tranportista"];
                 if (hora.Length > 0)
-                    entity.HoraEntregaTransportista = GetDateTimeFromString((string)json["hora_entrega_tranportista"]);
+                {
+                    if (hora.Length < 11)
+                    {
+                        entity.HoraEntregaTransportista = GetDateFromString((string)json["hora_entrega_tranportista"]);
+                    }
+                    else
+                    {
+                        entity.HoraEntregaTransportista = GetDateTimeFromString((string)json["hora_entrega_tranportista"]);
+                    }
+                }
+                    
             }
 
             if (json.GetValue("hora_entrega_anotador").Type != JTokenType.Null)
